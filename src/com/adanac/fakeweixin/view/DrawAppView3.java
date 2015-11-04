@@ -6,7 +6,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
@@ -21,9 +20,9 @@ import com.adanac.fakeweixin.util.ScreenUtil;
  * @author vance
  * 
  */
-public class DrawAppView2 extends View {
+public class DrawAppView3 extends View {
 
-	public DrawAppView2(Context context) {
+	public DrawAppView3(Context context) {
 		super(context);
 	}
 
@@ -36,20 +35,20 @@ public class DrawAppView2 extends View {
 		int height = sUtil.getHeight();
 		// 创建画笔
 		Paint paint = new Paint();
-		paint.setColor(Color.RED);// 设置红色
+		paint.setColor(Color.BLUE);// 设置蓝色
 
-		// int rectWidth = 160;
-		// int rectHeight = 80;
-		// int centerX = width / 2 - rectWidth / 2;
-		// int centerY = height / 2 - rectHeight - 100;
-		//
-		// drawRt(canvas, paint, 250, 400, 160, 80, "课程分类", Color.GREEN,
-		// Color.RED, 25);
-		//
-		// drawRt(canvas, paint, 200, 200, 120, 60, "语文", Color.BLACK,
-		// Color.YELLOW, 20);
-		// drawRt(canvas, paint, 400, 200, 120, 60, "数学", Color.BLACK,
-		// Color.YELLOW, 20);
+		int rectWidth = 160;
+		int rectHeight = 80;
+		int centerX = width / 2 - rectWidth / 2;
+		int centerY = height / 2 - rectHeight - 100;
+
+		drawRt(canvas, paint, 250, 300, 160, 80, "课程分类", Color.GREEN,
+				Color.RED, 25);
+
+		drawRt(canvas, paint, 200, 200, 120, 60, "语文", Color.BLACK,
+				Color.YELLOW, 20);
+		drawRt(canvas, paint, 400, 200, 120, 60, "数学", Color.BLACK,
+				Color.YELLOW, 20);
 		// drawRt(canvas, paint, 400, 200, 120, 60, "数学", Color.BLACK,
 		// Color.YELLOW, 20);
 		// drawRt(canvas, paint, 400, 200, 120, 60, "数学", Color.BLACK,
@@ -57,7 +56,10 @@ public class DrawAppView2 extends View {
 		// drawRt(canvas, paint, 400, 200, 120, 60, "数学", Color.BLACK,
 		// Color.YELLOW, 20);
 
-		drawAL(canvas, paint, 100, 100, 300, 300);
+		// 连接图片
+		paint.setColor(Color.BLACK);
+		drawLine(canvas, paint, 250, 360, 200, 170);
+		drawLine(canvas, paint, 250, 360, 400, 170);
 	}
 
 	/**
@@ -81,49 +83,6 @@ public class DrawAppView2 extends View {
 		// Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		// paint.setColor(color);
 		canvas.drawLine(ox1, oy1, ox2, oy2, paint);
-	}
-
-	/**
-	 * 画箭头
-	 * 
-	 * @param sx
-	 * @param sy
-	 * @param ex
-	 * @param ey
-	 */
-	public void drawAL(Canvas canvas, Paint paint, int sx, int sy, int ex,
-			int ey) {
-		double H = 8; // 箭头高度
-		double L = 3.5; // 底边的一半
-		int x3 = 0;
-		int y3 = 0;
-		int x4 = 0;
-		int y4 = 0;
-		double awrad = Math.atan(L / H); // 箭头角度
-		double arraow_len = Math.sqrt(L * L + H * H); // 箭头的长度
-		double[] arrXY_1 = rotateVec(ex - sx, ey - sy, awrad, true, arraow_len);
-		double[] arrXY_2 = rotateVec(ex - sx, ey - sy, -awrad, true, arraow_len);
-		double x_3 = ex - arrXY_1[0]; // (x3,y3)是第一端点
-		double y_3 = ey - arrXY_1[1];
-		double x_4 = ex - arrXY_2[0]; // (x4,y4)是第二端点
-		double y_4 = ey - arrXY_2[1];
-		Double X3 = new Double(x_3);
-		x3 = X3.intValue();
-		Double Y3 = new Double(y_3);
-		y3 = Y3.intValue();
-		Double X4 = new Double(x_4);
-		x4 = X4.intValue();
-		Double Y4 = new Double(y_4);
-		y4 = Y4.intValue();
-		// 画线
-		canvas.drawLine(sx, sy, ex, ey, paint);
-		Path triangle = new Path();
-		triangle.moveTo(ex, ey);
-		triangle.lineTo(x3, y3);
-		triangle.lineTo(x4, y4);
-		triangle.close();
-		canvas.drawPath(triangle, paint);
-
 	}
 
 	// 计算

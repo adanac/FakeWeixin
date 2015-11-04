@@ -19,6 +19,7 @@ import com.adanac.fakeweixin.R;
 import com.adanac.fakeweixin.adapter.ContentAdapter;
 import com.adanac.fakeweixin.view.DrawAppView;
 import com.adanac.fakeweixin.view.DrawAppView2;
+import com.adanac.fakeweixin.view.DrawAppView3;
 import com.adanac.fakeweixin.view.DrawAppView4;
 
 public class MainContent extends Activity implements OnClickListener,
@@ -135,6 +136,14 @@ public class MainContent extends Activity implements OnClickListener,
 		// 通知view组件重绘
 		view_two.invalidate();
 		((ViewGroup) page_02).addView(view_two);
+
+		// 在第3个页面画图形（）
+		final DrawAppView3 view_three = new DrawAppView3(this);
+		view_two.setMinimumHeight(600);
+		view_two.setMinimumWidth(800);
+		// 通知view组件重绘
+		view_two.invalidate();
+		((ViewGroup) page_03).addView(view_three);
 
 		// 在第4个页面画图形
 		final DrawAppView4 view_four = new DrawAppView4(this);
