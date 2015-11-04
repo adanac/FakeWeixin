@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    android:background = "#AABBCC"
+    android:id="@+id/main_content_content">
+
+    <ImageView
+            style="@style/layout_horizontal"
+            android:layout_weight="5"
+            android:background="@drawable/v1"/>
+    <ImageView
+            style="@style/layout_horizontal"
+            android:layout_weight="5"
+            android:background="@drawable/v4"/> 
+         
+      
+</LinearLayout>

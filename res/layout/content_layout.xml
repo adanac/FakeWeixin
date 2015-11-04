@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout_full"
+    android:orientation="vertical"
+    android:id="@+id/content_layout">
+
+     <LinearLayout 
+                style="@style/layout_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+         
+    	<include layout="@layout/content_head" />
+    	
+    	<ImageView
+    	    style="@style/layout_vertical"
+    	    android:layout_height="3dp"
+	        android:background="@drawable/barline" />
+    	
+    </LinearLayout>
+
+   
+    <LinearLayout 
+        style="@style/layout_vertical"
+        android:layout_weight="9"
+        android:orientation="vertical">
+    	
+	    <include layout="@layout/content_content" />
+	    
+    </LinearLayout>
+    
+</LinearLayout>

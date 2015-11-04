@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/v1"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/starttext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="80dp"
+        android:text="教育者，养成人性之事业也"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>
