@@ -18,9 +18,11 @@ import android.widget.TextView;
 import com.adanac.fakeweixin.R;
 import com.adanac.fakeweixin.adapter.ContentAdapter;
 import com.adanac.fakeweixin.view.DrawAppView;
+import com.adanac.fakeweixin.view.DrawAppView2;
 import com.adanac.fakeweixin.view.DrawAppView4;
 
-public class MainContent extends Activity implements OnClickListener, OnPageChangeListener {
+public class MainContent extends Activity implements OnClickListener,
+		OnPageChangeListener {
 	// 底部菜单4个Linearlayout
 	private LinearLayout ll_home;
 	private LinearLayout ll_address;
@@ -125,6 +127,14 @@ public class MainContent extends Activity implements OnClickListener, OnPageChan
 		// 通知view组件重绘
 		view_one.invalidate();
 		((ViewGroup) page_01).addView(view_one);
+
+		// 在第2个页面画图形（知识类）
+		final DrawAppView2 view_two = new DrawAppView2(this);
+		view_two.setMinimumHeight(600);
+		view_two.setMinimumWidth(800);
+		// 通知view组件重绘
+		view_two.invalidate();
+		((ViewGroup) page_02).addView(view_two);
 
 		// 在第4个页面画图形
 		final DrawAppView4 view_four = new DrawAppView4(this);
