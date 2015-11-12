@@ -5,6 +5,12 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 
+/**
+ * 画图工具类
+ * 
+ * @author adanac
+ * @date 2015-11-13上午12:23:11
+ */
 public class DrawUtil {
 
 	/**

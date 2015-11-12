@@ -3,6 +3,12 @@ package com.adanac.fakeweixin.util;
 import android.util.DisplayMetrics;
 import android.view.View;
 
+/**
+ * 屏幕相关类
+ * 
+ * @author adanac
+ * @date 2015-11-13上午12:23:31
+ */
 public class ScreenUtil {
 	private View view;
 	private int width;
