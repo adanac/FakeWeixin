@@ -60,7 +60,7 @@ public class DrawAppView2 extends View {
 
 		drawAL(canvas, paint, 100, 100, 300, 300);
 		DrawUtil.drawCircleAndTxt(canvas, paint, width / 2, height / 2 - 200,
-				100, "Ã½½éËØÑø", Color.YELLOW, Color.BLACK, 35);
+				100, "Ã½½éËØÑø", Color.RED, Color.BLACK, 35);
 	}
 
 	/**
