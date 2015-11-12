@@ -26,4 +26,5 @@ public class DrawUtil {
 		canvas.drawText(str, left, up, paint);
 
 	}
+
 }
