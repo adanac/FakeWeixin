@@ -13,6 +13,7 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 
+import com.adanac.fakeweixin.util.DrawUtil;
 import com.adanac.fakeweixin.util.ScreenUtil;
 
 /**
@@ -58,6 +59,8 @@ public class DrawAppView2 extends View {
 		// Color.YELLOW, 20);
 
 		drawAL(canvas, paint, 100, 100, 300, 300);
+		DrawUtil.drawCircleAndTxt(canvas, paint, width / 2, height / 2 - 200,
+				100, "Ã½½éËØÑø", Color.YELLOW, Color.BLACK, 35);
 	}
 
 	/**
