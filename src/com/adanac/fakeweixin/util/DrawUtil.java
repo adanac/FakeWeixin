@@ -1,16 +1,22 @@
 package com.adanac.fakeweixin.util;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Paint.FontMetricsInt;
+import android.graphics.Paint.Style;
 import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Shader;
+import android.graphics.drawable.Drawable;
+import android.view.View;
 
 /**
  * 画图工具类
@@ -18,7 +24,45 @@ import android.graphics.Shader;
  * @author adanac
  * @date 2015-11-13上午12:23:11
  */
-public class DrawUtil {
+public class DrawUtil extends View {
+
+	public DrawUtil(Context context) {
+		super(context);
+	}
+
+	/**
+	 * 画椭圆
+	 * 
+	 * @param canvas
+	 * @param paint
+	 * @param left
+	 * @param up
+	 * @param right
+	 * @param down
+	 * @param str
+	 * @param txtSize
+	 * @param txtColor
+	 */
+	public static void drawMyOval(Canvas canvas, Paint paint, int left, int up,
+			int right, int down, String str, int txtSize, int ovalColor,
+			int ovalBackGroundColor, int txtColor) {
+		paint.setAntiAlias(true); // 设置画笔为无锯齿
+		paint.setColor(ovalColor); // 设置画笔颜色
+		canvas.drawColor(ovalBackGroundColor); // 白色背景
+		paint.setStrokeWidth((float) 3.0); // 线宽
+		paint.setStyle(Style.STROKE);
+
+		RectF oval = new RectF(); // RectF对象
+		oval.left = left; // 左边
+		oval.top = up; // 上边
+		oval.right = right; // 右边
+		oval.bottom = down; // 下边
+		canvas.drawOval(oval, paint); // 绘制椭圆
+
+		// 写字
+		drawTxtCenter(canvas, paint, str, txtColor, txtSize, left
+				+ (right - left) / 2, up + (down - up) / 2);
+	}
 
 	/**
 	 * 画带文字的圆
@@ -42,12 +86,12 @@ public class DrawUtil {
 		canvas.drawCircle(left, up, radius, paint);
 
 		// 2、写字
-		paint.setTextSize(txtSize);
-		paint.setColor(txtColor);
-		paint.setTextAlign(Paint.Align.CENTER);
-		paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP));
-		canvas.drawText(str, left, up, paint);
-
+		// paint.setTextSize(txtSize);
+		// paint.setColor(txtColor);
+		// paint.setTextAlign(Paint.Align.CENTER);
+		// paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP));
+		// canvas.drawText(str, left, up, paint);
+		drawTxtCenter(canvas, paint, str, txtColor, txtSize, left, up);
 	}
 
 	/**
@@ -187,13 +231,62 @@ public class DrawUtil {
 	 * @param p
 	 * @param str
 	 */
-	public static void drawTxt(Canvas canvas, int width, int height, Paint p,
-			String str) {
-		p.setTextSize(24);
-		p.setColor(Color.WHITE);
-		p.setTextAlign(Paint.Align.CENTER);
-		p.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP));
-		canvas.drawText(str, width / 2, height / 2 - 140, p);
+	public static void drawTxt(Canvas canvas, Paint paint, int left, int up,
+			String str, int txtSize, int txtColor) {
+		paint.setTextSize(txtSize);
+		paint.setColor(txtColor);
+		paint.setTextAlign(Paint.Align.CENTER);
+		paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP));
+		canvas.drawText(str, left, up, paint);
+	}
+
+	/**
+	 * 画图片，就是贴图：getResources()方法是从view继承过来的
+	 * 
+	 * @param canvas
+	 * @param p
+	 * @param id
+	 */
+	public void drawPng(Canvas canvas, Paint p, int id) {
+		Bitmap bitmap = BitmapFactory.decodeResource(getResources(), id);
+		canvas.drawBitmap(bitmap, 200, 260, p);
+	}
+
+	/**
+	 * 在图片中写文字
+	 * 
+	 * @param canvas
+	 */
+	public void drawTxtPic(Canvas canvas) {
+
+		// 1、创建一个drawable对象，一个输出的Bitmap并以此创建一个画布
+		// 根据源文件新建一个darwable对象
+		int id = getResources().getIdentifier(
+				"com.adanac.fakeweixin:drawable/icon", null, null);
+		Drawable imageDrawable = getResources().getDrawable(id);
+		// 新建一个新的输出图片
+		Bitmap output = Bitmap.createBitmap(169, 169, Bitmap.Config.ARGB_8888);
+		canvas = new Canvas(output);
+
+		// 2、创建圆角矩形
+		// 新建一个矩形
+		RectF outerRect = new RectF(0, 0, 169, 169);
+		// 产生一个红色的圆角矩形 或者任何有色颜色，不能是透明！
+		Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		paint.setColor(Color.RED);
+		canvas.drawRoundRect(outerRect, 10, 10, paint);
+
+		// 3、在矩形上画图形
+		paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+		imageDrawable.setBounds(0, 0, 169, 169);
+		imageDrawable.draw(canvas);
+
+		// 4、写字
+		paint.setTextSize(24);
+		paint.setColor(Color.WHITE);
+		paint.setTextAlign(Paint.Align.CENTER);
+		paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP));
+		canvas.drawText("test", 85, 159, paint);
 	}
 
 	/**
@@ -217,7 +310,7 @@ public class DrawUtil {
 	}
 
 	/**
-	 * 画带文字的矩形
+	 * 画带文字的矩形（bug:文字不能居中显示）
 	 * 
 	 * @param canvas
 	 * @param paint
@@ -265,38 +358,86 @@ public class DrawUtil {
 	public static void drawRectCenterTxt(Canvas canvas, Paint paint, int ox,
 			int oy, int a, int b, String str, int rectColor, int txtColor,
 			int txtSize) {
-		// // 1.画矩形
-		// // 产生一个红色的圆角矩形 或者任何有色颜色，不能是透明！
-		// RectF outerRect = new RectF(ox - a / 2, oy - b / 2, ox + a / 2, oy +
-		// b
-		// / 2);
-		// paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-		// paint.setColor(rectColor);
-		// canvas.drawRoundRect(outerRect, 10, 10, paint);
-		//
-		// // 2、写字
+
+		Rect targetRect = new Rect(ox - a / 2, oy - b / 2, ox + a / 2, oy + b
+				/ 2);
+		paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
+		// 画矩形
+		paint.setColor(rectColor);
+		canvas.drawRect(targetRect, paint);
+		// 写字
+		drawTxtCenter(canvas, paint, str, txtColor, txtSize, targetRect);
+	}
+
+	/**
+	 * 画居中显示的字
+	 * 
+	 * @param canvas
+	 * @param paint
+	 * @param str
+	 * @param txtColor
+	 * @param txtSize
+	 * @param targetRect
+	 */
+	private static void drawTxtCenter(Canvas canvas, Paint paint, String str,
+			int txtColor, int txtSize, Rect targetRect) {
+		// 写字
+		paint.setColor(txtColor);
+		paint.setStrokeWidth(3);
+		paint.setTextSize(txtSize);
+		FontMetricsInt fontMetrics = paint.getFontMetricsInt();
+		// 每个成员数值都是以baseline为基准计算的，所以负值表示在baseline之上
+		int baseline = (targetRect.bottom + targetRect.top - fontMetrics.bottom - fontMetrics.top) / 2;
+		// 下面这行是实现水平居中，drawText对应改为传入targetRect.centerX()
+		paint.setTextAlign(Paint.Align.CENTER);
+		canvas.drawText(str, targetRect.centerX(), baseline, paint);
+	}
+
+	/**
+	 * 画居中显示的字
+	 * 
+	 * @param canvas
+	 * @param paint
+	 * @param str
+	 * @param txtColor
+	 * @param txtSize
+	 * @param left
+	 * @param baseline
+	 *            文字写在这个高度上
+	 */
+	private static void drawTxtCenter(Canvas canvas, Paint paint, String str,
+			int txtColor, int txtSize, int left, int baseline) {
+
 		// paint.setTextSize(txtSize);
 		// paint.setColor(txtColor);
 		// paint.setTextAlign(Paint.Align.CENTER);
 		// paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP));
 		// canvas.drawText(str, ox, oy, paint);
 
-		Rect targetRect = new Rect(ox - a / 2, oy - b / 2, ox + a / 2, oy + b
-				/ 2);
-		paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-
-		paint.setColor(rectColor);
-		canvas.drawRect(targetRect, paint);
-
+		// 写字
 		paint.setColor(txtColor);
 		paint.setStrokeWidth(3);
 		paint.setTextSize(txtSize);
 		FontMetricsInt fontMetrics = paint.getFontMetricsInt();
-		// 转载请注明出处：http://blog.csdn.net/hursing
-		int baseline = (targetRect.bottom + targetRect.top - fontMetrics.bottom - fontMetrics.top) / 2;
+		// 每个成员数值都是以baseline为基准计算的，所以负值表示在baseline之上
+		baseline = (baseline * 2 - fontMetrics.bottom - fontMetrics.top) / 2;
 		// 下面这行是实现水平居中，drawText对应改为传入targetRect.centerX()
 		paint.setTextAlign(Paint.Align.CENTER);
-		canvas.drawText(str, targetRect.centerX(), baseline, paint);
+		canvas.drawText(str, left, baseline, paint);
+	}
+
+	public static void drawArowLine(Canvas canvas, int ax, int ay, int ra,
+			int bx, int by, int rb, Paint paint) {
+		// float k = (by - ay) / (bx - ax);
+		double length = Math
+				.sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax));
+		double axshift = (bx - ax) * (ra / length);
+		double ayshift = (by - ay) * (ra / length);
+		double bxshift = (bx - ax) * (rb / length);
+		double byshift = (by - ay) * (rb / length);
+		drawAL(canvas, paint, ax + (int) axshift, ay + (int) ayshift, bx
+				- (int) bxshift, by - (int) byshift);
 	}
 
 	/**
@@ -325,11 +466,7 @@ public class DrawUtil {
 		canvas.drawRoundRect(outerRect, 10, 10, paint);
 
 		// 2、写字
-		paint.setTextSize(txtSize);
-		paint.setColor(txtColor);
-		paint.setTextAlign(Paint.Align.CENTER);
-		paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP));
-		canvas.drawText(str, ox, oy, paint);
+		drawTxtCenter(canvas, paint, str, txtColor, txtSize, ox, oy);
 	}
 
 	/**

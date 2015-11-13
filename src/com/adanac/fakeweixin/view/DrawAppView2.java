@@ -40,18 +40,19 @@ public class DrawAppView2 extends View {
 
 		DrawUtil.drawCircleAndTxt(canvas, paint, width / 2, height / 2 - 200,
 				100, "媒介素养", Color.YELLOW, Color.BLACK, 35);
-		DrawUtil.drawRect(canvas, paint, width / 2, height / 2 + 100, 200, 90,
-				"意义所指层次图", Color.GRAY, Color.BLACK, 18);
-		DrawUtil.drawRect(canvas, paint, width / 2 - 250, height / 2 - 200,
-				200, 90, "媒介素养的内涵", Color.GRAY, Color.BLACK, 18);
-		DrawUtil.drawRect(canvas, paint, width / 2 + 250, height / 2 - 200,
-				200, 90, "视觉素养", Color.GRAY, Color.BLACK, 18);
-		DrawUtil.drawRect(canvas, paint, width / 2, height / 2 - 400, 150, 90,
-				"媒介演变", Color.GRAY, Color.BLACK, 18);
-		DrawUtil.drawRect(canvas, paint, width / 2 - 250, height / 2 - 400,
-				200, 90, "媒介", Color.GRAY, Color.BLACK, 18);
-		DrawUtil.drawRect(canvas, paint, width / 2 + 250, height / 2 - 400,
-				150, 90, "符号的内涵", Color.GRAY, Color.BLACK, 18);
+		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2, height / 2 + 100,
+				200, 90, "意义所指层次图", Color.GRAY, Color.BLACK, 18);
+		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2 - 250,
+				height / 2 - 200, 200, 90, "媒介素养的内涵", Color.GRAY, Color.BLACK,
+				18);
+		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2 + 250,
+				height / 2 - 200, 200, 90, "视觉素养", Color.GRAY, Color.BLACK, 18);
+		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2, height / 2 - 400,
+				150, 90, "媒介演变", Color.GRAY, Color.BLACK, 18);
+		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2 - 250,
+				height / 2 - 400, 200, 90, "媒介", Color.GRAY, Color.BLACK, 18);
+		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2 + 250,
+				height / 2 - 400, 150, 90, "符号的内涵", Color.GRAY, Color.BLACK, 18);
 		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2 + 250,
 				height / 2 + 100, 150, 90, "二者间的关系",
 				Color.parseColor("yellow"), Color.BLACK, 18);
