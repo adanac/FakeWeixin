@@ -15,9 +15,9 @@ import android.view.View;
 import com.adanac.fakeweixin.util.ScreenUtil;
 
 /**
- * ª≠Õ÷‘≤
+ * ƒ‹¡¶¿‡
  * 
- * @author vance
+ * @author adanac
  * 
  */
 public class DrawAppView3 extends View {

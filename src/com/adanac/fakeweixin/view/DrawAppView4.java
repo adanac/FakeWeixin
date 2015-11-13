@@ -16,9 +16,9 @@ import android.view.View;
 import com.adanac.fakeweixin.util.ScreenUtil;
 
 /**
- * 画圆
+ * 情感类
  * 
- * @author vance
+ * @author adanac
  * 
  */
 public class DrawAppView4 extends View {
@@ -38,48 +38,51 @@ public class DrawAppView4 extends View {
 		Paint paint = new Paint();
 		paint.setColor(Color.GREEN);// 设置红色
 
-		drawCircleAndTxt(canvas, paint, width / 2, height / 2 - 200, 100, "媒介解读", Color.LTGRAY,
-				Color.BLACK, 35);
-		drawCircleAndTxt(canvas, paint, width / 2, height / 2 - 450, 70, "水墨画", Color.CYAN,
-				Color.BLACK, 30);
-		drawCircleAndTxt(canvas, paint, width / 2, height / 2 + 50, 70, "影视", Color.CYAN,
-				Color.BLACK, 30);
-		drawCircleAndTxt(canvas, paint, width / 2 - 225, height / 2 - 325, 70, "现代设计", Color.CYAN,
-				Color.BLACK, 30);
-		drawCircleAndTxt(canvas, paint, width / 2 - 225, height / 2 - 75, 70, "FLASH", Color.CYAN,
-				Color.BLACK, 30);
-		drawCircleAndTxt(canvas, paint, width / 2 + 225, height / 2 - 325, 70, "书法", Color.CYAN,
-				Color.BLACK, 30);
-		drawCircleAndTxt(canvas, paint, width / 2 + 225, height / 2 - 75, 70, "摄影", Color.CYAN,
-				Color.BLACK, 30);
+		drawCircleAndTxt(canvas, paint, width / 2, height / 2 - 200, 100,
+				"媒介解读", Color.LTGRAY, Color.BLACK, 35);
+		drawCircleAndTxt(canvas, paint, width / 2, height / 2 - 450, 70, "水墨画",
+				Color.CYAN, Color.BLACK, 30);
+		drawCircleAndTxt(canvas, paint, width / 2, height / 2 + 50, 70, "影视",
+				Color.CYAN, Color.BLACK, 30);
+		drawCircleAndTxt(canvas, paint, width / 2 - 225, height / 2 - 325, 70,
+				"现代设计", Color.CYAN, Color.BLACK, 30);
+		drawCircleAndTxt(canvas, paint, width / 2 - 225, height / 2 - 75, 70,
+				"FLASH", Color.CYAN, Color.BLACK, 30);
+		drawCircleAndTxt(canvas, paint, width / 2 + 225, height / 2 - 325, 70,
+				"书法", Color.CYAN, Color.BLACK, 30);
+		drawCircleAndTxt(canvas, paint, width / 2 + 225, height / 2 - 75, 70,
+				"摄影", Color.CYAN, Color.BLACK, 30);
 
 		paint.setColor(Color.BLACK);
-		drawAL(canvas, paint, width / 2, height / 2 - 200 - 100, width / 2, height / 2 - 450 + 70);
-		drawAL(canvas, paint, width / 2, height / 2 - 200 + 100, width / 2, height / 2 + 50 - 70);
-		drawArowLine(canvas, width / 2, height / 2 - 200, 100, width / 2 - 225, height / 2 - 325,
-				70, paint);
-		drawArowLine(canvas, width / 2, height / 2 - 200, 100, width / 2 - 225, height / 2 - 75,
-				70, paint);
-		drawArowLine(canvas, width / 2, height / 2 - 200, 100, width / 2 + 225, height / 2 - 75,
-				70, paint);
-		drawArowLine(canvas, width / 2, height / 2 - 200, 100, width / 2 + 225, height / 2 - 325,
-				70, paint);
+		drawAL(canvas, paint, width / 2, height / 2 - 200 - 100, width / 2,
+				height / 2 - 450 + 70);
+		drawAL(canvas, paint, width / 2, height / 2 - 200 + 100, width / 2,
+				height / 2 + 50 - 70);
+		drawArowLine(canvas, width / 2, height / 2 - 200, 100, width / 2 - 225,
+				height / 2 - 325, 70, paint);
+		drawArowLine(canvas, width / 2, height / 2 - 200, 100, width / 2 - 225,
+				height / 2 - 75, 70, paint);
+		drawArowLine(canvas, width / 2, height / 2 - 200, 100, width / 2 + 225,
+				height / 2 - 75, 70, paint);
+		drawArowLine(canvas, width / 2, height / 2 - 200, 100, width / 2 + 225,
+				height / 2 - 325, 70, paint);
 	}
 
-	private void drawArowLine(Canvas canvas, int ax, int ay, int ra, int bx, int by, int rb,
-			Paint paint) {
+	private void drawArowLine(Canvas canvas, int ax, int ay, int ra, int bx,
+			int by, int rb, Paint paint) {
 		// float k = (by - ay) / (bx - ax);
-		double length = Math.sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax));
+		double length = Math
+				.sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax));
 		double axshift = (bx - ax) * (ra / length);
 		double ayshift = (by - ay) * (ra / length);
 		double bxshift = (bx - ax) * (rb / length);
 		double byshift = (by - ay) * (rb / length);
-		drawAL(canvas, paint, ax + (int) axshift, ay + (int) ayshift, bx - (int) bxshift, by
-				- (int) byshift);
+		drawAL(canvas, paint, ax + (int) axshift, ay + (int) ayshift, bx
+				- (int) bxshift, by - (int) byshift);
 	}
 
-	private void drawCircleAndTxt(Canvas canvas, Paint paint, int left, int up, int radius,
-			String str, int circleColor, int txtColor, int txtSize) {
+	private void drawCircleAndTxt(Canvas canvas, Paint paint, int left, int up,
+			int radius, String str, int circleColor, int txtColor, int txtSize) {
 		// 1.画圆
 		paint.setColor(circleColor);
 		paint.setAntiAlias(true);// 设置画笔的锯齿效果。 true是去除
@@ -110,7 +113,8 @@ public class DrawAppView4 extends View {
 	 *            线的颜色
 	 */
 
-	private void drawLine(Canvas canvas, Paint paint, int ox1, int oy1, int ox2, int oy2) {
+	private void drawLine(Canvas canvas, Paint paint, int ox1, int oy1,
+			int ox2, int oy2) {
 		// Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		// paint.setColor(color);
 		canvas.drawLine(ox1, oy1, ox2, oy2, paint);
@@ -124,7 +128,8 @@ public class DrawAppView4 extends View {
 	 * @param ex
 	 * @param ey
 	 */
-	public void drawAL(Canvas canvas, Paint paint, int sx, int sy, int ex, int ey) {
+	public void drawAL(Canvas canvas, Paint paint, int sx, int sy, int ex,
+			int ey) {
 		double H = 8; // 箭头高度
 		double L = 3.5; // 底边的一半
 		int x3 = 0;
@@ -159,7 +164,8 @@ public class DrawAppView4 extends View {
 	}
 
 	// 计算
-	public double[] rotateVec(int px, int py, double ang, boolean isChLen, double newLen) {
+	public double[] rotateVec(int px, int py, double ang, boolean isChLen,
+			double newLen) {
 		double mathstr[] = new double[2];
 		// 矢量旋转函数，参数含义分别是x分量、y分量、旋转角、是否改变长度、新长度
 		double vx = px * Math.cos(ang) - py * Math.sin(ang);
@@ -175,9 +181,10 @@ public class DrawAppView4 extends View {
 	}
 
 	// 画带文字的圆角矩形
-	private void drawRt(Canvas canvas, Paint p, int ox, int oy, int a, int b, String str,
-			int rectColor, int txtColor, int txtSize) {
-		drawRectAndTxt(canvas, p, ox, oy, a, b, str, rectColor, txtColor, txtSize);
+	private void drawRt(Canvas canvas, Paint p, int ox, int oy, int a, int b,
+			String str, int rectColor, int txtColor, int txtSize) {
+		drawRectAndTxt(canvas, p, ox, oy, a, b, str, rectColor, txtColor,
+				txtSize);
 
 	}
 
@@ -188,7 +195,8 @@ public class DrawAppView4 extends View {
 	}
 
 	// 在图片上写字
-	private void drawTxt(Canvas canvas, int width, int height, Paint p, String str) {
+	private void drawTxt(Canvas canvas, int width, int height, Paint p,
+			String str) {
 		p.setTextSize(24);
 		p.setColor(Color.WHITE);
 		p.setTextAlign(Paint.Align.CENTER);
@@ -197,7 +205,8 @@ public class DrawAppView4 extends View {
 	}
 
 	// 画圆角矩形
-	private void drawRRect(Canvas canvas, Paint p, int left, int right, int width, int height) {
+	private void drawRRect(Canvas canvas, Paint p, int left, int right,
+			int width, int height) {
 		p.setStyle(Paint.Style.FILL);// 充满
 		p.setColor(Color.GREEN);
 		p.setAntiAlias(true);// 设置画笔的锯齿效果
@@ -207,11 +216,12 @@ public class DrawAppView4 extends View {
 	}
 
 	// 画带文字的圆角矩形
-	private void drawRectAndTxt(Canvas canvas, Paint paint, int ox, int oy, int a, int b,
-			String str, int rectColor, int txtColor, int txtSize) {
+	private void drawRectAndTxt(Canvas canvas, Paint paint, int ox, int oy,
+			int a, int b, String str, int rectColor, int txtColor, int txtSize) {
 		// 1.画矩形
 		// 产生一个红色的圆角矩形 或者任何有色颜色，不能是透明！
-		RectF outerRect = new RectF(ox - a / 2, oy - b / 2, ox + a / 2, oy + b / 2);
+		RectF outerRect = new RectF(ox - a / 2, oy - b / 2, ox + a / 2, oy + b
+				/ 2);
 		paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		paint.setColor(rectColor);
 		canvas.drawRoundRect(outerRect, 10, 10, paint);
@@ -228,7 +238,8 @@ public class DrawAppView4 extends View {
 
 		// 1、创建一个drawable对象，一个输出的Bitmap并以此创建一个画布
 		// 根据源文件新建一个darwable对象
-		int id = getResources().getIdentifier("com.adanac.fakeweixin:drawable/icon", null, null);
+		int id = getResources().getIdentifier(
+				"com.adanac.fakeweixin:drawable/icon", null, null);
 		Drawable imageDrawable = getResources().getDrawable(id);
 		// 新建一个新的输出图片
 		Bitmap output = Bitmap.createBitmap(169, 169, Bitmap.Config.ARGB_8888);

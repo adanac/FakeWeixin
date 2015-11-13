@@ -120,6 +120,7 @@ public final class R {
         public static final int p01_str=0x7f050004;
         public static final int p02_str=0x7f050005;
         public static final int p03_str=0x7f050006;
+        public static final int p04_str=0x7f050007;
         public static final int start=0x7f050003;
         public static final int top_title=0x7f050002;
     }

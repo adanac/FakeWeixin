@@ -6,7 +6,8 @@
     <string name="top_title">我的app</string>
     <string name="start">立即体验</string>
     <string name="p01_str">页面1</string>
-    <string name="p02_str">这里是知识类的内容</string>
-    <string name="p03_str">这里是能力类的内容</string>
+    <string name="p02_str">页面2</string>
+    <string name="p03_str">页面3</string>
+    <string name="p04_str">页面4</string>
 
 </resources>

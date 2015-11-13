@@ -8,6 +8,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="@string/p03_str"
-        android:textSize="30dp" />
+        android:textSize="18sp" />
 
 </RelativeLayout>
