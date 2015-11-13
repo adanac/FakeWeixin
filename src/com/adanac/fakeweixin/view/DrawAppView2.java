@@ -52,8 +52,9 @@ public class DrawAppView2 extends View {
 				200, 90, "媒介", Color.GRAY, Color.BLACK, 18);
 		DrawUtil.drawRect(canvas, paint, width / 2 + 250, height / 2 - 400,
 				150, 90, "符号的内涵", Color.GRAY, Color.BLACK, 18);
-		DrawUtil.drawRect(canvas, paint, width / 2 + 250, height / 2 + 100,
-				150, 90, "二者间的关系", Color.parseColor("yellow"), Color.BLACK, 18);
+		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2 + 250,
+				height / 2 + 100, 150, 90, "二者间的关系",
+				Color.parseColor("yellow"), Color.BLACK, 18);
 
 		paint.setColor(Color.BLACK);
 		// 连接媒介素养与媒介素养的内涵
