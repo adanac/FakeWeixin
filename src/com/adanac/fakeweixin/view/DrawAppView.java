@@ -34,7 +34,7 @@ public class DrawAppView extends View {
 
 		// 画椭圆
 		DrawUtil.drawMyOval(canvas, paint, width / 2 - 150, height / 2 - 300,
-				width / 2 + 150, height / 2 - 150, "媒介素养", 40, Color.BLACK,
+				width / 2 + 150, height / 2 - 150, "媒介素养", 35, Color.BLACK,
 				Color.YELLOW, Color.BLACK);
 		DrawUtil.drawLine(canvas, paint, 350, 250, 350, height / 2 - 300); // 媒介素养小短线
 		DrawUtil.drawLine(canvas, paint, 350, 600, 350, height / 2 - 150); // 媒介素养小短线

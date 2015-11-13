@@ -417,7 +417,7 @@ public class DrawUtil extends View {
 
 		// 写字
 		paint.setColor(txtColor);
-		paint.setStrokeWidth(3);
+		paint.setStrokeWidth(2);
 		paint.setTextSize(txtSize);
 		FontMetricsInt fontMetrics = paint.getFontMetricsInt();
 		// 每个成员数值都是以baseline为基准计算的，所以负值表示在baseline之上

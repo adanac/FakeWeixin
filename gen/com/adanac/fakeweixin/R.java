@@ -51,17 +51,17 @@ public final class R {
         public static final int v_point_pre2=0x7f020017;
     }
     public static final class id {
-        public static final int action_settings=0x7f080022;
-        public static final int btn_start=0x7f080021;
-        public static final int content_content=0x7f080012;
-        public static final int content_content_three=0x7f080013;
-        public static final int content_content_two=0x7f080014;
-        public static final int content_layout=0x7f080016;
-        public static final int content_layout2=0x7f080017;
-        public static final int content_layout2_one=0x7f080018;
-        public static final int content_layout2_two=0x7f080019;
-        public static final int content_layout3=0x7f08001a;
-        public static final int head_txt=0x7f080015;
+        public static final int action_settings=0x7f080023;
+        public static final int btn_start=0x7f080022;
+        public static final int content_content=0x7f080013;
+        public static final int content_content_three=0x7f080014;
+        public static final int content_content_two=0x7f080015;
+        public static final int content_layout=0x7f080017;
+        public static final int content_layout2=0x7f080018;
+        public static final int content_layout2_one=0x7f080019;
+        public static final int content_layout2_two=0x7f08001a;
+        public static final int content_layout3=0x7f08001b;
+        public static final int head_txt=0x7f080016;
         public static final int iv1=0x7f08000e;
         public static final int iv2=0x7f08000f;
         public static final int iv3=0x7f080010;
@@ -75,17 +75,18 @@ public final class R {
         public static final int ll_friend=0x7f080006;
         public static final int ll_home=0x7f080000;
         public static final int ll_setting=0x7f080009;
-        public static final int main_content=0x7f08001b;
-        public static final int main_content_content=0x7f08001d;
-        public static final int page_01=0x7f08001e;
-        public static final int page_01_ll=0x7f08001f;
-        public static final int starttext=0x7f080020;
+        public static final int main_content=0x7f08001c;
+        public static final int main_content_content=0x7f08001e;
+        public static final int page_01=0x7f08001f;
+        public static final int page_01_ll=0x7f080020;
+        public static final int starttext=0x7f080021;
         public static final int tv_address=0x7f080005;
         public static final int tv_friend=0x7f080008;
         public static final int tv_home=0x7f080002;
         public static final int tv_setting=0x7f08000b;
+        public static final int tv_top=0x7f080012;
         public static final int viewpager=0x7f08000c;
-        public static final int vp_content=0x7f08001c;
+        public static final int vp_content=0x7f08001d;
     }
     public static final class layout {
         public static final int activity_bottom=0x7f030000;

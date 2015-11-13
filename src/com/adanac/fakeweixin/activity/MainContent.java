@@ -36,6 +36,9 @@ public class MainContent extends Activity implements OnClickListener,
 	private ImageView iv_friend;
 	private ImageView iv_setting;
 
+	// 顶部标题
+	private TextView tv_top;
+
 	// 底部菜单4个菜单标题
 	private TextView tv_home;
 	private TextView tv_address;
@@ -106,6 +109,9 @@ public class MainContent extends Activity implements OnClickListener,
 		this.iv_friend = (ImageView) findViewById(R.id.iv_friend);
 		this.iv_setting = (ImageView) findViewById(R.id.iv_setting);
 
+		// 顶部标题
+		this.tv_top = (TextView) findViewById(R.id.tv_top);
+
 		// 底部菜单4个菜单标题
 		this.tv_home = (TextView) findViewById(R.id.tv_home);
 		this.tv_address = (TextView) findViewById(R.id.tv_address);
@@ -172,20 +178,24 @@ public class MainContent extends Activity implements OnClickListener,
 		switch (v.getId()) {
 		case R.id.ll_home:
 			iv_home.setImageResource(R.drawable.agt_aisles);
+			tv_top.setText("首页");
 			tv_home.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(0);
 			break;
 		case R.id.ll_address:
+			tv_top.setText("知识类");
 			iv_address.setImageResource(R.drawable.agt_mp3);
 			tv_address.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(1);
 			break;
 		case R.id.ll_friend:
+			tv_top.setText("能力类");
 			iv_friend.setImageResource(R.drawable.agt_games);
 			tv_friend.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(2);
 			break;
 		case R.id.ll_setting:
+			tv_top.setText("情感类");
 			iv_setting.setImageResource(R.drawable.agt_setting);
 			tv_setting.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(3);
@@ -226,18 +236,22 @@ public class MainContent extends Activity implements OnClickListener,
 		// 当前view被选择的时候,改变底部菜单图片，文字颜色
 		switch (arg0) {
 		case 0:
+			tv_top.setText("首页");
 			iv_home.setImageResource(R.drawable.agt_aisles);
 			tv_home.setTextColor(0xff1B940A);
 			break;
 		case 1:
+			tv_top.setText("知识类");
 			iv_address.setImageResource(R.drawable.agt_mp3);
 			tv_address.setTextColor(0xff1B940A);
 			break;
 		case 2:
+			tv_top.setText("能力类");
 			iv_friend.setImageResource(R.drawable.agt_games);
 			tv_friend.setTextColor(0xff1B940A);
 			break;
 		case 3:
+			tv_top.setText("情感类");
 			iv_setting.setImageResource(R.drawable.agt_setting);
 			tv_setting.setTextColor(0xff1B940A);
 			break;
