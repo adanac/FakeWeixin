@@ -18,6 +18,8 @@ import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 
+import com.adanac.fakeweixin.R;
+
 /**
  * 画图工具类
  * 
@@ -44,7 +46,7 @@ public class DrawUtil extends View {
 	 * @param txtColor
 	 */
 	public static void drawMyOval(Canvas canvas, Paint paint, int left, int up,
-			int right, int down, String str, int txtSize, int ovalColor,
+			int right, int down, int str, int txtSize, int ovalColor,
 			int ovalBackGroundColor, int txtColor) {
 		paint.setAntiAlias(true); // 设置画笔为无锯齿
 		paint.setColor(ovalColor); // 设置画笔颜色
@@ -60,7 +62,16 @@ public class DrawUtil extends View {
 		canvas.drawOval(oval, paint); // 绘制椭圆
 
 		// 写字
-		drawTxtCenter(canvas, paint, str, txtColor, txtSize, left
+		String str0 = "";
+		switch (str) {
+		case R.string.view1_str0:
+			str0 = "媒介素养";
+			break;
+
+		default:
+			break;
+		}
+		drawTxtCenter(canvas, paint, str0, txtColor, txtSize, left
 				+ (right - left) / 2, up + (down - up) / 2);
 	}
 

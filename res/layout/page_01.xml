@@ -18,7 +18,7 @@
 			    android:layout_width="match_parent"
 			    android:layout_height="0dp"
 			    android:orientation="vertical"
-			    android:background = "#AA00CC"
+			    android:background = "#AA00FF"
 			    android:id="@+id/page_01_ll">
 
          

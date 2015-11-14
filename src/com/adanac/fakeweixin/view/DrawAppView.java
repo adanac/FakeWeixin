@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.View;
 
+import com.adanac.fakeweixin.R;
 import com.adanac.fakeweixin.util.DrawUtil;
 import com.adanac.fakeweixin.util.ScreenUtil;
 
@@ -17,6 +18,9 @@ import com.adanac.fakeweixin.util.ScreenUtil;
  */
 public class DrawAppView extends View {
 
+	private int width;
+	private int height;
+
 	public DrawAppView(Context context) {
 		super(context);
 	}
@@ -26,16 +30,16 @@ public class DrawAppView extends View {
 		super.onDraw(canvas);
 
 		ScreenUtil sUtil = new ScreenUtil(this);
-		int width = sUtil.getWidth();
-		int height = sUtil.getHeight();
+		width = sUtil.getWidth();
+		height = sUtil.getHeight();
 		// 创建画笔
 		Paint paint = new Paint();
 		// paint.setColor(Color.RED);// 设置红色
 
 		// 画椭圆
 		DrawUtil.drawMyOval(canvas, paint, width / 2 - 150, height / 2 - 300,
-				width / 2 + 150, height / 2 - 150, "媒介素养", 35, Color.BLACK,
-				Color.YELLOW, Color.BLACK);
+				width / 2 + 150, height / 2 - 150, R.string.view1_str0, 35,
+				Color.BLACK, Color.YELLOW, Color.BLACK);
 		DrawUtil.drawLine(canvas, paint, 350, 250, 350, height / 2 - 300); // 媒介素养小短线
 		DrawUtil.drawLine(canvas, paint, 350, 600, 350, height / 2 - 150); // 媒介素养小短线
 
@@ -106,4 +110,5 @@ public class DrawAppView extends View {
 		DrawUtil.drawLine(canvas, paint, 630, 675, 630, 700);// 画视频小短线
 		DrawUtil.drawLine(canvas, paint, 500, 635, 500, 675);// 画媒介作品小短线
 	}
+
 }

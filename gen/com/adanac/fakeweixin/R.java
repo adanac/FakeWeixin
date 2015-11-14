@@ -135,6 +135,7 @@ public final class R {
         public static final int p04_str=0x7f050007;
         public static final int start=0x7f050003;
         public static final int top_title=0x7f050002;
+        public static final int view1_str0=0x7f050008;
     }
     public static final class style {
         /** 

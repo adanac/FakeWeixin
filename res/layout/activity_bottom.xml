@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:text="知识类"
+            android:text="学生作品"
             android:textColor="#ffffff"
             android:textStyle="bold" />
     </LinearLayout>
@@ -72,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:text="能力类"
+            android:text="个人空间"
             android:textColor="#ffffff"
             android:textStyle="bold" />
     </LinearLayout>
@@ -97,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:text="情感类"
+            android:text="帮助"
             android:textColor="#ffffff"
             android:textStyle="bold" />
     </LinearLayout>

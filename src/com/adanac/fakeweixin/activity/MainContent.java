@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -178,31 +181,36 @@ public class MainContent extends Activity implements OnClickListener,
 		switch (v.getId()) {
 		case R.id.ll_home:
 			iv_home.setImageResource(R.drawable.agt_aisles);
-			tv_top.setText("首页");
+			tv_top.setText("媒介素养");
 			tv_home.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(0);
 			break;
 		case R.id.ll_address:
-			tv_top.setText("知识类");
+			tv_top.setText("学生作品");
 			iv_address.setImageResource(R.drawable.agt_mp3);
 			tv_address.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(1);
 			break;
 		case R.id.ll_friend:
-			tv_top.setText("能力类");
+			tv_top.setText("个人空间");
 			iv_friend.setImageResource(R.drawable.agt_games);
 			tv_friend.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(2);
 			break;
 		case R.id.ll_setting:
-			tv_top.setText("情感类");
+			tv_top.setText("帮助");
 			iv_setting.setImageResource(R.drawable.agt_setting);
 			tv_setting.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(3);
 			// startActivity(new Intent(MainContent.this,
 			// EmotionalActivity.class));
 			break;
-
+		case R.string.view1_str0:
+			tv_top.setText("帮助~~");
+			iv_setting.setImageResource(R.drawable.agt_setting);
+			tv_setting.setTextColor(0xff1B940A);
+			viewPager.setCurrentItem(3);
+			break;
 		default:
 			break;
 		}
@@ -238,22 +246,22 @@ public class MainContent extends Activity implements OnClickListener,
 		// 当前view被选择的时候,改变底部菜单图片，文字颜色
 		switch (arg0) {
 		case 0:
-			tv_top.setText("首页");
+			tv_top.setText("媒介素养");
 			iv_home.setImageResource(R.drawable.agt_aisles);
 			tv_home.setTextColor(0xff1B940A);
 			break;
 		case 1:
-			tv_top.setText("知识类");
+			tv_top.setText("学生作品");
 			iv_address.setImageResource(R.drawable.agt_mp3);
 			tv_address.setTextColor(0xff1B940A);
 			break;
 		case 2:
-			tv_top.setText("能力类");
+			tv_top.setText("个人空间");
 			iv_friend.setImageResource(R.drawable.agt_games);
 			tv_friend.setTextColor(0xff1B940A);
 			break;
 		case 3:
-			tv_top.setText("情感类");
+			tv_top.setText("帮助");
 			iv_setting.setImageResource(R.drawable.agt_setting);
 			tv_setting.setTextColor(0xff1B940A);
 			break;
@@ -261,6 +269,26 @@ public class MainContent extends Activity implements OnClickListener,
 		default:
 			break;
 		}
+
+	}
+
+	@Override
+	public boolean onTouchEvent(MotionEvent e) {
+		TextView str0 = (TextView) findViewById(R.string.view1_str0);
+		str0.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				ComponentName componentname = new ComponentName(
+						MainContent.this,
+						"com.adanac.fakeweixin.activity.MainContent");
+				Intent intent = new Intent();
+				intent.setComponent(componentname);
+				startActivity(intent);
+
+			}
+		});
+		return true;
 
 	}
 }
