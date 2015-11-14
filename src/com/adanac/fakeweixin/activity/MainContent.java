@@ -199,6 +199,8 @@ public class MainContent extends Activity implements OnClickListener,
 			iv_setting.setImageResource(R.drawable.agt_setting);
 			tv_setting.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(3);
+			// startActivity(new Intent(MainContent.this,
+			// EmotionalActivity.class));
 			break;
 
 		default:
