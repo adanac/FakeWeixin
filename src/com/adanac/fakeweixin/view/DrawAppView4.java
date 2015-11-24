@@ -10,7 +10,7 @@ import com.adanac.fakeweixin.util.DrawUtil;
 import com.adanac.fakeweixin.util.ScreenUtil;
 
 /**
- * 情感类
+ * 情感类View
  * 
  * @author adanac
  * 
@@ -33,7 +33,7 @@ public class DrawAppView4 extends View {
 		paint.setColor(Color.GREEN);// 设置红色
 
 		DrawUtil.drawCircleAndTxt(canvas, paint, width / 2, height / 2 - 200,
-				100, "媒介解读", Color.LTGRAY, Color.BLACK, 35);
+				100, "媒介解读", Color.rgb(255, 100, 0), Color.BLACK, 35);
 		DrawUtil.drawCircleAndTxt(canvas, paint, width / 2, height / 2 - 450,
 				70, "水墨画", Color.CYAN, Color.BLACK, 30);
 		DrawUtil.drawCircleAndTxt(canvas, paint, width / 2, height / 2 + 50,
