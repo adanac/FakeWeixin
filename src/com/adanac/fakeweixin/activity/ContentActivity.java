@@ -6,7 +6,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.adanac.fakeweixin.R;
-import com.adanac.fakeweixin.view.DrawAppView;
+import com.adanac.fakeweixin.view.DrawAppView_bak;
 
 public class ContentActivity extends Activity {
 	@Override
@@ -22,7 +22,7 @@ public class ContentActivity extends Activity {
 
 		// TODO 要把不同的图形写到不同的view中，最后才逐个添加到总的content中
 		LinearLayout layoutContent = (LinearLayout) findViewById(R.id.content_content);
-		final DrawAppView view_one = new DrawAppView(this);
+		final DrawAppView_bak view_one = new DrawAppView_bak(this);
 		view_one.setMinimumHeight(1000);
 		view_one.setMinimumWidth(1200);
 		// 通知view组件重绘

@@ -6,7 +6,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.adanac.fakeweixin.R;
-import com.adanac.fakeweixin.view.DrawAppView;
+import com.adanac.fakeweixin.view.DrawAppView_bak;
 
 public class ContentActivity2 extends Activity {
 	@Override
@@ -21,7 +21,7 @@ public class ContentActivity2 extends Activity {
 		title.setText("我的教育app");
 
 		LinearLayout layoutContent = (LinearLayout) findViewById(R.id.content_content);
-		final DrawAppView view = new DrawAppView(this);
+		final DrawAppView_bak view = new DrawAppView_bak(this);
 		view.setMinimumHeight(1000);
 		view.setMinimumWidth(1200);
 		// 通知view组件重绘

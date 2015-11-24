@@ -4,13 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
-import android.content.ComponentName;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -24,6 +21,7 @@ import com.adanac.fakeweixin.view.DrawAppView;
 import com.adanac.fakeweixin.view.DrawAppView2;
 import com.adanac.fakeweixin.view.DrawAppView3;
 import com.adanac.fakeweixin.view.DrawAppView4;
+import com.adanac.fakeweixin.view.DrawAppView_bak;
 
 public class MainContent extends Activity implements OnClickListener,
 		OnPageChangeListener {
@@ -78,7 +76,7 @@ public class MainContent extends Activity implements OnClickListener,
 	private void initContent() {
 		// TODO 要把不同的图形写到不同的view中，最后才逐个添加到总的content中
 		LinearLayout layoutContent = (LinearLayout) findViewById(R.id.main_content);
-		final DrawAppView view_one = new DrawAppView(this);
+		final DrawAppView_bak view_one = new DrawAppView_bak(this);
 		view_one.setMinimumHeight(600);
 		view_one.setMinimumWidth(800);
 		// 通知view组件重绘
@@ -214,7 +212,6 @@ public class MainContent extends Activity implements OnClickListener,
 		default:
 			break;
 		}
-
 	}
 
 	private void restartBotton() {
@@ -269,26 +266,6 @@ public class MainContent extends Activity implements OnClickListener,
 		default:
 			break;
 		}
-
-	}
-
-	@Override
-	public boolean onTouchEvent(MotionEvent e) {
-		TextView str0 = (TextView) findViewById(R.string.view1_str0);
-		str0.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				ComponentName componentname = new ComponentName(
-						MainContent.this,
-						"com.adanac.fakeweixin.activity.MainContent");
-				Intent intent = new Intent();
-				intent.setComponent(componentname);
-				startActivity(intent);
-
-			}
-		});
-		return true;
 
 	}
 }

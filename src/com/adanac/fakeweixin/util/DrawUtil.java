@@ -109,9 +109,13 @@ public class DrawUtil extends View {
 	 * 画箭头
 	 * 
 	 * @param sx
+	 *            起始x坐标
 	 * @param sy
+	 *            起始y坐标
 	 * @param ex
+	 *            终止x坐标
 	 * @param ey
+	 *            终止y坐标
 	 */
 	public static void drawAL(Canvas canvas, Paint paint, int sx, int sy,
 			int ex, int ey) {
@@ -202,9 +206,13 @@ public class DrawUtil extends View {
 	 * @param canvas
 	 * @param paint
 	 * @param ox1
+	 *            起始x坐标
 	 * @param oy1
+	 *            起始y坐标
 	 * @param ox2
+	 *            终止x坐标
 	 * @param oy2
+	 *            终止y坐标
 	 */
 	public static void drawLine(Canvas canvas, Paint paint, int ox1, int oy1,
 			int ox2, int oy2) {
@@ -219,13 +227,21 @@ public class DrawUtil extends View {
 	 * @param canvas
 	 * @param p
 	 * @param ox
+	 *            中心x坐标
 	 * @param oy
+	 *            中心y坐标
 	 * @param a
+	 *            矩形长
 	 * @param b
+	 *            矩形宽
 	 * @param str
+	 *            文字
 	 * @param rectColor
+	 *            填充矩形颜色
 	 * @param txtColor
+	 *            文字颜色
 	 * @param txtSize
+	 *            文字大小
 	 */
 	public static void drawRt(Canvas canvas, Paint p, int ox, int oy, int a,
 			int b, String str, int rectColor, int txtColor, int txtSize) {
@@ -358,13 +374,21 @@ public class DrawUtil extends View {
 	 * @param canvas
 	 * @param paint
 	 * @param ox
+	 *            中间位置的x坐标
 	 * @param oy
+	 *            中间位置的y坐标
 	 * @param a
+	 *            矩形长度
 	 * @param b
+	 *            矩形宽度
 	 * @param str
+	 *            文字
 	 * @param rectColor
+	 *            矩形框颜色
 	 * @param txtColor
+	 *            字体颜色
 	 * @param txtSize
+	 *            字体大小
 	 */
 	public static void drawRectCenterTxt(Canvas canvas, Paint paint, int ox,
 			int oy, int a, int b, String str, int rectColor, int txtColor,
@@ -438,6 +462,18 @@ public class DrawUtil extends View {
 		canvas.drawText(str, left, baseline, paint);
 	}
 
+	/**
+	 * 连接两个圆的箭头
+	 * 
+	 * @param canvas
+	 * @param ax
+	 * @param ay
+	 * @param ra
+	 * @param bx
+	 * @param by
+	 * @param rb
+	 * @param paint
+	 */
 	public static void drawArowLine(Canvas canvas, int ax, int ay, int ra,
 			int bx, int by, int rb, Paint paint) {
 		// float k = (by - ay) / (bx - ax);

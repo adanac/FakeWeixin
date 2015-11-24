@@ -14,12 +14,12 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.adanac.fakeweixin.R;
 import com.adanac.fakeweixin.adapter.ImageAdapter;
 
-public class MainActivity extends Activity implements OnPageChangeListener, OnClickListener {
+public class MainActivity extends Activity implements OnPageChangeListener,
+		OnClickListener {
 
 	private ViewPager viewPager;
 	private List<View> viewList;
@@ -106,20 +106,28 @@ public class MainActivity extends Activity implements OnPageChangeListener, OnCl
 	public void onPageSelected(int position) {// 当前页卡被选择时,position为当前页数
 
 		if (position == 3) {// 由于进入微信这个按钮在第4个页面（view）才会出现，如果一开始就加载这个按钮监听，就导致空指针异常
-			startButton = (Button) findViewById(R.id.btn_start);
-			startButton.setOnClickListener(new OnClickListener() {// 匿名内部类，区分小圆圈的点击事件
-
-						@Override
-						public void onClick(View v) {
-							Toast.makeText(MainActivity.this, "欢迎进入APP", Toast.LENGTH_SHORT).show();
-							startActivity(new Intent(MainActivity.this, MainContent.class));
-						}
-					});
+			// startButton = (Button) findViewById(R.id.btn_start);
+			// startButton.setOnClickListener(new OnClickListener() {//
+			// 匿名内部类，区分小圆圈的点击事件
+			//
+			// @Override
+			// public void onClick(View v) {
+			// Toast.makeText(MainActivity.this, "欢迎进入APP",
+			// Toast.LENGTH_SHORT).show();
+			// startActivity(new Intent(MainActivity.this,
+			// TabMainActivity.class));
+			// }
+			// });
+			// onClickMain(view);
 		}
 		points[position].setEnabled(false);// 不可点
 		points[currentIndex].setEnabled(true);// 恢复之前页面状态
 		currentIndex = position;
 
+	}
+
+	public void onClickMain(View view) {
+		startActivity(new Intent(getApplicationContext(), MainContent.class));
 	}
 
 	@Override
@@ -129,5 +137,4 @@ public class MainActivity extends Activity implements OnPageChangeListener, OnCl
 		viewPager.setCurrentItem(Integer.parseInt(v.getTag().toString()));
 
 	}
-
 }

@@ -13,6 +13,5 @@
         android:text="@string/top_title"
         android:textSize="20sp" 
         android:textColor="#ffffff"/>
-    
 
 </RelativeLayout>
