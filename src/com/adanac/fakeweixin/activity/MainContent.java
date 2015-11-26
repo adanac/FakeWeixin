@@ -128,7 +128,7 @@ public class MainContent extends Activity implements OnClickListener,
 		View page_03 = View.inflate(MainContent.this, R.layout.page_03, null);
 		View page_04 = View.inflate(MainContent.this, R.layout.page_04, null);
 
-		// 在第1个页面画图形
+		// 在第1个页面画图形（首页）
 		final DrawAppView view_one = new DrawAppView(this);
 		view_one.setMinimumHeight(600);
 		view_one.setMinimumWidth(800);
@@ -144,7 +144,7 @@ public class MainContent extends Activity implements OnClickListener,
 		view_two.invalidate();
 		((ViewGroup) page_02).addView(view_two);
 
-		// 在第3个页面画图形（）
+		// 在第3个页面画图形（能力类）
 		final DrawAppView3 view_three = new DrawAppView3(this);
 		view_two.setMinimumHeight(600);
 		view_two.setMinimumWidth(800);
@@ -152,7 +152,7 @@ public class MainContent extends Activity implements OnClickListener,
 		view_two.invalidate();
 		((ViewGroup) page_03).addView(view_three);
 
-		// 在第4个页面画图形
+		// 在第4个页面画图形（情感类）
 		final DrawAppView4 view_four = new DrawAppView4(this);
 		view_four.setMinimumHeight(600);
 		view_four.setMinimumWidth(800);

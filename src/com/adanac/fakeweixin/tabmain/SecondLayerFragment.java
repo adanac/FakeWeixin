@@ -40,7 +40,7 @@ public class SecondLayerFragment extends LazyFragment {
 		switch (position) {
 		case 0:
 			textView.setText("画出第1个页面");
-			indexView = findViewById(R.id.frament_mainTab_item_IndexView);
+			// indexView = findViewById(R.id.frament_mainTab_item_IndexView);
 
 			indexView.draw(canvas);
 			// TabMainActivity activity = new TabMainActivity();
@@ -49,7 +49,7 @@ public class SecondLayerFragment extends LazyFragment {
 			break;
 		case 1:
 			// textView.setText("画出第2个页面");
-			indexView = findViewById(R.id.frament_mainTab_item_IndexView);
+			// indexView = findViewById(R.id.frament_mainTab_item_IndexView);
 			indexView = new DrawAppView2(indexView.getContext());
 			break;
 		case 2:
@@ -70,7 +70,7 @@ public class SecondLayerFragment extends LazyFragment {
 
 	private Canvas drawIndexView() {
 
-		View view = findViewById(R.id.frament_mainTab_item_IndexView);
+		// View view = findViewById(R.id.frament_mainTab_item_IndexView);
 		Paint paint = new Paint();
 		// paint.setColor(Color.RED);// 设置红色
 

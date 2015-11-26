@@ -23,13 +23,13 @@ import com.adanac.fakeweixin.view.DrawAppView3;
 import com.adanac.fakeweixin.view.DrawAppView4;
 
 /**
- * 知识类Activity
+ * 情感类Activity
  * 
  * @author adanac
- * @date 2015-11-24
+ * @date 2015-11-26
  * @version 1.0
  */
-public class KnowActivity extends Activity implements OnClickListener,
+public class EmotionActivity extends Activity implements OnClickListener,
 		OnPageChangeListener {
 	// 底部菜单4个Linearlayout
 	private LinearLayout ll_home;
@@ -44,7 +44,7 @@ public class KnowActivity extends Activity implements OnClickListener,
 	private ImageView iv_setting;
 
 	// 顶部标题
-	private TextView know_top;
+	private TextView emotion_top;
 
 	// 底部菜单4个菜单标题
 	private TextView tv_home;
@@ -60,7 +60,7 @@ public class KnowActivity extends Activity implements OnClickListener,
 
 	private List<View> views;
 
-	private static final String TAG = "Rabbit";
+	private static final String TAG = "Adanac";
 
 	// private Button mbButton;
 	// private ImageView imageView;
@@ -69,7 +69,7 @@ public class KnowActivity extends Activity implements OnClickListener,
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.know_content);
+		setContentView(R.layout.emotion_content);
 
 		// 初始化控件
 		initView();
@@ -94,7 +94,7 @@ public class KnowActivity extends Activity implements OnClickListener,
 		this.iv_setting = (ImageView) findViewById(R.id.iv_setting);
 
 		// 顶部标题
-		this.know_top = (TextView) findViewById(R.id.know_top);
+		this.emotion_top = (TextView) findViewById(R.id.emotion_top);
 
 		// 底部菜单4个菜单标题
 		this.tv_home = (TextView) findViewById(R.id.tv_home);
@@ -106,10 +106,14 @@ public class KnowActivity extends Activity implements OnClickListener,
 		this.viewPager = (ViewPager) findViewById(R.id.vp_content);
 
 		// 适配器
-		View page_01 = View.inflate(KnowActivity.this, R.layout.page_01, null);
-		View page_02 = View.inflate(KnowActivity.this, R.layout.page_02, null);
-		View page_03 = View.inflate(KnowActivity.this, R.layout.page_03, null);
-		View page_04 = View.inflate(KnowActivity.this, R.layout.page_04, null);
+		View page_01 = View.inflate(EmotionActivity.this, R.layout.page_01,
+				null);
+		View page_02 = View.inflate(EmotionActivity.this, R.layout.page_02,
+				null);
+		View page_03 = View.inflate(EmotionActivity.this, R.layout.page_03,
+				null);
+		View page_04 = View.inflate(EmotionActivity.this, R.layout.page_04,
+				null);
 
 		// 在第1个页面画图形
 		final DrawAppView view_one = new DrawAppView(this);
@@ -145,13 +149,12 @@ public class KnowActivity extends Activity implements OnClickListener,
 
 		views = new ArrayList<View>();
 		// views.add(page_01);
-		views.add(page_02);
+		// views.add(page_02);
 		// views.add(page_03);
-		// views.add(page_04);
+		views.add(page_04);
 
 		this.adapter = new ContentAdapter(views);
 		viewPager.setAdapter(adapter);
-
 	}
 
 	private void initEvent() {
@@ -181,60 +184,7 @@ public class KnowActivity extends Activity implements OnClickListener,
 	}
 
 	@Override
-	public void onClick(View v) {
-		// 在每次点击后将所有的底部按钮(ImageView,TextView)颜色改为灰色，然后根据点击着色
-		restartBotton();
-		// ImageView和TetxView置为绿色，页面随之跳转
-		switch (v.getId()) {
-		case R.id.ll_home:
-			iv_home.setImageResource(R.drawable.agt_aisles);
-			know_top.setText("知识类-媒介素养");
-			tv_home.setTextColor(0xff1B940A);
-			viewPager.setCurrentItem(0);
-			break;
-		case R.id.ll_address:
-			know_top.setText("知识类-学生作品");
-			iv_address.setImageResource(R.drawable.agt_mp3);
-			tv_address.setTextColor(0xff1B940A);
-			viewPager.setCurrentItem(1);
-			break;
-		case R.id.ll_friend:
-			know_top.setText("知识类-个人空间");
-			iv_friend.setImageResource(R.drawable.agt_games);
-			tv_friend.setTextColor(0xff1B940A);
-			viewPager.setCurrentItem(2);
-			break;
-		case R.id.ll_setting:
-			know_top.setText("知识类-帮助");
-			iv_setting.setImageResource(R.drawable.agt_setting);
-			tv_setting.setTextColor(0xff1B940A);
-			viewPager.setCurrentItem(3);
-			// startActivity(new Intent(MainContent.this,
-			// EmotionalActivity.class));
-			break;
-		case R.string.view1_str0:
-			know_top.setText("知识类2-帮助~~");
-			iv_setting.setImageResource(R.drawable.agt_setting);
-			tv_setting.setTextColor(0xff1B940A);
-			viewPager.setCurrentItem(3);
-			break;
-		default:
-			break;
-		}
-	}
-
-	private void restartBotton() {
-		// ImageView置为灰色
-		iv_home.setImageResource(R.drawable.agt_aisles);
-		iv_address.setImageResource(R.drawable.agt_mp3);
-		iv_friend.setImageResource(R.drawable.agt_games);
-		iv_setting.setImageResource(R.drawable.agt_setting);
-		// TextView置为白色
-		tv_home.setTextColor(0xffffffff);
-		tv_address.setTextColor(0xffffffff);
-		tv_friend.setTextColor(0xffffffff);
-		tv_setting.setTextColor(0xffffffff);
+	public void onClick(View arg0) {
 
 	}
-
 }

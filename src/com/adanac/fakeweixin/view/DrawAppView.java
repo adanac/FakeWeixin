@@ -9,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.adanac.fakeweixin.activity.MainContent;
+import com.adanac.fakeweixin.activity.sub.EmotionActivity;
 import com.adanac.fakeweixin.activity.sub.EnableActivity;
 import com.adanac.fakeweixin.activity.sub.KnowActivity;
 import com.adanac.fakeweixin.util.DrawUtil;
@@ -22,7 +23,7 @@ import com.adanac.fakeweixin.util.ScreenUtil;
  */
 public class DrawAppView extends View {
 
-	Context context;
+	private Context context;
 	ScreenUtil sUtil = new ScreenUtil(this);
 	private int width = sUtil.getWidth();
 	private int height = sUtil.getHeight();
@@ -97,9 +98,9 @@ public class DrawAppView extends View {
 				Color.GRAY, Color.BLACK, 20);
 
 		DrawUtil.drawLine(canvas, paint, 200, 635, 200, 700); // 连接学术空间和理论文章
-		DrawUtil.drawLine(canvas, paint, 100, 675, 300, 675);// 连接研究学者和好书分享
-		DrawUtil.drawLine(canvas, paint, 100, 675, 100, 700);// 2根小短线
-		DrawUtil.drawLine(canvas, paint, 300, 675, 300, 700);// 2根小短线
+		DrawUtil.drawLine(canvas, paint, 100, 675, 300, 675); // 连接研究学者和好书分享
+		DrawUtil.drawLine(canvas, paint, 100, 675, 100, 700); // 2根小短线
+		DrawUtil.drawLine(canvas, paint, 300, 675, 300, 700); // 2根小短线
 
 		DrawUtil.drawRectCenterTxt(canvas, paint, 530, 600, 140, 70, "使用媒介",
 				Color.GRAY, Color.BLACK, 25);
@@ -111,17 +112,17 @@ public class DrawAppView extends View {
 				Color.GRAY, Color.BLACK, 20);
 
 		// drawLine(canvas, paint, 500, 635, 500, 700); // 连接媒介作品和音频
-		DrawUtil.drawLine(canvas, paint, 430, 675, 630, 675);// 连接图像和视频
-		DrawUtil.drawLine(canvas, paint, 430, 675, 430, 700);// 画图像小短线
-		DrawUtil.drawLine(canvas, paint, 530, 675, 530, 700);// 画音频小短线
-		DrawUtil.drawLine(canvas, paint, 630, 675, 630, 700);// 画视频小短线
-		DrawUtil.drawLine(canvas, paint, 530, 635, 530, 675);// 画媒介作品小短线
+		DrawUtil.drawLine(canvas, paint, 430, 675, 630, 675); // 连接图像和视频
+		DrawUtil.drawLine(canvas, paint, 430, 675, 430, 700); // 画图像小短线
+		DrawUtil.drawLine(canvas, paint, 530, 675, 530, 700); // 画音频小短线
+		DrawUtil.drawLine(canvas, paint, 630, 675, 630, 700); // 画视频小短线
+		DrawUtil.drawLine(canvas, paint, 530, 635, 530, 675); // 画媒介作品小短线
 
 		// 四个箭头
-		DrawUtil.drawAL(canvas, paint, 200, 565, 200, 285);// 连接研究媒介与走进媒介
-		DrawUtil.drawAL(canvas, paint, 270, 250, 460, 250);// 连接走进媒介与理解媒介
-		DrawUtil.drawAL(canvas, paint, 530, 285, 530, 565);// 连接理解媒介与使用媒介
-		DrawUtil.drawAL(canvas, paint, 460, 600, 270, 600);// 连接使用媒介与研究媒介
+		DrawUtil.drawAL(canvas, paint, 200, 565, 200, 285); // 连接研究媒介与走进媒介
+		DrawUtil.drawAL(canvas, paint, 270, 250, 460, 250); // 连接走进媒介与理解媒介
+		DrawUtil.drawAL(canvas, paint, 530, 285, 530, 565); // 连接理解媒介与使用媒介
+		DrawUtil.drawAL(canvas, paint, 460, 600, 270, 600); // 连接使用媒介与研究媒介
 
 	}
 
@@ -145,7 +146,17 @@ public class DrawAppView extends View {
 		clickNLL(event, x, y, 530 - 90 / 2, 530 + 90 / 2, 120 - 60 / 2,
 				120 + 60 / 2, EnableActivity.class);
 
+		// 点击情感类（ 630, 120, 90, 60）
+		clickQGL(event, x, y, 630 - 90 / 2, 630 + 90 / 2, 120 - 60 / 2,
+				120 + 60 / 2, EmotionActivity.class);
+
 		return true;
+	}
+
+	// 点击情感类
+	private void clickQGL(MotionEvent event, float x, float y, float x1,
+			float x2, float y1, float y2, Class<EmotionActivity> clazz) {
+		clickSubMethod(event, x, y, x1, x2, y1, y2, clazz, "点击了情感类");
 	}
 
 	// 点击能力类
@@ -157,6 +168,7 @@ public class DrawAppView extends View {
 	// 点击知识类
 	private void clickZSL(MotionEvent event, float x, float y, float x1,
 			float x2, float y1, float y2, Class<KnowActivity> clazz) {
+
 		clickSubMethod(event, x, y, x1, x2, y1, y2, clazz, "点击了知识类");
 	}
 

@@ -8,7 +8,7 @@ import android.graphics.Paint;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.adanac.fakeweixin.activity.ContentFirstActivity;
+import com.adanac.fakeweixin.activity.moretab.MoreTabMJSYActivity;
 import com.adanac.fakeweixin.util.DrawUtil;
 import com.adanac.fakeweixin.util.ScreenUtil;
 
@@ -101,41 +101,38 @@ public class DrawAppView2 extends View {
 
 	}
 
-	public void OnClick(MotionEvent event) {
-		int action = event.getAction();
-		if (action != MotionEvent.ACTION_DOWN) {
-			return;
-		}
-		int x = (int) event.getX();
-		int y = (int) event.getY();
-		// Toast.makeText(MainContent.class, "欢迎进入APP",
-		// Toast.LENGTH_SHORT).show();
-
-	}
-
 	/**
-	 * 点击事件
+	 * 点击事件 onTouchEvent
 	 */
 	public boolean onTouchEvent(MotionEvent event) {
 		float x = event.getX();
 		float y = event.getY();
 		System.out.println("x:" + x + "y:" + y);
-		// 点击媒介素养
-		if (x > width / 2 - 100 && x < width / 2 + 100 && y > height / 2 - 300
-				&& y < height / 2 - 100) {
+
+		// 点击媒介素养内涵（width / 2 - 250,height / 2 - 250, 150, 90）
+		clickMJSYNH(event, x, y, width / 2 - 250 - 150 / 2, width / 2 - 250
+				+ 150 / 2, height / 2 - 250 - 90 / 2,
+				height / 2 - 250 + 90 / 2, MoreTabMJSYActivity.class);
+		return true;
+	}
+
+	// 点击媒介素养内涵
+	private void clickMJSYNH(MotionEvent event, float x, float y, float x1,
+			float x2, float y1, float y2, Class<MoreTabMJSYActivity> clazz) {
+		clickSubMethod(event, x, y, x1, x2, y1, y2, clazz, "点击了媒介素养内涵");
+	}
+
+	private void clickSubMethod(MotionEvent event, float x, float y, float x1,
+			float x2, float y1, float y2, Class<?> clazz, String str) {
+		if (x > x1 && x < x2 && y > y1 && y < y2) {
 			switch (event.getAction()) {
 			case MotionEvent.ACTION_DOWN:
-				System.out.println("点击了此区域");
+				System.out.println(str);
 				Intent intent = new Intent();
-				intent.setClass(context, ContentFirstActivity.class);
+				intent.setClass(context, clazz);
 				context.startActivity(intent);
-				break;
-
-			case MotionEvent.ACTION_UP:
-				System.out.println("离开了此区域");
 				break;
 			}
 		}
-		return true;
 	}
 }

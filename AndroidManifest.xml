@@ -59,6 +59,8 @@
         <activity android:name="com.adanac.fakeweixin.tabmain.DrawIndex"></activity>
         <activity android:name="com.adanac.fakeweixin.activity.sub.KnowActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.activity.sub.EnableActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.activity.sub.EmotionActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.activity.sub.MoreTabMJSYActivity"></activity>
     </application>
 
 </manifest>

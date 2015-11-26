@@ -4,26 +4,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <!-- <ProgressBar
+    <ProgressBar
         android:id="@+id/fragment_mainTab_item_progressBar"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center" />
- -->
-    <ListView 
-        android:id="@+id/frament_mainTab_item_IndexView"
-        android:layout_width="500px"
-        android:layout_height="800px"
-       ></ListView>
-    
-     <TextView
+
+    <TextView
         android:id="@+id/fragment_mainTab_item_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
+        android:layout_gravity="center"
         android:text="加载完毕"
         android:visibility="gone" />
-         
 
 </FrameLayout>
