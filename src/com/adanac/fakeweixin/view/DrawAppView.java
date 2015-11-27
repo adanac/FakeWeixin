@@ -19,7 +19,8 @@ import com.adanac.fakeweixin.util.ScreenUtil;
  * Ê×Ò³View
  * 
  * @author adanac
- * @date 2015-11-13
+ * @date 2015-11-27
+ * @version 1.0
  */
 public class DrawAppView extends View {
 
