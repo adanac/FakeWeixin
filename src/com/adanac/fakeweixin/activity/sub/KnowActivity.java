@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -31,6 +32,7 @@ import com.adanac.fakeweixin.view.DrawAppView4;
  */
 public class KnowActivity extends Activity implements OnClickListener,
 		OnPageChangeListener {
+	private Context mContext;
 	// 底部菜单4个Linearlayout
 	private LinearLayout ll_home;
 	private LinearLayout ll_address;
@@ -75,8 +77,9 @@ public class KnowActivity extends Activity implements OnClickListener,
 		initView();
 		// 初始化底部按钮事件
 		initEvent();
-
+		// 打印日志
 		Log.i(TAG, "1----------onCreate");
+
 	}
 
 	private void initView() {
@@ -163,6 +166,17 @@ public class KnowActivity extends Activity implements OnClickListener,
 
 		// 设置ViewPager滑动监听
 		viewPager.setOnPageChangeListener(this);
+
+		// TODO
+		// 设置返回按钮
+		findViewById(R.id.iv_back).setOnClickListener(
+				new View.OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						// TODO
+						KnowActivity.this.finish();
+					}
+				});
 	}
 
 	@Override
