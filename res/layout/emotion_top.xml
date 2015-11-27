@@ -30,7 +30,7 @@
 	        android:text="@string/emotion_top_title"
 	        android:textSize="20sp" 
 	        android:textColor="#ffffff"
-	        android:layout_marginLeft="120dp"/>
+	        android:layout_marginLeft="110dp"/>
 	    </LinearLayout>
 
 </LinearLayout>
