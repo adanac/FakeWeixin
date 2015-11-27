@@ -24,7 +24,8 @@ import com.adanac.fakeweixin.R;
  * 画图工具类
  * 
  * @author adanac
- * @date 2015-11-13上午12:23:11
+ * @date 2015-11-27
+ * @version 1.0
  */
 public class DrawUtil extends View {
 

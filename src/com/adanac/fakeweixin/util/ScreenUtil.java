@@ -7,7 +7,8 @@ import android.view.View;
  * 屏幕相关类
  * 
  * @author adanac
- * @date 2015-11-13上午12:23:31
+ * @date 2015-11-27
+ * @version 1.0
  */
 public class ScreenUtil {
 	private View view;
