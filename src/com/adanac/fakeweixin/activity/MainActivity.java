@@ -131,6 +131,11 @@ public class MainActivity extends Activity implements OnPageChangeListener,
 
 	}
 
+	/**
+	 * View4.xml÷–∂‘”¶£∫ android:onClick="onClickMain"
+	 * 
+	 * @param view
+	 */
 	public void onClickMain(View view) {
 		startActivity(new Intent(getApplicationContext(), MainContent.class));
 	}
