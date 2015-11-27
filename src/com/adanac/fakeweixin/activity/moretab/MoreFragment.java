@@ -9,6 +9,11 @@ import android.widget.TextView;
 import com.adanac.fakeweixin.R;
 import com.adanac.fragment.LazyFragment;
 
+/**
+ * @author adanac
+ * @date 2015-11-27
+ * @version 1.0
+ */
 public class MoreFragment extends LazyFragment {
 	private ProgressBar progressBar;
 	private TextView textView;

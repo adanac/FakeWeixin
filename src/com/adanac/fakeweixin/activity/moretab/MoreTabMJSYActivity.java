@@ -22,6 +22,11 @@ import com.adanac.view.indicator.ScrollIndicatorView;
 import com.adanac.view.indicator.slidebar.ColorBar;
 import com.adanac.view.indicator.transition.OnTransitionTextListener;
 
+/**
+ * @author adanac
+ * @date 2015-11-27
+ * @version 1.0
+ */
 public class MoreTabMJSYActivity extends FragmentActivity {
 	private IndicatorViewPager indicatorViewPager;
 	private LayoutInflater inflate;
