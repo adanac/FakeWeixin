@@ -167,13 +167,12 @@ public class KnowActivity extends Activity implements OnClickListener,
 		// 设置ViewPager滑动监听
 		viewPager.setOnPageChangeListener(this);
 
-		// TODO
 		// 设置返回按钮
 		findViewById(R.id.iv_back).setOnClickListener(
 				new View.OnClickListener() {
 					@Override
 					public void onClick(View view) {
-						// TODO
+						// 使当前Activity结束就可以了
 						KnowActivity.this.finish();
 					}
 				});

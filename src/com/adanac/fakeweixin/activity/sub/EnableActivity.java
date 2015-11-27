@@ -167,6 +167,16 @@ public class EnableActivity extends Activity implements OnClickListener,
 
 		// 设置ViewPager滑动监听
 		viewPager.setOnPageChangeListener(this);
+
+		// 设置返回按钮
+		findViewById(R.id.iv_back).setOnClickListener(
+				new View.OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						// 使当前Activity结束就可以了
+						EnableActivity.this.finish();
+					}
+				});
 	}
 
 	@Override
