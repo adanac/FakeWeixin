@@ -6,6 +6,11 @@ import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 
+/**
+ * @author adanac
+ * @date 2015-11-27
+ * @version 1.0
+ */
 public class ImageAdapter extends PagerAdapter {
 	private List<View> list;
 

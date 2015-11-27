@@ -7,10 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * viewpagerßmÅäÆ÷
+ * viewpagerÊÊÅäÆ÷
  * 
- * @author vance
- * 
+ * @author adanac
+ * @date 2015-11-27
+ * @version 1.0
  */
 public class ContentAdapter extends PagerAdapter {
 
