@@ -18,7 +18,8 @@ import com.adanac.fakeweixin.util.RadialMenuWidget.RadialMenuEntry;
  * «È∏–¿‡
  * 
  * @author adanac
- * 
+ * @date 2015-11-27
+ * @version 1.0
  */
 public class EmotionalActivity extends Activity {
 

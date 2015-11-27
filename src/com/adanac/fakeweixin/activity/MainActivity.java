@@ -18,6 +18,11 @@ import android.widget.LinearLayout;
 import com.adanac.fakeweixin.R;
 import com.adanac.fakeweixin.adapter.ImageAdapter;
 
+/**
+ * @author adanac
+ * @date 2015-11-27
+ * @version 1.0
+ */
 public class MainActivity extends Activity implements OnPageChangeListener,
 		OnClickListener {
 

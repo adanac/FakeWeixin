@@ -23,6 +23,11 @@ import com.adanac.fakeweixin.view.DrawAppView3;
 import com.adanac.fakeweixin.view.DrawAppView4;
 import com.adanac.fakeweixin.view.DrawAppView_bak;
 
+/**
+ * @author adanac
+ * @date 2015-11-27
+ * @version 1.0
+ */
 public class MainContent extends Activity implements OnClickListener,
 		OnPageChangeListener {
 	// µ×²¿²Ëµ¥4¸öLinearlayout
