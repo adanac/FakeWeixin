@@ -8,6 +8,11 @@ import android.widget.TextView;
 import com.adanac.fakeweixin.R;
 import com.adanac.fakeweixin.view.DrawAppView_bak;
 
+/**
+ * @author adanac
+ * @date 2015-11-28
+ * @version 0.2
+ */
 public class ContentActivity2 extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
