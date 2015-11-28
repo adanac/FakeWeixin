@@ -19,6 +19,8 @@ import com.adanac.fakeweixin.R;
 import com.adanac.fakeweixin.adapter.ImageAdapter;
 
 /**
+ * ∆Ù∂Ø≥Ã–Ú¿‡
+ * 
  * @author adanac
  * @date 2015-11-27
  * @version 1.0
