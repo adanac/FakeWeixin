@@ -10,6 +10,11 @@ import android.widget.TextView;
 import com.adanac.fakeweixin.R;
 import com.adanac.fakeweixin.view.DrawAppView_bak;
 
+/**
+ * @author adanac
+ * @date 2015-11-28
+ * @version 0.3
+ */
 public class ContentActivity3 extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -41,7 +46,8 @@ public class ContentActivity3 extends Activity {
 			@Override
 			public void onClick(View view) {
 				if (i == 0) {
-					Intent intent = new Intent(ContentActivity3.this, ContentFirstActivity.class);
+					Intent intent = new Intent(ContentActivity3.this,
+							ContentFirstActivity.class);
 					startActivity(intent);
 				}
 			}
