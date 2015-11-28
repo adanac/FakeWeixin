@@ -12,6 +12,13 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
+/**
+ * ≤‚ ‘Activity
+ * 
+ * @author adanac
+ * @date 2015-11-28
+ * @version 1.0
+ */
 public class Activity01 extends Activity {
 	private static int miCount = 0;
 
