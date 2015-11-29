@@ -9,9 +9,9 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.adanac.fakeweixin.activity.MainContent;
+import com.adanac.fakeweixin.activity.moretab.MoreTabMJSYActivity;
 import com.adanac.fakeweixin.activity.sub.EmotionActivity;
 import com.adanac.fakeweixin.activity.sub.EnableActivity;
-import com.adanac.fakeweixin.activity.sub.KnowActivity;
 import com.adanac.fakeweixin.util.DrawUtil;
 import com.adanac.fakeweixin.util.ScreenUtil;
 
@@ -141,7 +141,7 @@ public class DrawAppView extends View {
 
 		// 点击知识类（430, 120, 90, 60）
 		clickZSL(event, x, y, 430 - 90 / 2, 430 + 90 / 2, 120 - 60 / 2,
-				120 + 60 / 2, KnowActivity.class);
+				120 + 60 / 2, MoreTabMJSYActivity.class);
 
 		// 点击能力类（530, 120, 90, 60）
 		clickNLL(event, x, y, 530 - 90 / 2, 530 + 90 / 2, 120 - 60 / 2,
@@ -168,7 +168,7 @@ public class DrawAppView extends View {
 
 	// 点击知识类
 	private void clickZSL(MotionEvent event, float x, float y, float x1,
-			float x2, float y1, float y2, Class<KnowActivity> clazz) {
+			float x2, float y1, float y2, Class<MoreTabMJSYActivity> clazz) {
 
 		clickSubMethod(event, x, y, x1, x2, y1, y2, clazz, "点击了知识类");
 	}
