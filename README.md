@@ -1,2 +1,2 @@
 # FakeWeixin
-an education app who fake weixin
+an education app who 
