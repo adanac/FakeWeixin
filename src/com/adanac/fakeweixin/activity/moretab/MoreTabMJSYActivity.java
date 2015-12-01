@@ -30,7 +30,7 @@ import com.adanac.view.indicator.transition.OnTransitionTextListener;
 public class MoreTabMJSYActivity extends FragmentActivity {
 	private IndicatorViewPager indicatorViewPager;
 	private LayoutInflater inflate;
-	private String[] names = { "CUPCAKE", "DONUT", "FROYO", "GINGERBREAD",
+	private String[] names = { "知识点注释", "习题作业", "知识地图", "作业讨论", "相关资源",
 			"HONEYCOMB", "ICE CREAM SANDWICH", "JELLY BEAN", "KITKAT" };
 	private ScrollIndicatorView indicator;
 
