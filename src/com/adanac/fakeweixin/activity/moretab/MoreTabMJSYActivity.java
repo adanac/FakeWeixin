@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.TextView;
-import android.widget.ToggleButton;
 
 import com.adanac.fakeweixin.R;
 import com.adanac.view.indicator.FragmentListPageAdapter;
@@ -30,15 +29,14 @@ import com.adanac.view.indicator.transition.OnTransitionTextListener;
 public class MoreTabMJSYActivity extends FragmentActivity {
 	private IndicatorViewPager indicatorViewPager;
 	private LayoutInflater inflate;
-	private String[] names = { "知识点注释", "习题作业", "知识地图", "作业讨论", "相关资源",
-			"HONEYCOMB", "ICE CREAM SANDWICH", "JELLY BEAN", "KITKAT" };
+	private String[] names = { "知识点注释", "知识地图", "习题作业", "作业讨论", "相关资源" };
 	private ScrollIndicatorView indicator;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.moretab_mjsy);
-		ToggleButton toggleButton = (ToggleButton) findViewById(R.id.toggleButton1);
+
 		ViewPager viewPager = (ViewPager) findViewById(R.id.moretab_viewPager);
 		indicator = (ScrollIndicatorView) findViewById(R.id.moretab_indicator);
 		indicator.setScrollBar(new ColorBar(this, Color.RED, 5));
@@ -49,15 +47,11 @@ public class MoreTabMJSYActivity extends FragmentActivity {
 		indicator.setOnTransitionListener(new OnTransitionTextListener()
 				.setColorId(this, selectColorId, unSelectColorId));
 
-		viewPager.setOffscreenPageLimit(2);
+		viewPager.setOffscreenPageLimit(4);
 		indicatorViewPager = new IndicatorViewPager(indicator, viewPager);
 		inflate = LayoutInflater.from(getApplicationContext());
 		indicatorViewPager
 				.setAdapter(new MyAdapter(getSupportFragmentManager()));
-
-		// 默认true ，自动布局
-		toggleButton.setChecked(indicator.isSplitAuto());
-		toggleButton.setOnCheckedChangeListener(onCheckedChangeListener);
 
 	}
 
@@ -71,7 +65,7 @@ public class MoreTabMJSYActivity extends FragmentActivity {
 		}
 	};
 
-	private int size = 3;
+	private int size = 5;
 
 	public void on3(View view) {
 		size = 3;

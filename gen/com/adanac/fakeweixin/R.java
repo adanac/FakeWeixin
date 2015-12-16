@@ -92,11 +92,8 @@ public final class R {
         public static final int yellow_green_circle=0x7f02002d;
     }
     public static final class id {
-        public static final int action_settings=0x7f09003c;
-        public static final int btn_start=0x7f09003b;
-        public static final int button1=0x7f09002d;
-        public static final int button2=0x7f09002e;
-        public static final int button3=0x7f09002f;
+        public static final int action_settings=0x7f090039;
+        public static final int btn_start=0x7f090038;
         public static final int content_content=0x7f090013;
         public static final int content_content_three=0x7f090014;
         public static final int content_content_two=0x7f090015;
@@ -132,20 +129,20 @@ public final class R {
         public static final int ll_friend=0x7f090006;
         public static final int ll_home=0x7f090000;
         public static final int ll_setting=0x7f090009;
-        public static final int mainLinearLayoutTest=0x7f090035;
+        public static final int mainLinearLayoutTest=0x7f090032;
         public static final int main_content=0x7f09002b;
         public static final int main_content_content=0x7f09002c;
-        public static final int moretab_indicator=0x7f090031;
-        public static final int moretab_viewPager=0x7f090032;
-        public static final int page_01=0x7f090033;
-        public static final int page_01_ll=0x7f090034;
-        public static final int relativeLayoutTest=0x7f090036;
+        public static final int moretab_indicator=0x7f09002d;
+        public static final int moretab_viewPager=0x7f09002e;
+        public static final int page_01=0x7f090030;
+        public static final int page_01_ll=0x7f090031;
+        public static final int relativeLayoutTest=0x7f090033;
         public static final int slideMenu_listView=0x7f090029;
-        public static final int starttext=0x7f09003a;
-        public static final int tabmain_indicator=0x7f090039;
-        public static final int tabmain_viewPager=0x7f090038;
-        public static final int textView1=0x7f090037;
-        public static final int toggleButton1=0x7f090030;
+        public static final int starttext=0x7f090037;
+        public static final int tab_mjsy_top=0x7f09002f;
+        public static final int tabmain_indicator=0x7f090036;
+        public static final int tabmain_viewPager=0x7f090035;
+        public static final int textView1=0x7f090034;
         public static final int tv_address=0x7f090005;
         public static final int tv_friend=0x7f090008;
         public static final int tv_home=0x7f090002;
@@ -181,19 +178,20 @@ public final class R {
         public static final int main_content_content=0x7f030017;
         public static final int main_content_tablelayout=0x7f030018;
         public static final int moretab_mjsy=0x7f030019;
-        public static final int mybutton=0x7f03001a;
-        public static final int page_01=0x7f03001b;
-        public static final int page_02=0x7f03001c;
-        public static final int page_03=0x7f03001d;
-        public static final int page_04=0x7f03001e;
-        public static final int page_042=0x7f03001f;
-        public static final int tab_main=0x7f030020;
-        public static final int tab_top=0x7f030021;
-        public static final int tabmain_activity=0x7f030022;
-        public static final int view1=0x7f030023;
-        public static final int view2=0x7f030024;
-        public static final int view3=0x7f030025;
-        public static final int view4=0x7f030026;
+        public static final int moretab_mjsy_top=0x7f03001a;
+        public static final int mybutton=0x7f03001b;
+        public static final int page_01=0x7f03001c;
+        public static final int page_02=0x7f03001d;
+        public static final int page_03=0x7f03001e;
+        public static final int page_04=0x7f03001f;
+        public static final int page_042=0x7f030020;
+        public static final int tab_main=0x7f030021;
+        public static final int tab_top=0x7f030022;
+        public static final int tabmain_activity=0x7f030023;
+        public static final int view1=0x7f030024;
+        public static final int view2=0x7f030025;
+        public static final int view3=0x7f030026;
+        public static final int view4=0x7f030027;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -204,14 +202,15 @@ public final class R {
         public static final int emotion_top_title=0x7f060005;
         public static final int enable_top_title=0x7f060004;
         public static final int know_top_title=0x7f060003;
-        public static final int p01_str=0x7f060007;
-        public static final int p02_str=0x7f060008;
-        public static final int p03_str=0x7f060009;
-        public static final int p04_str=0x7f06000a;
-        public static final int start=0x7f060006;
+        public static final int p01_str=0x7f060008;
+        public static final int p02_str=0x7f060009;
+        public static final int p03_str=0x7f06000a;
+        public static final int p04_str=0x7f06000b;
+        public static final int start=0x7f060007;
+        public static final int tab_mjsy_top_title=0x7f060006;
         public static final int top_title=0x7f060002;
-        public static final int view1_str0=0x7f06000b;
-        public static final int view1_str1=0x7f06000c;
+        public static final int view1_str0=0x7f06000c;
+        public static final int view1_str1=0x7f06000d;
     }
     public static final class style {
         /** 

@@ -136,8 +136,8 @@ public class DrawAppView extends View {
 		System.out.println("x:" + x + "y:" + y);
 
 		// 点击中间
-		clickMJSY(event, x, y, width / 2 - 100, width / 2 + 100,
-				height / 2 - 300, height / 2 - 100, MainContent.class);
+		// clickMJSY(event, x, y, width / 2 - 100, width / 2 + 100,
+		// height / 2 - 300, height / 2 - 100, MainContent.class);
 
 		// 点击知识类（430, 120, 90, 60）
 		clickZSL(event, x, y, 430 - 90 / 2, 430 + 90 / 2, 120 - 60 / 2,
