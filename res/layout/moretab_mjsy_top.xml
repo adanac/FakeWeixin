@@ -22,10 +22,10 @@
             />
         
 	    <TextView
-	        android:id="@+id/tab_mjsy_top"
+	        android:id="@+id/moretab_mjsy_top"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:text="@string/tab_mjsy_top_title"
+	        android:text="@string/moretab_mjsy_top_title"
 	        android:textSize="20sp" 
 	        android:textColor="#ffffff"
 	        android:layout_marginLeft="50dp"/>
