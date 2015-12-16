@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -89,14 +88,9 @@ public class MoreTabMJSYActivity extends FragmentActivity {
 	}
 
 	private void initEvent() {
-		// 设置按钮监听
-		ll_home.setOnClickListener((OnClickListener) this);
-		ll_address.setOnClickListener((OnClickListener) this);
-		ll_friend.setOnClickListener((OnClickListener) this);
-		ll_setting.setOnClickListener((OnClickListener) this);
 
 		// 设置返回按钮
-		findViewById(R.id.iv_back).setOnClickListener(
+		findViewById(R.id.moretab_iv_back).setOnClickListener(
 				new View.OnClickListener() {
 					@Override
 					public void onClick(View view) {

@@ -92,8 +92,8 @@ public final class R {
         public static final int yellow_green_circle=0x7f02002d;
     }
     public static final class id {
-        public static final int action_settings=0x7f090039;
-        public static final int btn_start=0x7f090038;
+        public static final int action_settings=0x7f09003a;
+        public static final int btn_start=0x7f090039;
         public static final int content_content=0x7f090013;
         public static final int content_content_three=0x7f090014;
         public static final int content_content_two=0x7f090015;
@@ -129,20 +129,21 @@ public final class R {
         public static final int ll_friend=0x7f090006;
         public static final int ll_home=0x7f090000;
         public static final int ll_setting=0x7f090009;
-        public static final int mainLinearLayoutTest=0x7f090032;
+        public static final int mainLinearLayoutTest=0x7f090033;
         public static final int main_content=0x7f09002b;
         public static final int main_content_content=0x7f09002c;
         public static final int moretab_indicator=0x7f09002d;
-        public static final int moretab_mjsy_top=0x7f09002f;
+        public static final int moretab_iv_back=0x7f09002f;
+        public static final int moretab_mjsy_top=0x7f090030;
         public static final int moretab_viewPager=0x7f09002e;
-        public static final int page_01=0x7f090030;
-        public static final int page_01_ll=0x7f090031;
-        public static final int relativeLayoutTest=0x7f090033;
+        public static final int page_01=0x7f090031;
+        public static final int page_01_ll=0x7f090032;
+        public static final int relativeLayoutTest=0x7f090034;
         public static final int slideMenu_listView=0x7f090029;
-        public static final int starttext=0x7f090037;
-        public static final int tabmain_indicator=0x7f090036;
-        public static final int tabmain_viewPager=0x7f090035;
-        public static final int textView1=0x7f090034;
+        public static final int starttext=0x7f090038;
+        public static final int tabmain_indicator=0x7f090037;
+        public static final int tabmain_viewPager=0x7f090036;
+        public static final int textView1=0x7f090035;
         public static final int tv_address=0x7f090005;
         public static final int tv_friend=0x7f090008;
         public static final int tv_home=0x7f090002;
