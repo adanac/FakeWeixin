@@ -62,6 +62,7 @@
         <activity android:name="com.adanac.fakeweixin.activity.sub.EmotionActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.activity.sub.MoreTabMJSYActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabMJSYActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.video.VideoViewMJSY"></activity>
         
         
     </application>

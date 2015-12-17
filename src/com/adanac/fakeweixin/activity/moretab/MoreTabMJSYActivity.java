@@ -1,11 +1,16 @@
 package com.adanac.fakeweixin.activity.moretab;
 
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +18,9 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import com.adanac.fakeweixin.R;
 import com.adanac.view.indicator.FragmentListPageAdapter;
@@ -28,11 +35,13 @@ import com.adanac.view.indicator.transition.OnTransitionTextListener;
  * @date 2015-11-27
  * @version 1.0
  */
-public class MoreTabMJSYActivity extends FragmentActivity {
+public class MoreTabMJSYActivity extends FragmentActivity implements
+		MediaPlayer.OnErrorListener, MediaPlayer.OnCompletionListener {
 	private IndicatorViewPager indicatorViewPager;
 	private LayoutInflater inflate;
 	private String[] names = { "知识点注释", "知识地图", "习题作业", "相关资源" };
 	private ScrollIndicatorView indicator;
+	private int size = 4;
 
 	// TODO
 	// 底部菜单没有显示出来是因为代码中没有写出来
@@ -57,6 +66,14 @@ public class MoreTabMJSYActivity extends FragmentActivity {
 	private TextView tv_address;
 	private TextView tv_friend;
 	private TextView tv_setting;
+
+	// 关于视频
+	public static final String TAG = "VideoPlayer";
+	private VideoView mVideoView;
+	private Uri mUri;
+	private int mPositionWhenPaused = -1;
+
+	private MediaController mMediaController;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +101,22 @@ public class MoreTabMJSYActivity extends FragmentActivity {
 		inflate = LayoutInflater.from(getApplicationContext());
 		indicatorViewPager
 				.setAdapter(new MyAdapter(getSupportFragmentManager()));
+
+		// 关于视频播放
+		this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+		mVideoView = (VideoView) findViewById(R.id.videoview);
+
+		// 文件路径
+
+		mUri = Uri.parse(Environment.getExternalStorageDirectory()
+				+ "/媒介素养.flv");
+
+		// Create media controller
+		mMediaController = new MediaController(this);
+
+		// 设置MediaController
+		mVideoView.setMediaController(mMediaController);
 
 	}
 
@@ -134,26 +167,49 @@ public class MoreTabMJSYActivity extends FragmentActivity {
 		}
 	};
 
-	private int size = 4;
+	// 监听MediaPlayer上报的错误信息
 
-	public void on3(View view) {
-		size = 3;
-		indicatorViewPager.getAdapter().notifyDataSetChanged();
+	@Override
+	public boolean onError(MediaPlayer mp, int what, int extra) {
+		return false;
 	}
 
-	public void on4(View view) {
-		size = 4;
-		indicatorViewPager.getAdapter().notifyDataSetChanged();
+	// Video播完的时候得到通知
+
+	@Override
+	public void onCompletion(MediaPlayer mp) {
+		this.finish();
 	}
 
-	public void on5(View view) {
-		size = 5;
-		indicatorViewPager.getAdapter().notifyDataSetChanged();
+	// 开始
+	public void onStart() {
+		// Play Video
+		mVideoView.setVideoURI(mUri);
+		mVideoView.start();
+
+		super.onStart();
 	}
 
-	public void on12(View view) {
-		size = 12;
-		indicatorViewPager.getAdapter().notifyDataSetChanged();
+	// 暂停
+
+	public void onPause() {
+		// Stop video when the activity is pause.
+		mPositionWhenPaused = mVideoView.getCurrentPosition();
+		mVideoView.stopPlayback();
+		Log.d(TAG, "OnStop: mPositionWhenPaused = " + mPositionWhenPaused);
+		Log.d(TAG, "OnStop: getDuration  = " + mVideoView.getDuration());
+
+		super.onPause();
+	}
+
+	public void onResume() {
+		// Resume video player
+		if (mPositionWhenPaused >= 0) {
+			mVideoView.seekTo(mPositionWhenPaused);
+			mPositionWhenPaused = -1;
+		}
+
+		super.onResume();
 	}
 
 	private class MyAdapter extends IndicatorFragmentPagerAdapter {
