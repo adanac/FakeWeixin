@@ -238,9 +238,9 @@ public class MoreTabYYCCActivity extends FragmentActivity implements
 
 		@Override
 		public Fragment getFragmentForPage(int position) {
-			MoreFragmentSJSY fragment = new MoreFragmentSJSY();
+			MoreFragmentYYCC fragment = new MoreFragmentYYCC();
 			Bundle bundle = new Bundle();
-			bundle.putInt(MoreFragmentSJSY.INTENT_INT_INDEX, position);
+			bundle.putInt(MoreFragmentYYCC.INTENT_INT_INDEX, position);
 			fragment.setArguments(bundle);
 			return fragment;
 		}

@@ -36,12 +36,12 @@ public class MoreFragmentYYCC extends LazyFragment {
 			d.setBounds(0, 0, 200, 200); // 必须设置图片大小，否则不显示
 			textView.setCompoundDrawables(d, null, null, null);
 			d = getResources().getDrawable(R.drawable.map_yycc_know02);
-			d.setBounds(0, 0, 200, 200); // 必须设置图片大小，否则不显示
+			d.setBounds(0, 200, 200, 200); // 必须设置图片大小，否则不显示
 			textView.setCompoundDrawables(d, null, null, null);
 			d = getResources().getDrawable(R.drawable.map_yycc_know03);
-			d.setBounds(0, 0, 200, 200); // 必须设置图片大小，否则不显示
+			d.setBounds(0, 400, 200, 200); // 必须设置图片大小，否则不显示
 			textView.setCompoundDrawables(d, null, null, null);
-			textView.setText("图1 “代表者——被代表者”二项式\n图2 “符号——能指——所指”语义三角形\n图3 所指意义层次图");
+			textView.setText("图1\t\"代表者——被代表者\"二项式\n\n图2\t\"符号——能指——所指\"语义三角形\n\n图3\t所指意义层次图");
 			break;
 		case 1:
 			d = getResources().getDrawable(R.drawable.map_yycc);
@@ -51,9 +51,9 @@ public class MoreFragmentYYCC extends LazyFragment {
 			break;
 		case 2:
 			textView.setTextSize(15);
-			textView.setText("\n\n解读训练案例：\n图1 视觉文化网LOGO\n查询访问视觉文化网http://www.fromeyes.cn/并思考：\n1.观察网站的标志LOGO的造型特点，尝试分析其能指与所指及其之间的关系。\n2.此标志LOGO的造型结构对你理解此网站的主题内容有无暗示作用？");
+			textView.setText("\n\n解读训练案例：\n\n图1 视觉文化网LOGO\n\n查询访问视觉文化网http://www.fromeyes.cn/并思考：\n1.观察网站的标志LOGO的造型特点，尝试分析其能指与所指及其之间的关系。\n\n2.此标志LOGO的造型结构对你理解此网站的主题内容有无暗示作用？");
 			d = getResources().getDrawable(R.drawable.map_yycc_zuoye);
-			d.setBounds(0, 0, 500, 500); // 必须设置图片大小，否则不显示
+			d.setBounds(0, 0, 200, 400); // 必须设置图片大小，否则不显示
 			textView.setCompoundDrawables(d, null, null, null);
 			// textView.setText("图  摄影作品《我要读书》");
 			break;
