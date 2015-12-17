@@ -9,6 +9,8 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.adanac.fakeweixin.activity.moretab.MoreTabMJSYActivity;
+import com.adanac.fakeweixin.activity.moretab.MoreTabSJSYActivity;
+import com.adanac.fakeweixin.activity.moretab.MoreTabYYCCActivity;
 import com.adanac.fakeweixin.util.DrawUtil;
 import com.adanac.fakeweixin.util.ScreenUtil;
 
@@ -113,7 +115,28 @@ public class DrawAppView2 extends View {
 		clickMJSYNH(event, x, y, width / 2 - 250 - 150 / 2, width / 2 - 250
 				+ 150 / 2, height / 2 - 250 - 90 / 2,
 				height / 2 - 250 + 90 / 2, MoreTabMJSYActivity.class);
+		// 点击视觉素养（width / 2 + 250,height / 2 - 250, 150, 90）
+		clickSJSY(event, x, y, width / 2 + 250 - 150 / 2, width / 2 + 250 + 150
+				/ 2, height / 2 - 250 - 90 / 2, height / 2 - 250 + 90 / 2,
+				MoreTabSJSYActivity.class);
+		// 点击意义所指层次图（width / 2 - 40,height / 2 + 50, 200, 90）
+		clickYYCC(event, x, y, width / 2 - 40 - 200 / 2, width / 2 - 40 + 200
+				/ 2, height / 2 + 50 - 90 / 2, height / 2 + 50 + 90 / 2,
+				MoreTabYYCCActivity.class);
 		return true;
+	}
+
+	// 点击意义所指层次图
+	private void clickYYCC(MotionEvent event, float x, float y, int i, int j,
+			int k, int l, Class<MoreTabYYCCActivity> clazz) {
+
+		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了意义所指层次图");
+	}
+
+	// 点击视觉素养
+	private void clickSJSY(MotionEvent event, float x, float y, int i, int j,
+			int k, int l, Class<MoreTabSJSYActivity> clazz) {
+		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了视觉素养");
 	}
 
 	// 点击媒介素养内涵

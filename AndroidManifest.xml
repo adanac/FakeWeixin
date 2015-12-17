@@ -13,7 +13,7 @@
         android:allowBackup="true"
         android:icon="@drawable/education"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/notitle" >
         <activity
             android:name="com.adanac.fakeweixin.activity.MainActivity">
             <!-- android:label="@string/app_name" > -->
@@ -60,8 +60,9 @@
         <activity android:name="com.adanac.fakeweixin.activity.sub.KnowActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.activity.sub.EnableActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.activity.sub.EmotionActivity"></activity>
-        <activity android:name="com.adanac.fakeweixin.activity.sub.MoreTabMJSYActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabMJSYActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabSJSYActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabYYCCActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.video.VideoViewMJSY"></activity>
         
         

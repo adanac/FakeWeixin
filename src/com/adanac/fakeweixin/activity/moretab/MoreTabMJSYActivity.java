@@ -110,7 +110,7 @@ public class MoreTabMJSYActivity extends FragmentActivity implements
 		// 文件路径
 
 		mUri = Uri.parse(Environment.getExternalStorageDirectory()
-				+ "/媒介素养.flv");
+				+ "/eduapp/媒介素养.flv");
 
 		// Create media controller
 		mMediaController = new MediaController(this);
@@ -238,9 +238,9 @@ public class MoreTabMJSYActivity extends FragmentActivity implements
 
 		@Override
 		public Fragment getFragmentForPage(int position) {
-			MoreFragment fragment = new MoreFragment();
+			MoreFragmentMJSY fragment = new MoreFragmentMJSY();
 			Bundle bundle = new Bundle();
-			bundle.putInt(MoreFragment.INTENT_INT_INDEX, position);
+			bundle.putInt(MoreFragmentMJSY.INTENT_INT_INDEX, position);
 			fragment.setArguments(bundle);
 			return fragment;
 		}

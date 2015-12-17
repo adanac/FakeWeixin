@@ -1,5 +1,6 @@
 package com.adanac.fakeweixin.activity.moretab;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -14,7 +15,7 @@ import com.adanac.fragment.LazyFragment;
  * @date 2015-11-27
  * @version 1.0
  */
-public class MoreFragment extends LazyFragment {
+public class MoreFragmentSJSY extends LazyFragment {
 	private ProgressBar progressBar;
 	private TextView textView;
 	private int tabIndex;
@@ -23,17 +24,32 @@ public class MoreFragment extends LazyFragment {
 	@Override
 	protected void onCreateViewLazy(Bundle savedInstanceState) {
 		super.onCreateViewLazy(savedInstanceState);
-		setContentView(R.layout.fragment_tabmain_item);
+		setContentView(R.layout.fragment_tabmain_mjsy);
 		tabIndex = getArguments().getInt(INTENT_INT_INDEX);
 		progressBar = (ProgressBar) findViewById(R.id.fragment_mainTab_item_progressBar);
 		textView = (TextView) findViewById(R.id.fragment_mainTab_item_textView);
 		switch (tabIndex) {
 		case 0:
-			textView.setText("媒介就是承载信息的一切中介物。而媒介素养则是面对各种媒介信息时的选择能力、理解能力、质疑能力、评价能力、应用能力。  媒介素养可以成为帮助我们理解媒介文化的“新眼镜”。通过对具体媒介作品的解读训练，可以在感知、体验、沟通与交流的过程中逐步唤醒自觉意识，增强评价能力，为今后的媒介表达奠定扎实基础。");
+			textView.setTextSize(20);
+			textView.setText("^_^");
 			break;
-
+		case 1:
+			Drawable d = getResources().getDrawable(R.drawable.map_sjsy);
+			d.setBounds(0, 0, 500, 500); // 必须设置图片大小，否则不显示
+			textView.setCompoundDrawables(d, null, null, null);
+			// textView.setText("setCompoundDrawables");
+			break;
+		case 2:
+			textView.setTextSize(15);
+			textView.setText("\n\n1、摄影师、照相机和影像作品如何影响读者的观看？\n\n\n\n\n\n图1 摄影师");
+			d = getResources().getDrawable(R.drawable.map_sjsy_zuoye);
+			d.setBounds(0, 0, 500, 500); // 必须设置图片大小，否则不显示
+			textView.setCompoundDrawables(d, null, null, null);
+			// textView.setText("图  摄影作品《我要读书》");
+			break;
 		default:
-			textView.setText("界面 " + tabIndex + " 加载完毕");
+			textView.setTextSize(20);
+			textView.setText("相关链接：\n罗立中和他的《父亲》：http://baike.baidu.com/view/80043.htm?fr=aladdin");
 			break;
 		}
 		handler.sendEmptyMessageDelayed(1, 1000);
