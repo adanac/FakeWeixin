@@ -38,6 +38,20 @@ public class ThreeWzMainActivity extends Activity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.slide_three_wz);
 		initView();
+		initEvent();
+	}
+
+	private void initEvent() {
+
+		// 设置返回按钮
+		findViewById(R.id.moretab_iv_back).setOnClickListener(
+				new View.OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						// 使当前Activity结束就可以了
+						ThreeWzMainActivity.this.finish();
+					}
+				});
 	}
 
 	private void initView() {
