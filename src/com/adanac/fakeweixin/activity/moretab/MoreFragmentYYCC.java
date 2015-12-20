@@ -3,6 +3,9 @@ package com.adanac.fakeweixin.activity.moretab;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -28,38 +31,51 @@ public class MoreFragmentYYCC extends LazyFragment {
 		super.onCreateViewLazy(savedInstanceState);
 		setContentView(R.layout.fragment_tabmain_yycc);
 		tabIndex = getArguments().getInt(INTENT_INT_INDEX);
-		progressBar = (ProgressBar) findViewById(R.id.fragment_mainTab_item_progressBar);
-		textView = (TextView) findViewById(R.id.fragment_mainTab_item_textView);
+		progressBar = (ProgressBar) findViewById(R.id.fragment_mainTab_yycc_progressBar);
+		textView = (TextView) findViewById(R.id.fragment_mainTab_yycc_textView);
+		textView.setTextSize(12);
+		Drawable d = null;
 		switch (tabIndex) {
 		case 0:
-			Drawable d = getResources().getDrawable(R.drawable.map_yycc_know01);
-			d.setBounds(0, 0, 200, 200); // 必须设置图片大小，否则不显示
-			textView.setCompoundDrawables(d, null, null, null);
-			d = getResources().getDrawable(R.drawable.map_yycc_know02);
-			d.setBounds(0, 200, 200, 200); // 必须设置图片大小，否则不显示
-			textView.setCompoundDrawables(d, null, null, null);
-			d = getResources().getDrawable(R.drawable.map_yycc_know03);
-			d.setBounds(0, 400, 200, 200); // 必须设置图片大小，否则不显示
-			textView.setCompoundDrawables(d, null, null, null);
-			textView.setText("图1\t\"代表者——被代表者\"二项式\n\n图2\t\"符号——能指——所指\"语义三角形\n\n图3\t所指意义层次图");
+			textView.setMovementMethod(ScrollingMovementMethod.getInstance());
+			d = getResources().getDrawable(R.drawable.map_yycc_know01);
+			d.setBounds(0, 0, 300, 290); // 必须设置图片大小，否则不显示
+			Drawable d1 = getResources()
+					.getDrawable(R.drawable.map_yycc_know02);
+			d1.setBounds(0, 0, 350, 230);
+			Drawable d2 = getResources()
+					.getDrawable(R.drawable.map_yycc_know03);
+			d2.setBounds(0, 0, 350, 290);
+			textView.setCompoundDrawables(d, d1, d2, null);
+
+			// textView.setText("图1\t\"代表者——被代表者\"二项式");
+			// textView.append("\n\n图2\t\"符号——能指——所指\"语义三角形\n\n图3\t所指意义层次图");
+
 			break;
 		case 1:
 			d = getResources().getDrawable(R.drawable.map_yycc);
-			d.setBounds(0, 0, 500, 500); // 必须设置图片大小，否则不显示
+			d.setBounds(0, 0, 700, 500); // 必须设置图片大小，否则不显示
 			textView.setCompoundDrawables(d, null, null, null);
 			// textView.setText("setCompoundDrawables");
 			break;
 		case 2:
-			textView.setTextSize(15);
-			textView.setText("\n\n解读训练案例：\n\n图1 视觉文化网LOGO\n\n查询访问视觉文化网http://www.fromeyes.cn/并思考：\n1.观察网站的标志LOGO的造型特点，尝试分析其能指与所指及其之间的关系。\n\n2.此标志LOGO的造型结构对你理解此网站的主题内容有无暗示作用？");
 			d = getResources().getDrawable(R.drawable.map_yycc_zuoye);
-			d.setBounds(0, 0, 200, 400); // 必须设置图片大小，否则不显示
-			textView.setCompoundDrawables(d, null, null, null);
-			// textView.setText("图  摄影作品《我要读书》");
+			d.setBounds(0, 0, 450, 300); // 必须设置图片大小，否则不显示
+			textView.setCompoundDrawables(null, d, null, null);
+			textView.setMovementMethod(LinkMovementMethod.getInstance());
+			textView.append(Html
+					.fromHtml("<b>解读训练案例：</b><br/>"
+							+ "视觉文化网:<a href=\"http://www.fromeyes.cn/\">http://www.fromeyes.cn/</a><br/><br/>"
+							+ "<b>思考：</b><br/>"
+							+ "1.观察网站的标志LOGO的造型特点，尝试分析其能指与所指及其之间的关系。<br/>"
+							+ "2.此标志LOGO的造型结构对你理解此网站的主题内容有无暗示作用？"));
 			break;
 		default:
-			textView.setTextSize(20);
-			textView.setText("相关资源链接：\n视觉文化网：http://www.fromeyes.cn/\n复旦大学媒介素养小组：http://vr.theatre.ntu.edu.tw/fineart/");
+			textView.setText(Html
+					.fromHtml("<b>相关资源链接：</b><br/>"
+							+ "视觉文化网：<a href=\"http://www.fromeyes.cn/\">http://www.fromeyes.cn/</a><br/>"
+							+ "复旦大学媒介素养小组：<a href=\"http://vr.theatre.ntu.edu.tw/fineart/\">http://vr.theatre.ntu.edu.tw/fineart/</a>"));
+			textView.setMovementMethod(LinkMovementMethod.getInstance());
 			break;
 		}
 		handler.sendEmptyMessageDelayed(1, 1000);

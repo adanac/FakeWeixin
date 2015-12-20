@@ -185,36 +185,30 @@ public class MainContent extends Activity implements OnClickListener,
 		// ImageView和TetxView置为绿色，页面随之跳转
 		switch (v.getId()) {
 		case R.id.ll_home:
-			iv_home.setImageResource(R.drawable.agt_aisles);
-			tv_top.setText("媒介素养");
+			iv_home.setImageResource(R.drawable.map_sy);
+			tv_top.setText("首页");
 			tv_home.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(0);
 			break;
 		case R.id.ll_address:
 			tv_top.setText("学生作品");
-			iv_address.setImageResource(R.drawable.agt_mp3);
+			iv_address.setImageResource(R.drawable.map_zp);
 			tv_address.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(1);
 			break;
 		case R.id.ll_friend:
 			tv_top.setText("个人空间");
-			iv_friend.setImageResource(R.drawable.agt_games);
+			iv_friend.setImageResource(R.drawable.map_kj);
 			tv_friend.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(2);
 			break;
 		case R.id.ll_setting:
 			tv_top.setText("帮助");
-			iv_setting.setImageResource(R.drawable.agt_setting);
+			iv_setting.setImageResource(R.drawable.map_set);
 			tv_setting.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(3);
 			// startActivity(new Intent(MainContent.this,
 			// EmotionalActivity.class));
-			break;
-		case R.string.view1_str0:
-			tv_top.setText("帮助~~");
-			iv_setting.setImageResource(R.drawable.agt_setting);
-			tv_setting.setTextColor(0xff1B940A);
-			viewPager.setCurrentItem(3);
 			break;
 		default:
 			break;
@@ -223,10 +217,10 @@ public class MainContent extends Activity implements OnClickListener,
 
 	private void restartBotton() {
 		// ImageView置为灰色
-		iv_home.setImageResource(R.drawable.agt_aisles);
-		iv_address.setImageResource(R.drawable.agt_mp3);
-		iv_friend.setImageResource(R.drawable.agt_games);
-		iv_setting.setImageResource(R.drawable.agt_setting);
+		iv_home.setImageResource(R.drawable.map_sy);
+		iv_address.setImageResource(R.drawable.map_zp);
+		iv_friend.setImageResource(R.drawable.map_kj);
+		iv_setting.setImageResource(R.drawable.map_set);
 		// TextView置为白色
 		tv_home.setTextColor(0xffffffff);
 		tv_address.setTextColor(0xffffffff);
@@ -250,23 +244,23 @@ public class MainContent extends Activity implements OnClickListener,
 		// 当前view被选择的时候,改变底部菜单图片，文字颜色
 		switch (arg0) {
 		case 0:
-			tv_top.setText("媒介素养");
-			iv_home.setImageResource(R.drawable.agt_aisles);
+			tv_top.setText("首页");
+			iv_home.setImageResource(R.drawable.map_sy);
 			tv_home.setTextColor(0xff1B940A);
 			break;
 		case 1:
 			tv_top.setText("学生作品");
-			iv_address.setImageResource(R.drawable.agt_mp3);
+			iv_address.setImageResource(R.drawable.map_zp);
 			tv_address.setTextColor(0xff1B940A);
 			break;
 		case 2:
 			tv_top.setText("个人空间");
-			iv_friend.setImageResource(R.drawable.agt_games);
+			iv_friend.setImageResource(R.drawable.map_kj);
 			tv_friend.setTextColor(0xff1B940A);
 			break;
 		case 3:
 			tv_top.setText("帮助");
-			iv_setting.setImageResource(R.drawable.agt_setting);
+			iv_setting.setImageResource(R.drawable.map_set);
 			tv_setting.setTextColor(0xff1B940A);
 			break;
 

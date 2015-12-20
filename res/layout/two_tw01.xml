@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/two_tw01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         />
+	
+    <ImageView 
+        android:src="@drawable/two_tw01"/>
+
+</RelativeLayout>

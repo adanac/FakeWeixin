@@ -5,17 +5,22 @@
     android:orientation="vertical" >
 
     <ProgressBar
-        android:id="@+id/fragment_mainTab_item_progressBar"
+        android:id="@+id/fragment_mainTab_yycc_progressBar"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center" />
 
     <TextView
-        android:id="@+id/fragment_mainTab_item_textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/fragment_mainTab_yycc_textView"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone" />
+        android:layout_gravity="center_horizontal"
+        android:singleLine="false" 
+	    android:maxLines="100" 
+	    android:scrollbars="vertical" 
+        android:visibility="gone" 
+       />
+    
 
 </FrameLayout>

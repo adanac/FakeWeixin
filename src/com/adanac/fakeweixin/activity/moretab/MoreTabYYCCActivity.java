@@ -59,7 +59,7 @@ public class MoreTabYYCCActivity extends FragmentActivity implements
 	private ImageView iv_setting;
 
 	// 顶部标题
-	private TextView moretab_mjsy_top;
+	private TextView moretab_yycc_top;
 
 	// 底部菜单4个菜单标题
 	private TextView tv_home;
@@ -147,7 +147,7 @@ public class MoreTabYYCCActivity extends FragmentActivity implements
 		this.iv_setting = (ImageView) findViewById(R.id.iv_setting);
 
 		// 顶部标题
-		this.moretab_mjsy_top = (TextView) findViewById(R.id.moretab_yycc_top);
+		this.moretab_yycc_top = (TextView) findViewById(R.id.moretab_yycc_top);
 
 		// 底部菜单4个菜单标题
 		this.tv_home = (TextView) findViewById(R.id.tv_home);

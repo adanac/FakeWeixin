@@ -25,45 +25,57 @@
         </activity>
         
         <activity
-            android:name="com.adanac.fakeweixin.activity.MainContent"
-            android:label="@string/app_name" >
-        </activity>
-        
+            android:name="com.adanac.fakeweixin.activity.MainContent"></activity>
          <activity
-            android:name="com.adanac.fakeweixin.activity.ContentActivity"
-            android:label="@string/app_name" >
-        </activity>
-        
+            android:name="com.adanac.fakeweixin.activity.ContentActivity"></activity>
         <activity
-            android:name="com.adanac.fakeweixin.activity.ContentActivity2"
-            android:label="@string/app_name" >
-            
-        </activity>
-         
+            android:name="com.adanac.fakeweixin.activity.ContentActivity2"></activity>
         <activity
-            android:name="com.adanac.fakeweixin.activity.ContentActivity3"
-            android:label="@string/app_name" >
-            
-        </activity>
-        
+            android:name="com.adanac.fakeweixin.activity.ContentActivity3"></activity>
         <activity
-            android:name="com.adanac.fakeweixin.activity.ContentFirstActivity"
-            android:label="@string/app_name" >
-        </activity>
-        
+            android:name="com.adanac.fakeweixin.activity.ContentFirstActivity"></activity>
         <activity
-            android:name="com.adanac.fakeweixin.activity.EmotionalActivity"
-            android:label="@string/app_name" >
-        </activity>
+            android:name="com.adanac.fakeweixin.activity.EmotionalActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.tabmain.TabMainActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.tabmain.DrawIndex"></activity>
         <activity android:name="com.adanac.fakeweixin.activity.sub.KnowActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.activity.sub.EnableActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.activity.sub.EmotionActivity"></activity>
+        
+        <!-- 知识类 -->
         <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabMJSYActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabSJSYActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabYYCCActivity"></activity>
-        <activity android:name="com.adanac.fakeweixin.video.VideoViewMJSY"></activity>
+        <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabEZGXActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabFHNHActivity"></activity>
+        
+        <!-- 能力类 -->
+        <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabZYKFActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabZYXZActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabZYZHActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabZYYYActivity"></activity>
+        
+        <!-- 情感类 -->
+        <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabEMSMLActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabEMXDSJActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabEMFlashActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabEMYSActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabEMSYActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.activity.moretab.MoreTabEMSFActivity"></activity>
+        
+        <!-- 使用媒介 -->
+        <activity android:name="com.adanac.fakeweixin.view.sub.TwoTw01MoreTabActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.view.sub.TwoYp01MoreTabActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.view.sub.TwoSp01MoreTabActivity"></activity>
+        
+        <!-- 研究媒介 -->
+        <activity android:name="com.adanac.fakeweixin.view.sub.ThreeMjMoreTabActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.view.sub.ThreeXzMoreTabActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.slideview.ThreeXzMainActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.slideview.ThreeWzMainActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.slideview.ThreeFxMainActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.view.sub.ThreeWzMoreTabActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.view.sub.ThreeFxMoreTabActivity"></activity>
         
         
     </application>

@@ -34,7 +34,7 @@ public class SecondLayerFragment extends LazyFragment {
 		tabName = getArguments().getString(INTENT_STRING_TABNAME);
 		position = getArguments().getInt(INTENT_INT_POSITION);
 		setContentView(R.layout.fragment_tabmain_mjsy);
-		textView = (TextView) findViewById(R.id.fragment_mainTab_item_textView);
+		textView = (TextView) findViewById(R.id.fragment_mainTab_mjsy_textView);
 		// textView.setText(tabName + " " + position + " 界面加载完毕");
 
 		switch (position) {

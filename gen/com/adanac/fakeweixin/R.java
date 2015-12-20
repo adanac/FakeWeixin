@@ -11,18 +11,453 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int tab_main_selector=0x7f040007;
+        /**  蜜色 
+         */
+        public static final int aliceblue=0x7f040032;
+        /**  亚麻色 
+         */
+        public static final int antiquewhite=0x7f040028;
+        /**  中灰兰色 
+         */
+        public static final int aqua=0x7f040088;
+        /**  粟色 
+         */
+        public static final int aquamarine=0x7f040069;
+        /**  沙褐色 
+         */
+        public static final int azure=0x7f040030;
+        /**  烟白色 
+         */
+        public static final int beige=0x7f04002d;
+        /**  浅玫瑰色 
+         */
+        public static final int bisque=0x7f040013;
+        /**  海军色 
+         */
+        public static final int black=0x7f040097;
+        /**  番木色 
+         */
+        public static final int blanchedalmond=0x7f040011;
+        /**  暗绿色 
+         */
+        public static final int blue=0x7f040093;
+        /**  暗红色 
+         */
+        public static final int blueviolet=0x7f040061;
+        /**  暗灰色 
+         */
+        public static final int brown=0x7f040056;
+        /**  亮青色 
+         */
+        public static final int burlywood=0x7f04003a;
+        /**  菊兰色 
+         */
+        public static final int cadetblue=0x7f040077;
+        /**  碧绿色 
+         */
+        public static final int chartreuse=0x7f04006a;
+        /**  茶色 
+         */
+        public static final int chocolate=0x7f040045;
+        /**  暗桔黄色 
+         */
+        public static final int coral=0x7f04001d;
+        /**  中绿色 
+         */
+        public static final int cornflowerblue=0x7f040076;
+        /**  柠檬绸色 
+         */
+        public static final int cornsilk=0x7f04000d;
+        /**  淡灰色 
+         */
+        public static final int crimson=0x7f04003d;
+        /**  浅绿色 
+         */
+        public static final int cyan=0x7f040089;
+        /**  中兰色 
+         */
+        public static final int darkblue=0x7f040095;
+        /**  深天蓝色 
+         */
+        public static final int darkcyan=0x7f04008f;
+        /**  中粉紫色 
+         */
+        public static final int darkgoldenrod=0x7f04004d;
+        /**  亮蓝色 
+         */
+        public static final int darkgray=0x7f040054;
+        /**  绿色 
+         */
+        public static final int darkgreen=0x7f040092;
+        /**  暗灰色 
+         */
+        public static final int darkgrey=0x7f040055;
+        /**  银色 
+         */
+        public static final int darkkhaki=0x7f04004a;
+        /**  重褐色 
+         */
+        public static final int darkmagenta=0x7f04005f;
+        /**  军兰色 
+         */
+        public static final int darkolivegreen=0x7f040078;
+        /**  亮肉色 
+         */
+        public static final int darkorange=0x7f04001c;
+        /**  赭色 
+         */
+        public static final int darkorchid=0x7f040058;
+        /**  暗洋红 
+         */
+        public static final int darkred=0x7f040060;
+        /**  紫罗兰色 
+         */
+        public static final int darksalmon=0x7f040037;
+        /**  亮绿色 
+         */
+        public static final int darkseagreen=0x7f04005d;
+        /**  中绿宝石 
+         */
+        public static final int darkslateblue=0x7f04007b;
+        /**  橙绿色 
+         */
+        public static final int darkslategray=0x7f040081;
+        /**  暗瓦灰色 
+         */
+        public static final int darkslategrey=0x7f040082;
+        /**  中春绿色 
+         */
+        public static final int darkturquoise=0x7f04008d;
+        /**  苍绿色 
+         */
+        public static final int darkviolet=0x7f04005a;
+        /**  红橙色 
+         */
+        public static final int deeppink=0x7f040021;
+        /**  暗宝石绿 
+         */
+        public static final int deepskyblue=0x7f04008e;
+        /**  石蓝色 
+         */
+        public static final int dimgray=0x7f040073;
+        /**  暗灰色 
+         */
+        public static final int dimgrey=0x7f040074;
+        /**  亮海蓝色 
+         */
+        public static final int dodgerblue=0x7f040086;
+        /**  暗金黄色 
+         */
+        public static final int firebrick=0x7f04004e;
+        /**  雪白色 
+         */
+        public static final int floralwhite=0x7f04000b;
+        /**  海绿色 
+         */
+        public static final int forestgreen=0x7f040084;
+        /**  深粉红色 
+         */
+        public static final int fuchsia=0x7f040022;
+        /**  洋李色 
+         */
+        public static final int gainsboro=0x7f04003c;
+        /**  鲜肉色 
+         */
+        public static final int ghostwhite=0x7f04002a;
+        /**  桃色 
+         */
+        public static final int gold=0x7f040017;
+        /**  苍紫罗兰色 
+         */
+        public static final int goldenrod=0x7f04003f;
+        /**  天蓝色 
+         */
+        public static final int gray=0x7f040064;
+        /**  水鸭色 
+         */
+        public static final int green=0x7f040091;
+        /**  苍宝石绿 
+         */
+        public static final int greenyellow=0x7f040052;
+        /**  灰色 
+         */
+        public static final int grey=0x7f040065;
+        /**  天蓝色 
+         */
+        public static final int honeydew=0x7f040031;
+        /**  珊瑚色 
+         */
+        public static final int hotpink=0x7f04001e;
+        /**  秘鲁色 
+         */
+        public static final int indianred=0x7f040047;
+        /**  暗橄榄绿 
+         */
+        public static final int indigo=0x7f040079;
+        /**  白色 
+         */
+        public static final int ivory=0x7f040007;
+        /**  艾利斯兰 
+         */
+        public static final int khaki=0x7f040033;
+        /**  暗肉色 
+         */
+        public static final int lavender=0x7f040038;
+        /**  海贝色 
+         */
+        public static final int lavenderblush=0x7f04000f;
+        /**  黄绿色 
+         */
+        public static final int lawngreen=0x7f04006b;
+        /**  花白色 
+         */
+        public static final int lemonchiffon=0x7f04000c;
+        /**  黄绿色 
+         */
+        public static final int lightblue=0x7f040053;
+        /**  黄褐色 
+         */
+        public static final int lightcoral=0x7f040034;
+        /**  淡紫色 
+         */
+        public static final int lightcyan=0x7f040039;
+        /**  老花色 
+         */
+        public static final int lightgoldenrodyellow=0x7f040026;
+        /**  蓟色 
+         */
+        public static final int lightgray=0x7f040042;
+        /**  中紫色 
+         */
+        public static final int lightgreen=0x7f04005c;
+        /**  亮灰色 
+         */
+        public static final int lightgrey=0x7f040043;
+        /**  粉红色 
+         */
+        public static final int lightpink=0x7f040019;
+        /**  橙色 
+         */
+        public static final int lightsalmon=0x7f04001b;
+        /**  森林绿 
+         */
+        public static final int lightseagreen=0x7f040085;
+        /**  紫罗兰蓝色 
+         */
+        public static final int lightskyblue=0x7f040062;
+        /**  中暗蓝色 
+         */
+        public static final int lightslategray=0x7f04006d;
+        /**  亮蓝灰 
+         */
+        public static final int lightslategrey=0x7f04006e;
+        /**  粉蓝色 
+         */
+        public static final int lightsteelblue=0x7f040050;
+        /**  象牙色 
+         */
+        public static final int lightyellow=0x7f040008;
+        /**  春绿色 
+         */
+        public static final int lime=0x7f04008b;
+        /**  中海蓝 
+         */
+        public static final int limegreen=0x7f040080;
+        /**  亮金黄色 
+         */
+        public static final int linen=0x7f040027;
+        /**  紫红色 
+         */
+        public static final int magenta=0x7f040023;
+        /**  紫色 
+         */
+        public static final int maroon=0x7f040068;
+        /**  暗灰色 
+         */
+        public static final int mediumaquamarine=0x7f040075;
+        /**  蓝色 
+         */
+        public static final int mediumblue=0x7f040094;
+        /**  褐玫瑰红 
+         */
+        public static final int mediumorchid=0x7f04004c;
+        /**  暗紫罗兰色 
+         */
+        public static final int mediumpurple=0x7f04005b;
+        /**  青绿色 
+         */
+        public static final int mediumseagreen=0x7f04007f;
+        /**  草绿色 
+         */
+        public static final int mediumslateblue=0x7f04006c;
+        /**  酸橙色 
+         */
+        public static final int mediumspringgreen=0x7f04008c;
+        /**  靛青色 
+         */
+        public static final int mediumturquoise=0x7f04007a;
+        /**  印第安红 
+         */
+        public static final int mediumvioletred=0x7f040048;
+        /**  闪兰色 
+         */
+        public static final int midnightblue=0x7f040087;
+        /**  幽灵白 
+         */
+        public static final int mintcream=0x7f04002b;
+        /**  白杏色 
+         */
+        public static final int mistyrose=0x7f040012;
+        /**  桔黄色 
+         */
+        public static final int moccasin=0x7f040014;
+        /**  鹿皮色 
+         */
+        public static final int navajowhite=0x7f040015;
+        /**  暗蓝色 
+         */
+        public static final int navy=0x7f040096;
+        /**  红色 
+         */
+        public static final int oldlace=0x7f040025;
+        /**  灰色 
+         */
+        public static final int olive=0x7f040066;
+        /**  灰石色 
+         */
+        public static final int olivedrab=0x7f040071;
+        /**  亮粉红色 
+         */
+        public static final int orange=0x7f04001a;
+        /**  西红柿色 
+         */
+        public static final int orangered=0x7f040020;
+        /**  金麒麟色 
+         */
+        public static final int orchid=0x7f040040;
+        /**  亮珊瑚色 
+         */
+        public static final int palegoldenrod=0x7f040035;
+        /**  暗紫色 
+         */
+        public static final int palegreen=0x7f040059;
+        /**  亮钢兰色 
+         */
+        public static final int paleturquoise=0x7f040051;
+        /**  暗深红色 
+         */
+        public static final int palevioletred=0x7f04003e;
+        /**  淡紫红 
+         */
+        public static final int papayawhip=0x7f040010;
+        /**  纳瓦白 
+         */
+        public static final int peachpuff=0x7f040016;
+        /**  巧可力色 
+         */
+        public static final int peru=0x7f040046;
+        /**  金色 
+         */
+        public static final int pink=0x7f040018;
+        /**  实木色 
+         */
+        public static final int plum=0x7f04003b;
+        /**  火砖色 
+         */
+        public static final int powderblue=0x7f04004f;
+        /**  橄榄色 
+         */
+        public static final int purple=0x7f040067;
+        /**  红紫色 
+         */
+        public static final int red=0x7f040024;
+        /**  暗黄褐色 
+         */
+        public static final int rosybrown=0x7f04004b;
+        /**  钢兰色 
+         */
+        public static final int royalblue=0x7f04007d;
+        /**  暗海兰色 
+         */
+        public static final int saddlebrown=0x7f04005e;
+        /**  古董白 
+         */
+        public static final int salmon=0x7f040029;
+        /**  浅黄色 
+         */
+        public static final int sandybrown=0x7f04002f;
+        /**  暗瓦灰色 
+         */
+        public static final int seagreen=0x7f040083;
+        /**  米绸色 
+         */
+        public static final int seashell=0x7f04000e;
+        /**  褐色 
+         */
+        public static final int sienna=0x7f040057;
+        /**  中紫罗兰色 
+         */
+        public static final int silver=0x7f040049;
+        /**  亮天蓝色 
+         */
+        public static final int skyblue=0x7f040063;
+        /**  深绿褐色 
+         */
+        public static final int slateblue=0x7f040072;
+        /**  亮蓝灰 
+         */
+        public static final int slategray=0x7f04006f;
+        /**  灰石色 
+         */
+        public static final int slategrey=0x7f040070;
+        /**  黄色 
+         */
+        public static final int snow=0x7f04000a;
+        /**  青色 
+         */
+        public static final int springgreen=0x7f04008a;
+        /**  暗灰蓝色 
+         */
+        public static final int steelblue=0x7f04007c;
+        public static final int tab_main_selector=0x7f040098;
         /**  公共的 
          */
         public static final int tab_main_text_1=0x7f040000;
         public static final int tab_main_text_2=0x7f040001;
-        public static final int tab_top2_selector=0x7f040008;
+        public static final int tab_top2_selector=0x7f040099;
         public static final int tab_top2_text_1=0x7f040004;
         public static final int tab_top2_text_2=0x7f040005;
-        public static final int tab_top_selector=0x7f040009;
+        public static final int tab_top_selector=0x7f04009a;
         public static final int tab_top_text_1=0x7f040002;
         public static final int tab_top_text_2=0x7f040003;
+        /**  亮灰色 
+         */
+        public static final int tan=0x7f040044;
+        /**  暗青色 
+         */
+        public static final int teal=0x7f040090;
+        /**  淡紫色 
+         */
+        public static final int thistle=0x7f040041;
+        /**  热粉红色 
+         */
+        public static final int tomato=0x7f04001f;
+        /**  皇家蓝 
+         */
+        public static final int turquoise=0x7f04007e;
+        /**  苍麒麟色 
+         */
+        public static final int violet=0x7f040036;
+        /**  米色 
+         */
+        public static final int wheat=0x7f04002e;
         public static final int white=0x7f040006;
+        /**  薄荷色 
+         */
+        public static final int whitesmoke=0x7f04002c;
+        /**  亮黄色 
+         */
+        public static final int yellow=0x7f040009;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -53,56 +488,108 @@ public final class R {
         public static final int bottom_bar=0x7f020006;
         public static final int btn_start=0x7f020007;
         public static final int c=0x7f020008;
-        public static final int education=0x7f020009;
-        public static final int green_circle=0x7f02000a;
-        public static final int guide4=0x7f02000b;
-        public static final int ic_launcher=0x7f02000c;
-        public static final int icon=0x7f02000d;
-        public static final int icon_back=0x7f02000e;
-        public static final int ireadbook=0x7f02000f;
-        public static final int light_blue_circle=0x7f020010;
-        public static final int maintab_1_selector=0x7f020011;
-        public static final int maintab_2_selector=0x7f020012;
-        public static final int maintab_3_selector=0x7f020013;
-        public static final int maintab_4_selector=0x7f020014;
-        public static final int map_mjsynh=0x7f020015;
-        public static final int map_sjsy=0x7f020016;
-        public static final int map_sjsy_zuoye=0x7f020017;
-        public static final int map_yycc=0x7f020018;
-        public static final int map_yycc_know01=0x7f020019;
-        public static final int map_yycc_know02=0x7f02001a;
-        public static final int map_yycc_know03=0x7f02001b;
-        public static final int map_yycc_zuoye=0x7f02001c;
-        public static final int pink_circle=0x7f02001d;
-        public static final int point_selector=0x7f02001e;
-        public static final int red_circle=0x7f02001f;
-        public static final int slide=0x7f020020;
-        public static final int tabbar_discover=0x7f020021;
-        public static final int tabbar_discover_selected=0x7f020022;
-        public static final int tabbar_home=0x7f020023;
-        public static final int tabbar_home_selected=0x7f020024;
-        public static final int tabbar_message_center=0x7f020025;
-        public static final int tabbar_message_center_selected=0x7f020026;
-        public static final int tabbar_profile=0x7f020027;
-        public static final int tabbar_profile_selected=0x7f020028;
-        public static final int title_bar=0x7f020029;
-        public static final int v1=0x7f02002a;
-        public static final int v2=0x7f02002b;
-        public static final int v3=0x7f02002c;
-        public static final int v4=0x7f02002d;
-        public static final int v_btn_nor=0x7f02002e;
-        public static final int v_btn_pressed=0x7f02002f;
-        public static final int v_point_nor=0x7f020030;
-        public static final int v_point_nor2=0x7f020031;
-        public static final int v_point_nor_64=0x7f020032;
-        public static final int v_point_pre=0x7f020033;
-        public static final int v_point_pre2=0x7f020034;
-        public static final int yellow_circle=0x7f020035;
-        public static final int yellow_green_circle=0x7f020036;
+        public static final int default_qq_avatar=0x7f020009;
+        public static final int del_icon_normal=0x7f02000a;
+        public static final int education=0x7f02000b;
+        public static final int green_circle=0x7f02000c;
+        public static final int guide4=0x7f02000d;
+        public static final int holder_bg=0x7f02000e;
+        public static final int ic_launcher=0x7f02000f;
+        public static final int icon=0x7f020010;
+        public static final int icon_back=0x7f020011;
+        public static final int ireadbook=0x7f020012;
+        public static final int item_point_bg=0x7f020013;
+        public static final int light_blue_circle=0x7f020014;
+        public static final int list_item_bg=0x7f020015;
+        public static final int maintab_1_selector=0x7f020016;
+        public static final int maintab_2_selector=0x7f020017;
+        public static final int maintab_3_selector=0x7f020018;
+        public static final int maintab_4_selector=0x7f020019;
+        public static final int map_emsml_zp01=0x7f02001a;
+        public static final int map_emsml_zp02=0x7f02001b;
+        public static final int map_emxdsj_know=0x7f02001c;
+        public static final int map_emxdsj_sk=0x7f02001d;
+        public static final int map_emxdsj_zp01=0x7f02001e;
+        public static final int map_emxdsj_zp02=0x7f02001f;
+        public static final int map_emxdsj_zp03=0x7f020020;
+        public static final int map_emys_sk=0x7f020021;
+        public static final int map_emys_zp01=0x7f020022;
+        public static final int map_emys_zp02=0x7f020023;
+        public static final int map_emys_zp03=0x7f020024;
+        public static final int map_ezgx=0x7f020025;
+        public static final int map_fhnh=0x7f020026;
+        public static final int map_fhnh_taolun=0x7f020027;
+        public static final int map_fhnh_zuoye=0x7f020028;
+        public static final int map_flash_car=0x7f020029;
+        public static final int map_kj=0x7f02002a;
+        public static final int map_mjsynh=0x7f02002b;
+        public static final int map_set=0x7f02002c;
+        public static final int map_sjsy=0x7f02002d;
+        public static final int map_sjsy_zuoye=0x7f02002e;
+        public static final int map_sy=0x7f02002f;
+        public static final int map_two_sp_01=0x7f020030;
+        public static final int map_two_sp_02=0x7f020031;
+        public static final int map_two_sp_03=0x7f020032;
+        public static final int map_two_tw01=0x7f020033;
+        public static final int map_two_tw02=0x7f020034;
+        public static final int map_two_tw03=0x7f020035;
+        public static final int map_two_tw04=0x7f020036;
+        public static final int map_two_yp=0x7f020037;
+        public static final int map_two_yp_gq=0x7f020038;
+        public static final int map_two_yp_pp=0x7f020039;
+        public static final int map_yycc=0x7f02003a;
+        public static final int map_yycc_know01=0x7f02003b;
+        public static final int map_yycc_know02=0x7f02003c;
+        public static final int map_yycc_know03=0x7f02003d;
+        public static final int map_yycc_zuoye=0x7f02003e;
+        public static final int map_zp=0x7f02003f;
+        public static final int map_zykf=0x7f020040;
+        public static final int map_zyxz=0x7f020041;
+        public static final int map_zyyy=0x7f020042;
+        public static final int map_zyyy_zuoye01=0x7f020043;
+        public static final int map_zyyy_zuoye02=0x7f020044;
+        public static final int map_zyzh=0x7f020045;
+        public static final int pink_circle=0x7f020046;
+        public static final int point_selector=0x7f020047;
+        public static final int red_circle=0x7f020048;
+        public static final int slide=0x7f020049;
+        public static final int tabbar_discover=0x7f02004a;
+        public static final int tabbar_discover_selected=0x7f02004b;
+        public static final int tabbar_home=0x7f02004c;
+        public static final int tabbar_home_selected=0x7f02004d;
+        public static final int tabbar_message_center=0x7f02004e;
+        public static final int tabbar_message_center_selected=0x7f02004f;
+        public static final int tabbar_profile=0x7f020050;
+        public static final int tabbar_profile_selected=0x7f020051;
+        public static final int three_fx01=0x7f020052;
+        public static final int three_fx02=0x7f020053;
+        public static final int three_fx03=0x7f020054;
+        public static final int three_wz01=0x7f020055;
+        public static final int three_wz02=0x7f020056;
+        public static final int three_wz03=0x7f020057;
+        public static final int three_xz01=0x7f020058;
+        public static final int three_xz02=0x7f020059;
+        public static final int three_xz03=0x7f02005a;
+        public static final int title_bar=0x7f02005b;
+        public static final int two_tw01=0x7f02005c;
+        public static final int v1=0x7f02005d;
+        public static final int v2=0x7f02005e;
+        public static final int v3=0x7f02005f;
+        public static final int v4=0x7f020060;
+        public static final int v_btn_nor=0x7f020061;
+        public static final int v_btn_pressed=0x7f020062;
+        public static final int v_point_nor=0x7f020063;
+        public static final int v_point_nor2=0x7f020064;
+        public static final int v_point_nor_64=0x7f020065;
+        public static final int v_point_pre=0x7f020066;
+        public static final int v_point_pre2=0x7f020067;
+        public static final int wechat_icon=0x7f020068;
+        public static final int yellow_circle=0x7f020069;
+        public static final int yellow_green_circle=0x7f02006a;
     }
     public static final class id {
-        public static final int action_settings=0x7f09003d;
-        public static final int btn_start=0x7f09003c;
+        public static final int action_settings=0x7f090086;
+        public static final int btn_start=0x7f090085;
         public static final int content_content=0x7f090013;
         public static final int content_content_three=0x7f090014;
         public static final int content_content_two=0x7f090015;
@@ -111,17 +598,53 @@ public final class R {
         public static final int content_layout2_one=0x7f090019;
         public static final int content_layout2_two=0x7f09001a;
         public static final int content_layout3=0x7f09001b;
+        public static final int delete=0x7f09007e;
+        public static final int delete1=0x7f09007b;
         public static final int emotion_content=0x7f09001c;
         public static final int emotion_top=0x7f09001f;
         public static final int enable_content=0x7f090020;
         public static final int enable_top=0x7f090021;
-        public static final int fragment_mainTab_item_progressBar=0x7f090025;
-        public static final int fragment_mainTab_item_textView=0x7f090026;
+        public static final int fragment_mainTab_emflash_progressBar=0x7f090025;
+        public static final int fragment_mainTab_emflash_textView=0x7f090026;
+        public static final int fragment_mainTab_emsml_progressBar=0x7f090027;
+        public static final int fragment_mainTab_emsml_textView=0x7f090028;
+        public static final int fragment_mainTab_emxdsj_progressBar=0x7f090029;
+        public static final int fragment_mainTab_emxdsj_textView=0x7f09002a;
+        public static final int fragment_mainTab_emys_progressBar=0x7f09002b;
+        public static final int fragment_mainTab_emys_textView=0x7f09002c;
+        public static final int fragment_mainTab_ezgx_progressBar=0x7f09002d;
+        public static final int fragment_mainTab_ezgx_textView=0x7f09002e;
+        public static final int fragment_mainTab_fhnh_progressBar=0x7f09002f;
+        public static final int fragment_mainTab_fhnh_textView=0x7f090030;
+        public static final int fragment_mainTab_mjsy_progressBar=0x7f090031;
+        public static final int fragment_mainTab_mjsy_textView=0x7f090032;
+        public static final int fragment_mainTab_sjsy_progressBar=0x7f090033;
+        public static final int fragment_mainTab_sjsy_textView=0x7f090034;
+        public static final int fragment_mainTab_three_mj_progressBar=0x7f090035;
+        public static final int fragment_mainTab_three_mj_textView=0x7f090036;
+        public static final int fragment_mainTab_two_sp_progressBar=0x7f090037;
+        public static final int fragment_mainTab_two_sp_textView=0x7f090038;
+        public static final int fragment_mainTab_two_tw_progressBar=0x7f090039;
+        public static final int fragment_mainTab_two_tw_textView=0x7f09003a;
+        public static final int fragment_mainTab_two_yp_progressBar=0x7f09003b;
+        public static final int fragment_mainTab_two_yp_textView=0x7f09003c;
+        public static final int fragment_mainTab_yycc_progressBar=0x7f09003d;
+        public static final int fragment_mainTab_yycc_textView=0x7f09003e;
+        public static final int fragment_mainTab_zykf_progressBar=0x7f09003f;
+        public static final int fragment_mainTab_zykf_textView=0x7f090040;
+        public static final int fragment_mainTab_zyxz_progressBar=0x7f090041;
+        public static final int fragment_mainTab_zyxz_textView=0x7f090042;
+        public static final int fragment_mainTab_zyyy_progressBar=0x7f090043;
+        public static final int fragment_mainTab_zyyy_textView=0x7f090044;
+        public static final int fragment_mainTab_zyzh_progressBar=0x7f090045;
+        public static final int fragment_mainTab_zyzh_textView=0x7f090046;
         public static final int fragment_slide_progressBar=0x7f090022;
         public static final int fragment_tabmain_indicator=0x7f090023;
         public static final int fragment_tabmain_viewPager=0x7f090024;
         public static final int head_txt=0x7f090016;
-        public static final int imageView1=0x7f09002a;
+        public static final int icon=0x7f090072;
+        public static final int id=0x7f090071;
+        public static final int imageView1=0x7f09004a;
         public static final int iv1=0x7f09000e;
         public static final int iv2=0x7f09000f;
         public static final int iv3=0x7f090010;
@@ -131,36 +654,73 @@ public final class R {
         public static final int iv_friend=0x7f090007;
         public static final int iv_home=0x7f090001;
         public static final int iv_setting=0x7f09000a;
-        public static final int know_content=0x7f090027;
-        public static final int know_top=0x7f090028;
+        public static final int know_content=0x7f090047;
+        public static final int know_top=0x7f090048;
+        public static final int left_holder=0x7f09007a;
+        public static final int list_fx=0x7f090077;
+        public static final int list_wz=0x7f090078;
+        public static final int list_xz=0x7f090079;
         public static final int ll=0x7f09000d;
         public static final int ll_address=0x7f090003;
         public static final int ll_friend=0x7f090006;
         public static final int ll_home=0x7f090000;
         public static final int ll_setting=0x7f090009;
-        public static final int mainLinearLayoutTest=0x7f090036;
-        public static final int main_content=0x7f09002b;
-        public static final int main_content_content=0x7f09002c;
-        public static final int moretab_indicator=0x7f09002e;
-        public static final int moretab_iv_back=0x7f090030;
-        public static final int moretab_mjsy_top=0x7f090031;
-        public static final int moretab_sjsy_top=0x7f090032;
-        public static final int moretab_viewPager=0x7f09002f;
-        public static final int moretab_yycc_top=0x7f090033;
-        public static final int page_01=0x7f090034;
-        public static final int page_01_ll=0x7f090035;
-        public static final int relativeLayoutTest=0x7f090037;
-        public static final int slideMenu_listView=0x7f090029;
-        public static final int starttext=0x7f09003b;
-        public static final int tabmain_indicator=0x7f09003a;
-        public static final int tabmain_viewPager=0x7f090039;
-        public static final int textView1=0x7f090038;
+        public static final int mainLinearLayoutTest=0x7f09006e;
+        public static final int main_content=0x7f09004b;
+        public static final int main_content_content=0x7f09004c;
+        public static final int moretab_emflash_top=0x7f090051;
+        public static final int moretab_emsml_top=0x7f090055;
+        public static final int moretab_emxdsj_top=0x7f090059;
+        public static final int moretab_emys_top=0x7f09005d;
+        public static final int moretab_ezgx_top=0x7f09005e;
+        public static final int moretab_indicator=0x7f090057;
+        public static final int moretab_indicator_emflash=0x7f09004e;
+        public static final int moretab_indicator_emsml=0x7f090053;
+        public static final int moretab_indicator_emys=0x7f09005b;
+        public static final int moretab_iv_back=0x7f090050;
+        public static final int moretab_mjsy_top=0x7f090060;
+        public static final int moretab_sjsy_top=0x7f090061;
+        public static final int moretab_three_fx_top=0x7f090062;
+        public static final int moretab_three_wz_top=0x7f090064;
+        public static final int moretab_three_xz_top=0x7f090063;
+        public static final int moretab_two_sp_top=0x7f090065;
+        public static final int moretab_two_tw_top=0x7f090066;
+        public static final int moretab_two_yp_top=0x7f090067;
+        public static final int moretab_viewPager=0x7f090058;
+        public static final int moretab_viewPager_emflash=0x7f09004f;
+        public static final int moretab_viewPager_emsml=0x7f090054;
+        public static final int moretab_viewPager_emys=0x7f09005c;
+        public static final int moretab_yycc_top=0x7f09005f;
+        public static final int moretab_zykf_top=0x7f090068;
+        public static final int moretab_zyxz_top=0x7f090069;
+        public static final int moretab_zyyy_top=0x7f09006a;
+        public static final int moretab_zyzh_top=0x7f09006b;
+        public static final int msg=0x7f090074;
+        public static final int page_01=0x7f09006c;
+        public static final int page_01_ll=0x7f09006d;
+        public static final int relativeLayoutTest=0x7f09006f;
+        public static final int right_holder=0x7f09007d;
+        public static final int slideMenu_listView=0x7f090049;
+        public static final int slide_three=0x7f090076;
+        public static final int starttext=0x7f090084;
+        public static final int tabmain_indicator=0x7f090080;
+        public static final int tabmain_viewPager=0x7f09007f;
+        public static final int textView1=0x7f090070;
+        public static final int time=0x7f090075;
+        public static final int title=0x7f090073;
         public static final int tv_address=0x7f090005;
         public static final int tv_friend=0x7f090008;
         public static final int tv_home=0x7f090002;
         public static final int tv_setting=0x7f09000b;
         public static final int tv_top=0x7f090012;
-        public static final int videoview=0x7f09002d;
+        public static final int two_tw01=0x7f090081;
+        public static final int two_tw_content=0x7f090082;
+        public static final int two_tw_top=0x7f090083;
+        public static final int videoview=0x7f090056;
+        public static final int videoview_emflash=0x7f09004d;
+        public static final int videoview_emsml=0x7f090052;
+        public static final int videoview_emys=0x7f09005a;
+        public static final int view_content=0x7f09007c;
         public static final int viewpager=0x7f09000c;
         public static final int vp_content=0x7f09001d;
     }
@@ -181,37 +741,104 @@ public final class R {
         public static final int enable_top=0x7f03000d;
         public static final int fragment_slide=0x7f03000e;
         public static final int fragment_tabmain=0x7f03000f;
-        public static final int fragment_tabmain_mjsy=0x7f030010;
-        public static final int fragment_tabmain_sjsy=0x7f030011;
-        public static final int fragment_tabmain_yycc=0x7f030012;
-        public static final int know_content=0x7f030013;
-        public static final int know_top=0x7f030014;
-        public static final int layout_slide=0x7f030015;
-        public static final int layout_slide_menu=0x7f030016;
-        public static final int layout_slidebar=0x7f030017;
-        public static final int main_content=0x7f030018;
-        public static final int main_content_content=0x7f030019;
-        public static final int main_content_tablelayout=0x7f03001a;
-        public static final int moretab_mjsy=0x7f03001b;
-        public static final int moretab_mjsy_top=0x7f03001c;
-        public static final int moretab_sjsy=0x7f03001d;
-        public static final int moretab_sjsy_top=0x7f03001e;
-        public static final int moretab_yycc=0x7f03001f;
-        public static final int moretab_yycc_top=0x7f030020;
-        public static final int mybutton=0x7f030021;
-        public static final int page_01=0x7f030022;
-        public static final int page_02=0x7f030023;
-        public static final int page_03=0x7f030024;
-        public static final int page_04=0x7f030025;
-        public static final int page_042=0x7f030026;
-        public static final int tab_main=0x7f030027;
-        public static final int tab_top=0x7f030028;
-        public static final int tabmain_activity=0x7f030029;
-        public static final int video_videoview=0x7f03002a;
-        public static final int view1=0x7f03002b;
-        public static final int view2=0x7f03002c;
-        public static final int view3=0x7f03002d;
-        public static final int view4=0x7f03002e;
+        public static final int fragment_tabmain_emflash=0x7f030010;
+        public static final int fragment_tabmain_emsf=0x7f030011;
+        public static final int fragment_tabmain_emsml=0x7f030012;
+        public static final int fragment_tabmain_emsy=0x7f030013;
+        public static final int fragment_tabmain_emxdsj=0x7f030014;
+        public static final int fragment_tabmain_emys=0x7f030015;
+        public static final int fragment_tabmain_ezgx=0x7f030016;
+        public static final int fragment_tabmain_fhnh=0x7f030017;
+        public static final int fragment_tabmain_mjsy=0x7f030018;
+        public static final int fragment_tabmain_sjsy=0x7f030019;
+        public static final int fragment_tabmain_three_fx=0x7f03001a;
+        public static final int fragment_tabmain_three_mj=0x7f03001b;
+        public static final int fragment_tabmain_three_wz=0x7f03001c;
+        public static final int fragment_tabmain_three_xz=0x7f03001d;
+        public static final int fragment_tabmain_two_sp=0x7f03001e;
+        public static final int fragment_tabmain_two_tw=0x7f03001f;
+        public static final int fragment_tabmain_two_yp=0x7f030020;
+        public static final int fragment_tabmain_yycc=0x7f030021;
+        public static final int fragment_tabmain_zykf=0x7f030022;
+        public static final int fragment_tabmain_zyxz=0x7f030023;
+        public static final int fragment_tabmain_zyyy=0x7f030024;
+        public static final int fragment_tabmain_zyzh=0x7f030025;
+        public static final int know_content=0x7f030026;
+        public static final int know_top=0x7f030027;
+        public static final int layout_slide=0x7f030028;
+        public static final int layout_slide_menu=0x7f030029;
+        public static final int layout_slidebar=0x7f03002a;
+        public static final int main_content=0x7f03002b;
+        public static final int main_content_content=0x7f03002c;
+        public static final int main_content_tablelayout=0x7f03002d;
+        public static final int moretab_emflash=0x7f03002e;
+        public static final int moretab_emflash_top=0x7f03002f;
+        public static final int moretab_emsf=0x7f030030;
+        public static final int moretab_emsf_top=0x7f030031;
+        public static final int moretab_emsml=0x7f030032;
+        public static final int moretab_emsml_top=0x7f030033;
+        public static final int moretab_emsy=0x7f030034;
+        public static final int moretab_emsy_top=0x7f030035;
+        public static final int moretab_emxdsj=0x7f030036;
+        public static final int moretab_emxdsj_top=0x7f030037;
+        public static final int moretab_emys=0x7f030038;
+        public static final int moretab_emys_top=0x7f030039;
+        public static final int moretab_ezgx=0x7f03003a;
+        public static final int moretab_ezgx_top=0x7f03003b;
+        public static final int moretab_fhnh=0x7f03003c;
+        public static final int moretab_fhnh_top=0x7f03003d;
+        public static final int moretab_mjsy=0x7f03003e;
+        public static final int moretab_mjsy_top=0x7f03003f;
+        public static final int moretab_sjsy=0x7f030040;
+        public static final int moretab_sjsy_top=0x7f030041;
+        public static final int moretab_three_fx=0x7f030042;
+        public static final int moretab_three_fx_top=0x7f030043;
+        public static final int moretab_three_mj=0x7f030044;
+        public static final int moretab_three_mj_top=0x7f030045;
+        public static final int moretab_three_wz=0x7f030046;
+        public static final int moretab_three_wz_top=0x7f030047;
+        public static final int moretab_three_xz=0x7f030048;
+        public static final int moretab_three_xz_top=0x7f030049;
+        public static final int moretab_two_sp=0x7f03004a;
+        public static final int moretab_two_sp_top=0x7f03004b;
+        public static final int moretab_two_tw=0x7f03004c;
+        public static final int moretab_two_tw_top=0x7f03004d;
+        public static final int moretab_two_yp=0x7f03004e;
+        public static final int moretab_two_yp_top=0x7f03004f;
+        public static final int moretab_yycc=0x7f030050;
+        public static final int moretab_yycc_top=0x7f030051;
+        public static final int moretab_zykf=0x7f030052;
+        public static final int moretab_zykf_top=0x7f030053;
+        public static final int moretab_zyxz=0x7f030054;
+        public static final int moretab_zyxz_top=0x7f030055;
+        public static final int moretab_zyyy=0x7f030056;
+        public static final int moretab_zyyy_top=0x7f030057;
+        public static final int moretab_zyzh=0x7f030058;
+        public static final int moretab_zyzh_top=0x7f030059;
+        public static final int mybutton=0x7f03005a;
+        public static final int page_01=0x7f03005b;
+        public static final int page_02=0x7f03005c;
+        public static final int page_03=0x7f03005d;
+        public static final int page_04=0x7f03005e;
+        public static final int page_042=0x7f03005f;
+        public static final int slide_footer=0x7f030060;
+        public static final int slide_list_item=0x7f030061;
+        public static final int slide_three_fx=0x7f030062;
+        public static final int slide_three_wz=0x7f030063;
+        public static final int slide_three_xz=0x7f030064;
+        public static final int slide_view_merge_fx=0x7f030065;
+        public static final int slide_view_merge_wz=0x7f030066;
+        public static final int slide_view_merge_xz=0x7f030067;
+        public static final int tab_main=0x7f030068;
+        public static final int tab_top=0x7f030069;
+        public static final int tabmain_activity=0x7f03006a;
+        public static final int two_tw01=0x7f03006b;
+        public static final int two_tw_content=0x7f03006c;
+        public static final int two_tw_top=0x7f03006d;
+        public static final int view1=0x7f03006e;
+        public static final int view2=0x7f03006f;
+        public static final int view3=0x7f030070;
+        public static final int view4=0x7f030071;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -222,17 +849,42 @@ public final class R {
         public static final int emotion_top_title=0x7f060005;
         public static final int enable_top_title=0x7f060004;
         public static final int know_top_title=0x7f060003;
+        public static final int moretab_emflash_top_title=0x7f060011;
+        public static final int moretab_emsf_top_title=0x7f060014;
+        public static final int moretab_emsml_top_title=0x7f06000f;
+        public static final int moretab_emsy_top_title=0x7f060013;
+        public static final int moretab_emxdsj_top_title=0x7f060010;
+        public static final int moretab_emys_top_title=0x7f060012;
+        public static final int moretab_ezgx_top_title=0x7f060009;
+        public static final int moretab_fhnh_top_title=0x7f06000a;
+        /**  第一模块：理解媒介 
+         */
         public static final int moretab_mjsy_top_title=0x7f060006;
         public static final int moretab_sjsy_top_title=0x7f060007;
         public static final int moretab_yycc_top_title=0x7f060008;
-        public static final int p01_str=0x7f06000a;
-        public static final int p02_str=0x7f06000b;
-        public static final int p03_str=0x7f06000c;
-        public static final int p04_str=0x7f06000d;
-        public static final int start=0x7f060009;
+        public static final int moretab_zykf_top_title=0x7f06000b;
+        public static final int moretab_zyxz_top_title=0x7f06000c;
+        public static final int moretab_zyyy_top_title=0x7f06000e;
+        public static final int moretab_zyzh_top_title=0x7f06000d;
+        public static final int p01_str=0x7f06001d;
+        public static final int p02_str=0x7f06001e;
+        public static final int p03_str=0x7f06001f;
+        public static final int p04_str=0x7f060020;
+        public static final int start=0x7f06001c;
+        public static final int three_fx_top_title=0x7f06001b;
+        /**  第三模块：研究媒介 
+         */
+        public static final int three_mj_top_title=0x7f060018;
+        public static final int three_wz_top_title=0x7f06001a;
+        public static final int three_xz_top_title=0x7f060019;
         public static final int top_title=0x7f060002;
-        public static final int view1_str0=0x7f06000e;
-        public static final int view1_str1=0x7f06000f;
+        public static final int two_sp_top_title=0x7f060017;
+        /**  第二模块：使用媒介  
+         */
+        public static final int two_tw_top_title=0x7f060015;
+        public static final int two_yp_top_title=0x7f060016;
+        public static final int view1_str0=0x7f060021;
+        public static final int view1_str1=0x7f060022;
     }
     public static final class style {
         /** 

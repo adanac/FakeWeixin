@@ -8,6 +8,8 @@ import android.graphics.Paint;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.adanac.fakeweixin.activity.moretab.MoreTabEZGXActivity;
+import com.adanac.fakeweixin.activity.moretab.MoreTabFHNHActivity;
 import com.adanac.fakeweixin.activity.moretab.MoreTabMJSYActivity;
 import com.adanac.fakeweixin.activity.moretab.MoreTabSJSYActivity;
 import com.adanac.fakeweixin.activity.moretab.MoreTabYYCCActivity;
@@ -39,33 +41,33 @@ public class DrawAppView2 extends View {
 		paint.setColor(Color.RED);// 设置红色
 
 		DrawUtil.drawCircleAndTxt(canvas, paint, width / 2 - 40,
-				height / 2 - 250, 90, "媒介素养", Color.rgb(255, 100, 0),
-				Color.BLACK, 30);
+				height / 2 - 250, 90, "媒介素养", Color.rgb(247, 80, 0),
+				Color.WHITE, 30);
 
 		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2 - 40,
-				height / 2 + 50, 200, 90, "意义所指层次图", Color.GRAY, Color.BLACK,
+				height / 2 + 50, 200, 90, "意义所指层次图", Color.GRAY, Color.WHITE,
 				25);
 
 		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2 - 250,
-				height / 2 - 250, 150, 90, "媒介素养内涵", Color.GRAY, Color.BLACK,
+				height / 2 - 250, 150, 90, "媒介素养内涵", Color.GRAY, Color.WHITE,
 				25);
 
 		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2 + 250,
-				height / 2 - 250, 150, 90, "视觉素养", Color.GRAY, Color.BLACK, 25);
+				height / 2 - 250, 150, 90, "视觉素养", Color.GRAY, Color.WHITE, 25);
 
 		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2 - 40,
-				height / 2 - 500, 120, 70, "媒介演变", Color.GRAY, Color.BLACK, 20);
+				height / 2 - 500, 120, 70, "媒介演变", Color.GRAY, Color.WHITE, 25);
 
 		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2 - 250,
-				height / 2 - 500, 100, 70, "媒介", Color.GRAY, Color.BLACK, 25);
+				height / 2 - 500, 100, 70, "媒介", Color.GRAY, Color.WHITE, 25);
 
 		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2 + 110,
-				height / 2 - 370, 120, 70, "符号的内涵", Color.parseColor("yellow"),
-				Color.BLACK, 20);
+				height / 2 - 370, 120, 70, "符号的内涵", Color.parseColor("gray"),
+				Color.WHITE, 25);
 
 		DrawUtil.drawRectCenterTxt(canvas, paint, width / 2 + 110,
-				height / 2 - 100, 150, 70, "二者间的关系",
-				Color.parseColor("yellow"), Color.BLACK, 20);
+				height / 2 - 100, 150, 70, "二者间的关系", Color.parseColor("gray"),
+				Color.WHITE, 25);
 
 		paint.setColor(Color.BLACK);
 
@@ -123,7 +125,26 @@ public class DrawAppView2 extends View {
 		clickYYCC(event, x, y, width / 2 - 40 - 200 / 2, width / 2 - 40 + 200
 				/ 2, height / 2 + 50 - 90 / 2, height / 2 + 50 + 90 / 2,
 				MoreTabYYCCActivity.class);
+		// 点击二者间的关系 （width / 2 + 110,height / 2 - 100, 150, 70）
+		clickEZGX(event, x, y, width / 2 + 110 - 150 / 2, width / 2 + 110 + 150
+				/ 2, height / 2 - 100 - 70 / 2, height / 2 - 50 + 70 / 2,
+				MoreTabEZGXActivity.class);
+		// 点击符号的内涵（width / 2 + 110,height / 2 - 370, 120, 70）
+		clickFHNH(event, x, y, width / 2 + 110 - 120 / 2, width / 2 + 110 + 120
+				/ 2, height / 2 - 370 - 70 / 2, height / 2 - 370 + 70 / 2,
+				MoreTabFHNHActivity.class);
 		return true;
+	}
+
+	private void clickFHNH(MotionEvent event, float x, float y, int i, int j,
+			int k, int l, Class<MoreTabFHNHActivity> clazz) {
+		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了符号的内涵");
+	}
+
+	private void clickEZGX(MotionEvent event, float x, float y, int i, int j,
+			int k, int l, Class<MoreTabEZGXActivity> clazz) {
+
+		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了二者关系");
 	}
 
 	// 点击意义所指层次图

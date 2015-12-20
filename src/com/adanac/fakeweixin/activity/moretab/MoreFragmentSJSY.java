@@ -3,6 +3,7 @@ package com.adanac.fakeweixin.activity.moretab;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Html;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -24,32 +25,32 @@ public class MoreFragmentSJSY extends LazyFragment {
 	@Override
 	protected void onCreateViewLazy(Bundle savedInstanceState) {
 		super.onCreateViewLazy(savedInstanceState);
-		setContentView(R.layout.fragment_tabmain_mjsy);
+		setContentView(R.layout.fragment_tabmain_sjsy);
 		tabIndex = getArguments().getInt(INTENT_INT_INDEX);
-		progressBar = (ProgressBar) findViewById(R.id.fragment_mainTab_item_progressBar);
-		textView = (TextView) findViewById(R.id.fragment_mainTab_item_textView);
+		progressBar = (ProgressBar) findViewById(R.id.fragment_mainTab_sjsy_progressBar);
+		textView = (TextView) findViewById(R.id.fragment_mainTab_sjsy_textView);
+		textView.setTextSize(12);
 		switch (tabIndex) {
 		case 0:
-			textView.setTextSize(20);
 			textView.setText("^_^");
 			break;
 		case 1:
 			Drawable d = getResources().getDrawable(R.drawable.map_sjsy);
-			d.setBounds(0, 0, 500, 500); // 必须设置图片大小，否则不显示
+			d.setBounds(0, 0, 700, 500); // 必须设置图片大小，否则不显示
 			textView.setCompoundDrawables(d, null, null, null);
 			// textView.setText("setCompoundDrawables");
 			break;
 		case 2:
-			textView.setTextSize(15);
-			textView.setText("\n\n1、摄影师、照相机和影像作品如何影响读者的观看？\n\n\n\n\n\n图1 摄影师");
 			d = getResources().getDrawable(R.drawable.map_sjsy_zuoye);
-			d.setBounds(0, 0, 500, 500); // 必须设置图片大小，否则不显示
-			textView.setCompoundDrawables(d, null, null, null);
-			// textView.setText("图  摄影作品《我要读书》");
+			d.setBounds(0, 0, 700, 400); // 必须设置图片大小，否则不显示
+			textView.setCompoundDrawables(null, d, null, null);
+			textView.setText("\t\t\t\t\t\t\t\t\t\t\t\t图1 摄影师");
+			textView.append("\n1、摄影师、照相机和影像作品如何影响读者的观看？");
 			break;
 		default:
-			textView.setTextSize(20);
-			textView.setText("相关链接：\n罗立中和他的《父亲》：http://baike.baidu.com/view/80043.htm?fr=aladdin");
+			textView.setText(Html
+					.fromHtml("<b>相关链接：</b><br/>罗立中和他的《父亲》："
+							+ "<a href=\"http://baike.baidu.com/view/80043.htm?fr=aladdin\">http://baike.baidu.com/view/80043.htm?fr=aladdin</a>"));
 			break;
 		}
 		handler.sendEmptyMessageDelayed(1, 1000);

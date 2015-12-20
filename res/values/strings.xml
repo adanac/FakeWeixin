@@ -7,9 +7,32 @@
     <string name="know_top_title">知识类</string>
     <string name="enable_top_title">能力类</string>
     <string name="emotion_top_title">情感类</string>
+    <!-- 第一模块：理解媒介 -->
     <string name="moretab_mjsy_top_title">知识类 - 媒介素养的内涵</string>
     <string name="moretab_sjsy_top_title">知识类 - 视觉素养</string>
     <string name="moretab_yycc_top_title">知识类 - 意义所指层次图</string>
+    <string name="moretab_ezgx_top_title">知识类 - 二者间的关系</string>
+    <string name="moretab_fhnh_top_title">知识类 - 符号的内涵</string>
+    <string name="moretab_zykf_top_title">能力类 - 资源的开发</string>
+    <string name="moretab_zyxz_top_title">能力类 - 资源的选择</string>
+    <string name="moretab_zyzh_top_title">能力类 - 资源的转化</string>
+    <string name="moretab_zyyy_top_title">能力类 - 资源的运用</string>
+    <string name="moretab_emsml_top_title">情感类 - 水墨画</string>
+    <string name="moretab_emxdsj_top_title">情感类 - 现代设计</string>
+    <string name="moretab_emflash_top_title">情感类 - Flash</string>
+    <string name="moretab_emys_top_title">情感类 - 影视</string>
+    <string name="moretab_emsy_top_title">情感类 - 摄影</string>
+    <string name="moretab_emsf_top_title">情感类 - 书法</string>
+    <!-- 第二模块：使用媒介  -->
+    <string name="two_tw_top_title">使用媒介 - 图文</string>
+    <string name="two_yp_top_title">使用媒介 - 音频</string>
+    <string name="two_sp_top_title">使用媒介 - 视频</string>
+    <!-- 第三模块：研究媒介 -->
+    <string name="three_mj_top_title">研究媒介</string>
+    <string name="three_xz_top_title">研究媒介 - 研究学者</string>
+    <string name="three_wz_top_title">研究媒介 - 理论文章</string>
+    <string name="three_fx_top_title">研究媒介 - 好书分享</string>
+    
     <string name="start">立即体验</string>
     <string name="p01_str">页面1</string>
     <string name="p02_str">页面2</string>

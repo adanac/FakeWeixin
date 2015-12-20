@@ -12,8 +12,14 @@ import com.adanac.fakeweixin.activity.MainContent;
 import com.adanac.fakeweixin.activity.sub.EmotionActivity;
 import com.adanac.fakeweixin.activity.sub.EnableActivity;
 import com.adanac.fakeweixin.activity.sub.KnowActivity;
+import com.adanac.fakeweixin.slideview.ThreeFxMainActivity;
+import com.adanac.fakeweixin.slideview.ThreeWzMainActivity;
+import com.adanac.fakeweixin.slideview.ThreeXzMainActivity;
 import com.adanac.fakeweixin.util.DrawUtil;
 import com.adanac.fakeweixin.util.ScreenUtil;
+import com.adanac.fakeweixin.view.sub.TwoSp01MoreTabActivity;
+import com.adanac.fakeweixin.view.sub.TwoTw01MoreTabActivity;
+import com.adanac.fakeweixin.view.sub.TwoYp01MoreTabActivity;
 
 /**
  * 首页View
@@ -53,16 +59,16 @@ public class DrawAppView extends View {
 		// 媒介素养小短线
 
 		DrawUtil.drawRectCenterTxt(canvas, paint, 200, 250, 140, 70, "走进媒介",
-				Color.GRAY, Color.BLACK, 25);
+				Color.rgb(247, 80, 0), Color.WHITE, 25);
 
 		DrawUtil.drawRectCenterTxt(canvas, paint, 90, 120, 70, 60, "书法",
-				Color.GRAY, Color.BLACK, 20);
+				Color.GRAY, Color.WHITE, 20);
 		DrawUtil.drawRectCenterTxt(canvas, paint, 170, 120, 70, 60, "摄影",
-				Color.GRAY, Color.BLACK, 20);
+				Color.GRAY, Color.WHITE, 20);
 		DrawUtil.drawRectCenterTxt(canvas, paint, 250, 120, 70, 60, "影视",
-				Color.GRAY, Color.BLACK, 20);
+				Color.GRAY, Color.WHITE, 20);
 		DrawUtil.drawRectCenterTxt(canvas, paint, 330, 120, 70, 60, "其他",
-				Color.GRAY, Color.BLACK, 20);
+				Color.GRAY, Color.WHITE, 20);
 
 		DrawUtil.drawLine(canvas, paint, 200 + 70, 250, 430, 250);// 连接媒介新闻和微课程
 		DrawUtil.drawLine(canvas, paint, 200 + 70, 600, 430, 600); // 连接学术空间和媒介作品
@@ -74,13 +80,13 @@ public class DrawAppView extends View {
 		DrawUtil.drawLine(canvas, paint, 200, 215, 200, 180);// 画新闻媒介小短线;
 
 		DrawUtil.drawRectCenterTxt(canvas, paint, 530, 250, 140, 70, "理解媒介",
-				Color.GRAY, Color.BLACK, 25);
+				Color.rgb(247, 80, 0), Color.WHITE, 25);
 		DrawUtil.drawRectCenterTxt(canvas, paint, 430, 120, 90, 60, "知识类",
-				Color.GRAY, Color.BLACK, 20);
+				Color.GRAY, Color.WHITE, 20);
 		DrawUtil.drawRectCenterTxt(canvas, paint, 530, 120, 90, 60, "能力类",
-				Color.GRAY, Color.BLACK, 20);
+				Color.GRAY, Color.WHITE, 20);
 		DrawUtil.drawRectCenterTxt(canvas, paint, 630, 120, 90, 60, "情感类",
-				Color.GRAY, Color.BLACK, 20);
+				Color.GRAY, Color.WHITE, 20);
 
 		// drawLine(canvas, paint, 500, 150, 500, 215);// 连接能力类和微课程
 		DrawUtil.drawLine(canvas, paint, 430, 180, 630, 180);// 连接知识类和情感类
@@ -90,13 +96,13 @@ public class DrawAppView extends View {
 		DrawUtil.drawLine(canvas, paint, 530, 215, 530, 180);// 画微课程小短线;
 
 		DrawUtil.drawRectCenterTxt(canvas, paint, 200, 600, 140, 70, "研究媒介",
-				Color.GRAY, Color.BLACK, 25);
+				Color.rgb(247, 80, 0), Color.WHITE, 25);
 		DrawUtil.drawRectCenterTxt(canvas, paint, 100, 730, 90, 60, "研究学者",
-				Color.GRAY, Color.BLACK, 20);
+				Color.GRAY, Color.WHITE, 20);
 		DrawUtil.drawRectCenterTxt(canvas, paint, 200, 730, 90, 60, "理论文章",
-				Color.GRAY, Color.BLACK, 20);
+				Color.GRAY, Color.WHITE, 20);
 		DrawUtil.drawRectCenterTxt(canvas, paint, 300, 730, 90, 60, "好书分享",
-				Color.GRAY, Color.BLACK, 20);
+				Color.GRAY, Color.WHITE, 20);
 
 		DrawUtil.drawLine(canvas, paint, 200, 635, 200, 700); // 连接学术空间和理论文章
 		DrawUtil.drawLine(canvas, paint, 100, 675, 300, 675); // 连接研究学者和好书分享
@@ -104,13 +110,13 @@ public class DrawAppView extends View {
 		DrawUtil.drawLine(canvas, paint, 300, 675, 300, 700); // 2根小短线
 
 		DrawUtil.drawRectCenterTxt(canvas, paint, 530, 600, 140, 70, "使用媒介",
-				Color.GRAY, Color.BLACK, 25);
+				Color.rgb(247, 80, 0), Color.WHITE, 25);
 		DrawUtil.drawRectCenterTxt(canvas, paint, 430, 730, 90, 60, "图文",
-				Color.GRAY, Color.BLACK, 20);
+				Color.GRAY, Color.WHITE, 20);
 		DrawUtil.drawRectCenterTxt(canvas, paint, 530, 730, 90, 60, "音频",
-				Color.GRAY, Color.BLACK, 20);
+				Color.GRAY, Color.WHITE, 20);
 		DrawUtil.drawRectCenterTxt(canvas, paint, 630, 730, 90, 60, "视频",
-				Color.GRAY, Color.BLACK, 20);
+				Color.GRAY, Color.WHITE, 20);
 
 		// drawLine(canvas, paint, 500, 635, 500, 700); // 连接媒介作品和音频
 		DrawUtil.drawLine(canvas, paint, 430, 675, 630, 675); // 连接图像和视频
@@ -151,7 +157,61 @@ public class DrawAppView extends View {
 		clickQGL(event, x, y, 630 - 90 / 2, 630 + 90 / 2, 120 - 60 / 2,
 				120 + 60 / 2, EmotionActivity.class);
 
+		// 点击使用媒介 - 图文（430, 730, 90, 60）
+		clickTW(event, x, y, 430 - 90 / 2, 430 + 90 / 2, 730 - 60 / 2,
+				730 + 60 / 2, TwoTw01MoreTabActivity.class);
+		// 点击使用媒介 - 音频（530, 730, 90, 60）
+		clickYP(event, x, y, 530 - 90 / 2, 530 + 90 / 2, 730 - 60 / 2,
+				730 + 60 / 2, TwoYp01MoreTabActivity.class);
+		// 点击使用媒介 - 视频（630, 730, 90, 60）
+		clickSP(event, x, y, 630 - 90 / 2, 630 + 90 / 2, 730 - 60 / 2,
+				730 + 60 / 2, TwoSp01MoreTabActivity.class);
+
+		// 点击研究媒介 - 研究学者（100, 730, 90, 60）
+		clickXZ(event, x, y, 100 - 90 / 2, 100 + 90 / 2, 730 - 60 / 2,
+				730 + 60 / 2, ThreeXzMainActivity.class);
+		// 点击研究媒介 - 理论文章
+		clickWZ(event, x, y, 200 - 90 / 2, 200 + 90 / 2, 730 - 60 / 2,
+				730 + 60 / 2, ThreeWzMainActivity.class);
+		// 点击研究媒介 - 好书分享
+		clickFX(event, x, y, 300 - 90 / 2, 300 + 90 / 2, 730 - 60 / 2,
+				730 + 60 / 2, ThreeFxMainActivity.class);
 		return true;
+	}
+
+	private void clickFX(MotionEvent event, float x, float y, int i, int j,
+			int k, int l, Class<ThreeFxMainActivity> clazz) {
+		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了好书分享");
+
+	}
+
+	private void clickWZ(MotionEvent event, float x, float y, int i, int j,
+			int k, int l, Class<ThreeWzMainActivity> clazz) {
+		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了理论文章");
+
+	}
+
+	private void clickXZ(MotionEvent event, float x, float y, int i, int j,
+			int k, int l, Class<ThreeXzMainActivity> clazz) {
+		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了研究学者");
+	}
+
+	private void clickSP(MotionEvent event, float x, float y, int i, int j,
+			int k, int l, Class<TwoSp01MoreTabActivity> clazz) {
+		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了视频");
+
+	}
+
+	private void clickYP(MotionEvent event, float x, float y, int i, int j,
+			int k, int l, Class<TwoYp01MoreTabActivity> clazz) {
+		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了音频");
+
+	}
+
+	private void clickTW(MotionEvent event, float x, float y, int i, int j,
+			int k, int l, Class<TwoTw01MoreTabActivity> clazz) {
+		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了图文");
+
 	}
 
 	// 点击情感类

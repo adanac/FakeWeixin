@@ -17,7 +17,7 @@
             android:id="@+id/iv_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/agt_aisles" />
+            android:src="@drawable/map_sy" />
 
         <TextView
             android:id="@+id/tv_home"
@@ -41,7 +41,7 @@
             android:id="@+id/iv_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/agt_mp3" />
+            android:src="@drawable/map_zp" />
 
         <TextView
             android:id="@+id/tv_address"
@@ -65,7 +65,7 @@
             android:id="@+id/iv_friend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/agt_games" />
+            android:src="@drawable/map_kj" />
 
         <TextView
             android:id="@+id/tv_friend"
@@ -90,7 +90,7 @@
             android:id="@+id/iv_setting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/agt_setting" />
+            android:src="@drawable/map_set" />
 
         <TextView
             android:id="@+id/tv_setting"
