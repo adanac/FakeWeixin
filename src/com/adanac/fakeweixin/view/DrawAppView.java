@@ -71,7 +71,7 @@ public class DrawAppView extends View {
 				Color.GRAY, Color.WHITE, 20);
 		DrawUtil.drawRectCenterTxt(canvas, paint, 250, 120, 70, 60, "影视",
 				Color.GRAY, Color.WHITE, 20);
-		DrawUtil.drawRectCenterTxt(canvas, paint, 330, 120, 70, 60, "其他",
+		DrawUtil.drawRectCenterTxt(canvas, paint, 330, 120, 70, 60, "绘画",
 				Color.GRAY, Color.WHITE, 20);
 
 		DrawUtil.drawLine(canvas, paint, 200 + 70, 250, 430, 250);// 连接媒介新闻和微课程

@@ -20,18 +20,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.adanac.fakeweixin.R;
-import com.adanac.fakeweixin.slideview.SlideViewXz.OnSlideListener;
+import com.adanac.fakeweixin.slideview.SlideViewSY.OnSlideListener;
 
 public class FourSYMainActivity extends Activity implements
 		OnItemClickListener, OnClickListener, OnSlideListener {
 
 	private static final String TAG = "MainActivity";
 
-	private ListViewCompatXz mListView;
+	private ListViewCompatSY mListView;
 	SlideAdapter slideAdapter;
 	private List<MessageItem> mMessageItems = new ArrayList<FourSYMainActivity.MessageItem>();
 
-	private SlideViewXz mLastSlideViewWithStatusOn;
+	private SlideViewSY mLastSlideViewWithStatusOn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -57,27 +57,27 @@ public class FourSYMainActivity extends Activity implements
 	}
 
 	private void initView() {
-		mListView = (ListViewCompatXz) findViewById(R.id.list_xz);
+		mListView = (ListViewCompatSY) findViewById(R.id.list_four_sy);
 
 		for (int i = 0; i < 3; i++) {
 			MessageItem item = new MessageItem();
 			switch (i % 3) {
 			case 0:
-				item.iconRes = R.drawable.three_xz01;
-				item.title = "卜卫";
-				item.msg = "学者";
-				item.time = "2015.12.18";
+				item.iconRes = R.drawable.map_four_sy01;
+				item.title = "阿尔弗雷德．艾森斯塔特之《时代广场的胜利日》";
+				item.msg = "来源：现代摄影网";
+				item.time = "2015.12.10";
 				break;
 			case 1:
-				item.iconRes = R.drawable.three_xz02;
-				item.title = "陆晔";
-				item.msg = "学者";
-				item.time = "2015.12.18";
+				item.iconRes = R.drawable.map_four_sy01;
+				item.title = "解海龙作品《我要读书》";
+				item.msg = "来源：现代摄影网";
+				item.time = "2015.12.12";
 				break;
 			default:
-				item.iconRes = R.drawable.three_xz03;
-				item.title = "张舒予";
-				item.msg = "学者";
+				item.iconRes = R.drawable.map_four_sy01;
+				item.title = "曼．雷Man Ray之《泪珠》";
+				item.msg = "来源：现代摄影网";
 				item.time = "2015.12.18";
 				break;
 			}
@@ -119,12 +119,12 @@ public class FourSYMainActivity extends Activity implements
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			ViewHolder holder;
-			SlideViewXz slideView = (SlideViewXz) convertView;
+			SlideViewSY slideView = (SlideViewSY) convertView;
 			if (slideView == null) {
 				View itemView = mInflater.inflate(R.layout.slide_list_item,
 						null);
 
-				slideView = new SlideViewXz(FourSYMainActivity.this);
+				slideView = new SlideViewSY(FourSYMainActivity.this);
 				slideView.setContentView(itemView);
 
 				holder = new ViewHolder(slideView);
@@ -152,7 +152,7 @@ public class FourSYMainActivity extends Activity implements
 		public String title;
 		public String msg;
 		public String time;
-		public SlideViewXz slideView;
+		public SlideViewSY slideView;
 	}
 
 	private static class ViewHolder {
@@ -177,7 +177,7 @@ public class FourSYMainActivity extends Activity implements
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
 		Log.e(TAG, "onItemClick position=" + position);
-		SlideViewXz slideView = mMessageItems.get(position).slideView;
+		SlideViewSY slideView = mMessageItems.get(position).slideView;
 		if (slideView.ismIsMoveClick()) {
 			return;
 		}
@@ -199,7 +199,7 @@ public class FourSYMainActivity extends Activity implements
 		}
 
 		if (status == SLIDE_STATUS_ON) {
-			mLastSlideViewWithStatusOn = (SlideViewXz) view;
+			mLastSlideViewWithStatusOn = (SlideViewSY) view;
 		}
 	}
 

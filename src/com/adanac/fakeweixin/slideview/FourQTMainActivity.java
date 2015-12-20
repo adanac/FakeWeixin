@@ -20,18 +20,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.adanac.fakeweixin.R;
-import com.adanac.fakeweixin.slideview.SlideViewXz.OnSlideListener;
+import com.adanac.fakeweixin.slideview.SlideViewQT.OnSlideListener;
 
 public class FourQTMainActivity extends Activity implements
 		OnItemClickListener, OnClickListener, OnSlideListener {
 
 	private static final String TAG = "MainActivity";
 
-	private ListViewCompatXz mListView;
+	private ListViewCompatQT mListView;
 	SlideAdapter slideAdapter;
 	private List<MessageItem> mMessageItems = new ArrayList<FourQTMainActivity.MessageItem>();
 
-	private SlideViewXz mLastSlideViewWithStatusOn;
+	private SlideViewQT mLastSlideViewWithStatusOn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -57,27 +57,28 @@ public class FourQTMainActivity extends Activity implements
 	}
 
 	private void initView() {
-		mListView = (ListViewCompatXz) findViewById(R.id.list_xz);
+		mListView = (ListViewCompatQT) findViewById(R.id.list_four_qt);
 
 		for (int i = 0; i < 3; i++) {
 			MessageItem item = new MessageItem();
 			switch (i % 3) {
 			case 0:
-				item.iconRes = R.drawable.three_xz01;
-				item.title = "卜卫";
-				item.msg = "学者";
-				item.time = "2015.12.18";
+				item.iconRes = R.drawable.map_four_qt01;
+				item.title = "顾闳中《韩熙载夜宴图》";
+				item.msg = "来源：百度百科";
+				item.time = "2015.10.10";
 				break;
 			case 1:
-				item.iconRes = R.drawable.three_xz02;
-				item.title = "陆晔";
-				item.msg = "学者";
-				item.time = "2015.12.18";
+
+				item.iconRes = R.drawable.map_four_qt01;
+				item.title = "黄公望的《富春山居图》";
+				item.msg = "来源：光明日报";
+				item.time = "2015.10.10";
 				break;
 			default:
-				item.iconRes = R.drawable.three_xz03;
-				item.title = "张舒予";
-				item.msg = "学者";
+				item.iconRes = R.drawable.map_four_qt01;
+				item.title = "徐悲鸿的《奔马图》";
+				item.msg = "来源：徐悲鸿国画作品欣赏";
 				item.time = "2015.12.18";
 				break;
 			}
@@ -119,12 +120,12 @@ public class FourQTMainActivity extends Activity implements
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			ViewHolder holder;
-			SlideViewXz slideView = (SlideViewXz) convertView;
+			SlideViewQT slideView = (SlideViewQT) convertView;
 			if (slideView == null) {
 				View itemView = mInflater.inflate(R.layout.slide_list_item,
 						null);
 
-				slideView = new SlideViewXz(FourQTMainActivity.this);
+				slideView = new SlideViewQT(FourQTMainActivity.this);
 				slideView.setContentView(itemView);
 
 				holder = new ViewHolder(slideView);
@@ -152,7 +153,7 @@ public class FourQTMainActivity extends Activity implements
 		public String title;
 		public String msg;
 		public String time;
-		public SlideViewXz slideView;
+		public SlideViewQT slideView;
 	}
 
 	private static class ViewHolder {
@@ -177,7 +178,7 @@ public class FourQTMainActivity extends Activity implements
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
 		Log.e(TAG, "onItemClick position=" + position);
-		SlideViewXz slideView = mMessageItems.get(position).slideView;
+		SlideViewQT slideView = mMessageItems.get(position).slideView;
 		if (slideView.ismIsMoveClick()) {
 			return;
 		}
@@ -199,7 +200,7 @@ public class FourQTMainActivity extends Activity implements
 		}
 
 		if (status == SLIDE_STATUS_ON) {
-			mLastSlideViewWithStatusOn = (SlideViewXz) view;
+			mLastSlideViewWithStatusOn = (SlideViewQT) view;
 		}
 	}
 

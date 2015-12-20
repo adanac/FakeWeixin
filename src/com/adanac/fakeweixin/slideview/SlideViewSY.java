@@ -58,7 +58,7 @@ public class SlideViewSY extends LinearLayout {
 		mScroller = new Scroller(mContext);
 
 		setOrientation(LinearLayout.HORIZONTAL);
-		View.inflate(mContext, R.layout.slide_view_merge_xz, this);
+		View.inflate(mContext, R.layout.slide_view_merge_four_sy, this);
 		mViewContent = (LinearLayout) findViewById(R.id.view_content);
 		mHolderWidth = Math.round(TypedValue.applyDimension(
 				TypedValue.COMPLEX_UNIT_DIP, mHolderWidth, getResources()
