@@ -77,6 +77,11 @@
         <activity android:name="com.adanac.fakeweixin.view.sub.ThreeWzMoreTabActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.view.sub.ThreeFxMoreTabActivity"></activity>
         
+        <!-- 走进媒介 -->
+        <activity android:name="com.adanac.fakeweixin.slideview.FourQTMainActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.slideview.FourSFMainActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.slideview.FourSYMainActivity"></activity>
+        <activity android:name="com.adanac.fakeweixin.slideview.FourYSMainActivity"></activity>
         
     </application>
 

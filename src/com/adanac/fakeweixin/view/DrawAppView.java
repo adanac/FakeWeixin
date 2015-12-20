@@ -12,6 +12,10 @@ import com.adanac.fakeweixin.activity.MainContent;
 import com.adanac.fakeweixin.activity.sub.EmotionActivity;
 import com.adanac.fakeweixin.activity.sub.EnableActivity;
 import com.adanac.fakeweixin.activity.sub.KnowActivity;
+import com.adanac.fakeweixin.slideview.FourQTMainActivity;
+import com.adanac.fakeweixin.slideview.FourSFMainActivity;
+import com.adanac.fakeweixin.slideview.FourSYMainActivity;
+import com.adanac.fakeweixin.slideview.FourYSMainActivity;
 import com.adanac.fakeweixin.slideview.ThreeFxMainActivity;
 import com.adanac.fakeweixin.slideview.ThreeWzMainActivity;
 import com.adanac.fakeweixin.slideview.ThreeXzMainActivity;
@@ -176,7 +180,44 @@ public class DrawAppView extends View {
 		// 点击研究媒介 - 好书分享
 		clickFX(event, x, y, 300 - 90 / 2, 300 + 90 / 2, 730 - 60 / 2,
 				730 + 60 / 2, ThreeFxMainActivity.class);
+
+		// 点击走进媒介 - 书法(90, 120, 70, 60)
+		clickSF(event, x, y, 90 - 70 / 2, 90 + 70 / 2, 120 - 60 / 2,
+				120 + 60 / 2, FourSFMainActivity.class);
+		// 点击走进媒介 - 摄影
+		clickSY(event, x, y, 170 - 70 / 2, 170 + 70 / 2, 120 - 60 / 2,
+				120 + 60 / 2, FourSYMainActivity.class);
+		// 点击走进媒介 - 影视
+		clickYS(event, x, y, 250 - 70 / 2, 250 + 70 / 2, 120 - 60 / 2,
+				120 + 60 / 2, FourYSMainActivity.class);
+		// 点击走进媒介 - 其他
+		clickQT(event, x, y, 330 - 70 / 2, 330 + 70 / 2, 120 - 60 / 2,
+				120 + 60 / 2, FourQTMainActivity.class);
 		return true;
+	}
+
+	private void clickQT(MotionEvent event, float x, float y, int i, int j,
+			int k, int l, Class<FourQTMainActivity> clazz) {
+		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了绘画");
+
+	}
+
+	private void clickYS(MotionEvent event, float x, float y, int i, int j,
+			int k, int l, Class<FourYSMainActivity> clazz) {
+		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了影视");
+
+	}
+
+	private void clickSY(MotionEvent event, float x, float y, int i, int j,
+			int k, int l, Class<FourSYMainActivity> clazz) {
+		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了摄影");
+
+	}
+
+	private void clickSF(MotionEvent event, float x, float y, int i, int j,
+			int k, int l, Class<FourSFMainActivity> clazz) {
+		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了书法");
+
 	}
 
 	private void clickFX(MotionEvent event, float x, float y, int i, int j,
