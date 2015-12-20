@@ -64,7 +64,7 @@ public class FourSYMainActivity extends Activity implements
 			switch (i % 3) {
 			case 0:
 				item.iconRes = R.drawable.map_four_sy01;
-				item.title = "阿尔弗雷德．艾森斯塔特之《时代广场的胜利日》";
+				item.title = "艾森斯塔特之《时代广场的胜利日》";
 				item.msg = "来源：现代摄影网";
 				item.time = "2015.12.10";
 				break;

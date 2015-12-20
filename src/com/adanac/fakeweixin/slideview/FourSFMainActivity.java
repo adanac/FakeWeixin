@@ -62,13 +62,13 @@ public class FourSFMainActivity extends Activity implements
 		for (int i = 0; i < 3; i++) {
 			MessageItem item = new MessageItem();
 			switch (i % 3) {
-			case 0:
+			case 1:
 				item.iconRes = R.drawable.map_four_sf01;
 				item.title = "苏轼《寒食帖》";
 				item.msg = "来源：中国书法家园";
 				item.time = "2015.11.25";
 				break;
-			case 1:
+			case 0:
 				item.iconRes = R.drawable.map_four_sf01;
 				item.title = "晋·王羲之《快雪时晴帖》";
 				item.msg = "来源：光明日报";
