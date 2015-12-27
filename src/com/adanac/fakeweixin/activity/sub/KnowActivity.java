@@ -5,7 +5,6 @@ import java.util.List;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -18,7 +17,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.adanac.fakeweixin.R;
-import com.adanac.fakeweixin.activity.MainContent;
 import com.adanac.fakeweixin.adapter.ContentAdapter;
 import com.adanac.fakeweixin.view.DrawAppView;
 import com.adanac.fakeweixin.view.DrawAppView2;
@@ -149,10 +147,10 @@ public class KnowActivity extends Activity implements OnClickListener,
 		((ViewGroup) page_04).addView(view_four);
 
 		views = new ArrayList<View>();
-		// views.add(page_01);
 		views.add(page_02);
-		// views.add(page_03);
-		// views.add(page_04);
+		views.add(page_01);
+		views.add(page_03);
+		views.add(page_04);
 
 		this.adapter = new ContentAdapter(views);
 		viewPager.setAdapter(adapter);
@@ -170,14 +168,14 @@ public class KnowActivity extends Activity implements OnClickListener,
 		viewPager.setOnPageChangeListener(this);
 
 		// 设置返回按钮
-		findViewById(R.id.iv_back).setOnClickListener(
-				new View.OnClickListener() {
-					@Override
-					public void onClick(View view) {
-						// 使当前Activity结束就可以了
-						KnowActivity.this.finish();
-					}
-				});
+		// findViewById(R.id.iv_back).setOnClickListener(
+		// new View.OnClickListener() {
+		// @Override
+		// public void onClick(View view) {
+		// // 使当前Activity结束就可以了
+		// KnowActivity.this.finish();
+		// }
+		// });
 	}
 
 	@Override
@@ -192,59 +190,90 @@ public class KnowActivity extends Activity implements OnClickListener,
 
 	@Override
 	public void onPageSelected(int arg0) {
+		restartBotton();
+		// 当前view被选择的时候,改变底部菜单图片，文字颜色
+		switch (arg0) {
+		case 0:
+			know_top.setText("媒介素养");
+			iv_home.setImageResource(R.drawable.map_sy);
+			tv_home.setTextColor(0xff1B940A);
+			break;
+		case 1:
+			know_top.setText("学生作品");
+			iv_address.setImageResource(R.drawable.map_zp);
+			tv_address.setTextColor(0xff1B940A);
+			break;
+		case 2:
+			know_top.setText("个人空间");
+			iv_friend.setImageResource(R.drawable.map_kj);
+			tv_friend.setTextColor(0xff1B940A);
+			break;
+		case 3:
+			know_top.setText("帮助");
+			iv_setting.setImageResource(R.drawable.map_set);
+			tv_setting.setTextColor(0xff1B940A);
+			break;
 
+		default:
+			break;
+		}
 	}
 
 	@Override
 	public void onClick(View v) {
 		// 在每次点击后将所有的底部按钮(ImageView,TextView)颜色改为灰色，然后根据点击着色
-		// restartBotton();
+		restartBotton();
 		// ImageView和TetxView置为绿色，页面随之跳转
 		switch (v.getId()) {
 		case R.id.ll_home:
-			// iv_home.setImageResource(R.drawable.map_sy);
-			// know_top.setText("知识类-媒介素养");
-			// tv_home.setTextColor(0xff1B940A);
-			// viewPager.setCurrentItem(0);
-			startActivity(new Intent(getApplicationContext(), MainContent.class));
+			iv_home.setImageResource(R.drawable.map_sy);
+			know_top.setText("媒介素养");
+			tv_home.setTextColor(0xff1B940A);
+			viewPager.setCurrentItem(1);
+			// startActivity(new Intent(getApplicationContext(),
+			// MainContent.class));
 			break;
 		case R.id.ll_address:
-			know_top.setText("知识类-学生作品");
+			know_top.setText("学生作品");
 			iv_address.setImageResource(R.drawable.map_zp);
 			tv_address.setTextColor(0xff1B940A);
-			viewPager.setCurrentItem(1);
+			viewPager.setCurrentItem(0);
+			// startActivity(new Intent(getApplicationContext(),
+			// KnowActivity.class));
 			break;
 		case R.id.ll_friend:
 			know_top.setText("知识类-个人空间");
 			iv_friend.setImageResource(R.drawable.map_kj);
 			tv_friend.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(2);
+			// startActivity(new Intent(getApplicationContext(),
+			// EnableActivity.class));
 			break;
 		case R.id.ll_setting:
-			know_top.setText("知识类-帮助");
+			know_top.setText("帮助");
 			iv_setting.setImageResource(R.drawable.map_set);
 			tv_setting.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(3);
-			// startActivity(new Intent(MainContent.this,
-			// EmotionalActivity.class));
+			// startActivity(new Intent(getApplicationContext(),
+			// EmotionActivity.class));
 			break;
 		default:
 			break;
 		}
 	}
 
-	// private void restartBotton() {
-	// // ImageView置为灰色
-	// iv_home.setImageResource(R.drawable.agt_aisles);
-	// iv_address.setImageResource(R.drawable.agt_mp3);
-	// iv_friend.setImageResource(R.drawable.agt_games);
-	// iv_setting.setImageResource(R.drawable.agt_setting);
-	// // TextView置为白色
-	// tv_home.setTextColor(0xffffffff);
-	// tv_address.setTextColor(0xffffffff);
-	// tv_friend.setTextColor(0xffffffff);
-	// tv_setting.setTextColor(0xffffffff);
-	//
-	// }
+	private void restartBotton() {
+		// ImageView置为灰色
+		iv_home.setImageResource(R.drawable.map_sy);
+		iv_address.setImageResource(R.drawable.map_zp);
+		iv_friend.setImageResource(R.drawable.map_kj);
+		iv_setting.setImageResource(R.drawable.map_set);
+		// TextView置为白色
+		tv_home.setTextColor(0xffffffff);
+		tv_address.setTextColor(0xffffffff);
+		tv_friend.setTextColor(0xffffffff);
+		tv_setting.setTextColor(0xffffffff);
+
+	}
 
 }

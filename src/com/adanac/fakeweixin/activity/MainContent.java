@@ -186,7 +186,7 @@ public class MainContent extends Activity implements OnClickListener,
 		switch (v.getId()) {
 		case R.id.ll_home:
 			iv_home.setImageResource(R.drawable.map_sy);
-			tv_top.setText("首页");
+			tv_top.setText("媒介素养");
 			tv_home.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(0);
 			break;
@@ -244,7 +244,7 @@ public class MainContent extends Activity implements OnClickListener,
 		// 当前view被选择的时候,改变底部菜单图片，文字颜色
 		switch (arg0) {
 		case 0:
-			tv_top.setText("首页");
+			tv_top.setText("媒介素养");
 			iv_home.setImageResource(R.drawable.map_sy);
 			tv_home.setTextColor(0xff1B940A);
 			break;

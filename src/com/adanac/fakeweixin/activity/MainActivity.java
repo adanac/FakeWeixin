@@ -11,7 +11,6 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -37,7 +36,7 @@ public class MainActivity extends Activity implements OnPageChangeListener,
 
 	private int currentIndex = 0;// 当前页面,默认首页
 
-	private Button startButton;
+	// private Button startButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -83,9 +82,9 @@ public class MainActivity extends Activity implements OnPageChangeListener,
 		view2 = View.inflate(MainActivity.this, R.layout.view2, null);
 		view3 = View.inflate(MainActivity.this, R.layout.view3, null);
 		view4 = View.inflate(MainActivity.this, R.layout.view4, null);
-		viewList.add(view1);
-		viewList.add(view2);
-		viewList.add(view3);
+		// viewList.add(view1);
+		// viewList.add(view2);
+		// viewList.add(view3);
 		viewList.add(view4);
 
 		// 设置适配器

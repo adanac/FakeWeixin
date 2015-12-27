@@ -5,17 +5,6 @@
     android:background="@drawable/guide4"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/starttext"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginTop="80dp"
-        android:text="教育，是一种生活方式"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textSize="20dp" />
 
     <Button
         android:id="@+id/btn_start"
