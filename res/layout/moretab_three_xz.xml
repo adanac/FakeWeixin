@@ -5,7 +5,7 @@
     android:orientation="vertical" 
     >
 
-    <include layout="@layout/moretab_three_mj_top" />
+    <include layout="@layout/moretab_three_xz_top" />
 
     
     

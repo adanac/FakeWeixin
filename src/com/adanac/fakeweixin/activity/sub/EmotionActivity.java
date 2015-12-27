@@ -148,8 +148,8 @@ public class EmotionActivity extends Activity implements OnClickListener,
 		((ViewGroup) page_04).addView(view_four);
 
 		views = new ArrayList<View>();
-		views.add(page_04);
-		views.add(page_01);
+		views.add(page_04);// 情感类
+		views.add(page_01);// 首页
 		views.add(page_02);
 		views.add(page_03);
 
@@ -168,14 +168,14 @@ public class EmotionActivity extends Activity implements OnClickListener,
 		viewPager.setOnPageChangeListener(this);
 
 		// 设置返回按钮
-		// findViewById(R.id.iv_back).setOnClickListener(
-		// new View.OnClickListener() {
-		// @Override
-		// public void onClick(View view) {
-		// // 使当前Activity结束就可以了
-		// EmotionActivity.this.finish();
-		// }
-		// });
+		findViewById(R.id.emotion_iv_back).setOnClickListener(
+				new View.OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						// 使当前Activity结束就可以了
+						EmotionActivity.this.finish();
+					}
+				});
 	}
 
 	@Override
@@ -194,24 +194,24 @@ public class EmotionActivity extends Activity implements OnClickListener,
 		// 当前view被选择的时候,改变底部菜单图片，文字颜色
 		switch (arg0) {
 		case 0:
-			emotion_top.setText("媒介素养");
-			iv_home.setImageResource(R.drawable.map_sy);
-			tv_home.setTextColor(0xff1B940A);
+			emotion_top.setText("理解媒介 - 情感类");
+			iv_home.setImageResource(R.drawable.map_set);
+			// tv_home.setTextColor(0xff1B940A);
 			break;
 		case 1:
-			emotion_top.setText("学生作品");
-			iv_address.setImageResource(R.drawable.map_zp);
-			tv_address.setTextColor(0xff1B940A);
+			emotion_top.setText("首页");
+			iv_address.setImageResource(R.drawable.map_sy);
+			// tv_address.setTextColor(0xff1B940A);
 			break;
 		case 2:
-			emotion_top.setText("个人空间");
-			iv_friend.setImageResource(R.drawable.map_kj);
-			tv_friend.setTextColor(0xff1B940A);
+			emotion_top.setText("理解媒介 - 知识类");
+			iv_friend.setImageResource(R.drawable.map_zp);
+			// tv_friend.setTextColor(0xff1B940A);
 			break;
 		case 3:
-			emotion_top.setText("帮助");
-			iv_setting.setImageResource(R.drawable.map_set);
-			tv_setting.setTextColor(0xff1B940A);
+			emotion_top.setText("理解媒介 - 能力类");
+			iv_setting.setImageResource(R.drawable.map_kj);
+			// tv_setting.setTextColor(0xff1B940A);
 			break;
 
 		default:
@@ -227,8 +227,8 @@ public class EmotionActivity extends Activity implements OnClickListener,
 		switch (v.getId()) {
 		case R.id.ll_home:
 			iv_home.setImageResource(R.drawable.map_sy);
-			emotion_top.setText("媒介素养");
-			tv_home.setTextColor(0xff1B940A);
+			emotion_top.setText("首页");
+			// tv_home.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(1);
 			// startActivity(new Intent(getApplicationContext(),
 			// MainContent.class));
@@ -236,7 +236,7 @@ public class EmotionActivity extends Activity implements OnClickListener,
 		case R.id.ll_address:
 			emotion_top.setText("学生作品");
 			iv_address.setImageResource(R.drawable.map_zp);
-			tv_address.setTextColor(0xff1B940A);
+			// tv_address.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(2);
 			// startActivity(new Intent(getApplicationContext(),
 			// KnowActivity.class));
@@ -244,7 +244,7 @@ public class EmotionActivity extends Activity implements OnClickListener,
 		case R.id.ll_friend:
 			emotion_top.setText("个人空间");
 			iv_friend.setImageResource(R.drawable.map_kj);
-			tv_friend.setTextColor(0xff1B940A);
+			// tv_friend.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(3);
 			// startActivity(new Intent(getApplicationContext(),
 			// EnableActivity.class));
@@ -252,7 +252,7 @@ public class EmotionActivity extends Activity implements OnClickListener,
 		case R.id.ll_setting:
 			emotion_top.setText("帮助");
 			iv_setting.setImageResource(R.drawable.map_set);
-			tv_setting.setTextColor(0xff1B940A);
+			// tv_setting.setTextColor(0xff1B940A);
 			viewPager.setCurrentItem(0);
 			// startActivity(new Intent(getApplicationContext(),
 			// EmotionActivity.class));

@@ -4,9 +4,9 @@
     <string name="app_name">媒介素养</string>
     <string name="action_settings">Settings</string>
     <string name="top_title">媒介素养</string>
-    <string name="know_top_title">知识类</string>
-    <string name="enable_top_title">能力类</string>
-    <string name="emotion_top_title">情感类</string>
+    <string name="know_top_title">理解媒介 - 知识类</string>
+    <string name="enable_top_title">理解媒介 - 能力类</string>
+    <string name="emotion_top_title">理解媒介 - 情感类</string>
     <!-- 第一模块：理解媒介 -->
     <string name="moretab_mjsy_top_title">知识类 - 媒介素养的内涵</string>
     <string name="moretab_sjsy_top_title">知识类 - 视觉素养</string>

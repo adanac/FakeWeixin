@@ -6,6 +6,15 @@
     android:background="@drawable/title_bar">
 
 
+    <ImageView
+            android:id="@+id/emotion_iv_back"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:src="@drawable/icon_back"
+            android:clickable="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            />
     
      
      <TextView

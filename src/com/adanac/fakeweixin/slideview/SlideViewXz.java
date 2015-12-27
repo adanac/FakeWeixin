@@ -43,6 +43,13 @@ public class SlideViewXz extends LinearLayout {
 		public void onSlide(View view, int status);
 	}
 
+	static Context threeXzMoreFragment;
+
+	public SlideViewXz() {
+		super(threeXzMoreFragment);
+		initView();
+	}
+
 	public SlideViewXz(Context context) {
 		super(context);
 		initView();

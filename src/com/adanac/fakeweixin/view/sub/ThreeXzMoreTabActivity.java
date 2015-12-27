@@ -31,15 +31,15 @@ import com.adanac.view.indicator.transition.OnTransitionTextListener;
 public class ThreeXzMoreTabActivity extends FragmentActivity {
 	private IndicatorViewPager indicatorViewPager;
 	private LayoutInflater inflate;
-	private String[] names = { "学者一", "学者二", "学者三" };
+	private String[] names = { "推荐", "研究学者", "理论文章", "好书分享" };
 	private ScrollIndicatorView indicator;
-	private int size = 3;
+	private int size = 4;
 
 	// TODO
 	// 底部菜单没有显示出来是因为代码中没有写出来
 
 	// 顶部标题
-	private TextView moretab_two_sp_top;
+	private TextView moretab_three_xz_top;
 
 	// 底部菜单4个Linearlayout
 	private LinearLayout ll_home;
@@ -62,7 +62,7 @@ public class ThreeXzMoreTabActivity extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.moretab_two_sp);
+		setContentView(R.layout.moretab_three_xz);
 
 		ViewPager viewPager = (ViewPager) findViewById(R.id.moretab_viewPager);
 		indicator = (ScrollIndicatorView) findViewById(R.id.moretab_indicator);
@@ -115,7 +115,7 @@ public class ThreeXzMoreTabActivity extends FragmentActivity {
 		this.iv_setting = (ImageView) findViewById(R.id.iv_setting);
 
 		// 顶部标题
-		this.moretab_two_sp_top = (TextView) findViewById(R.id.moretab_two_sp_top);
+		this.moretab_three_xz_top = (TextView) findViewById(R.id.moretab_three_xz_top);
 
 		// 底部菜单4个菜单标题
 		this.tv_home = (TextView) findViewById(R.id.tv_home);
@@ -161,9 +161,9 @@ public class ThreeXzMoreTabActivity extends FragmentActivity {
 
 		@Override
 		public Fragment getFragmentForPage(int position) {
-			TwoSp01MoreFragment fragment = new TwoSp01MoreFragment();
+			ThreeXzMoreFragment fragment = new ThreeXzMoreFragment();
 			Bundle bundle = new Bundle();
-			bundle.putInt(TwoSp01MoreFragment.INTENT_INT_INDEX, position);
+			bundle.putInt(ThreeXzMoreFragment.INTENT_INT_INDEX, position);
 			fragment.setArguments(bundle);
 			return fragment;
 		}
