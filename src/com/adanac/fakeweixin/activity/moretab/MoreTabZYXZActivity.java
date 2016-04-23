@@ -1,8 +1,11 @@
 package com.adanac.fakeweixin.activity.moretab;
 
+import java.io.File;
+
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnBufferingUpdateListener;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -23,6 +26,7 @@ import android.widget.TextView;
 import android.widget.VideoView;
 
 import com.adanac.fakeweixin.R;
+import com.adanac.fakeweixin.util.DownFileUtil;
 import com.adanac.view.indicator.FragmentListPageAdapter;
 import com.adanac.view.indicator.IndicatorViewPager;
 import com.adanac.view.indicator.IndicatorViewPager.IndicatorFragmentPagerAdapter;
@@ -36,7 +40,8 @@ import com.adanac.view.indicator.transition.OnTransitionTextListener;
  * @version 1.0
  */
 public class MoreTabZYXZActivity extends FragmentActivity implements
-		MediaPlayer.OnErrorListener, MediaPlayer.OnCompletionListener {
+		MediaPlayer.OnErrorListener, MediaPlayer.OnCompletionListener,
+		OnBufferingUpdateListener, MediaPlayer.OnPreparedListener {
 	private IndicatorViewPager indicatorViewPager;
 	private LayoutInflater inflate;
 	private String[] names = { "知识点注释", "知识地图", "习题作业", "作业讨论", "相关资源" };
@@ -72,6 +77,9 @@ public class MoreTabZYXZActivity extends FragmentActivity implements
 	private VideoView mVideoView;
 	private Uri mUri;
 	private int mPositionWhenPaused = -1;
+	private int videoWidth;
+	private int videoHeight;
+	public MediaPlayer mediaPlayer;
 
 	private MediaController mMediaController;
 
@@ -110,7 +118,7 @@ public class MoreTabZYXZActivity extends FragmentActivity implements
 		// 文件路径
 
 		mUri = Uri.parse(Environment.getExternalStorageDirectory()
-				+ "/eduapp/资源的选择.wmv");
+				+ "/appvideo/资源的选择.wmv");
 
 		// Create media controller
 		mMediaController = new MediaController(this);
@@ -181,8 +189,43 @@ public class MoreTabZYXZActivity extends FragmentActivity implements
 		this.finish();
 	}
 
+	@Override
+	public void onPrepared(MediaPlayer arg0) {
+		videoWidth = mediaPlayer.getVideoWidth();
+		videoHeight = mediaPlayer.getVideoHeight();
+		if (videoHeight != 0 && videoWidth != 0) {
+			arg0.start();
+		}
+		Log.e("mediaPlayer", "onPrepared");
+
+	}
+
+	@Override
+	public void onBufferingUpdate(MediaPlayer arg0, int bufferingProgress) {
+		// skbProgress.setSecondaryProgress(bufferingProgress); int
+		// currentProgress=skbProgress.getMax()*mediaPlayer.getCurrentPosition()/mediaPlayer.getDuration();
+		// Log.e(currentProgress+"% play", bufferingProgress + "% buffer"); }
+	}
+
 	// 开始
 	public void onStart() {
+		int index = mUri.getPath().lastIndexOf("/");
+		String savePath = mUri.getPath().substring(0, index);
+		Log.e("savePath:", savePath);
+		String filename = mUri.getLastPathSegment();
+		Log.e("filename:", filename);
+		File file = new File(savePath + "/" + filename);
+		if (!file.exists()) {
+			// Down Video
+			String downPath = "http://adanac.qiniudn.com/app%E8%B5%84%E6%BA%90%E7%9A%84%E9%80%89%E6%8B%A9.wmv";
+			DownFileUtil.downMedia(savePath, filename, downPath);
+			DownFileUtil.toastDisplay(MoreTabZYXZActivity.this, "缓冲中...", 5000);
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 		// Play Video
 		mVideoView.setVideoURI(mUri);
 		mVideoView.start();

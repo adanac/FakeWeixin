@@ -1,5 +1,7 @@
 package com.adanac.fakeweixin.activity.moretab;
 
+import java.io.File;
+
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -23,6 +25,7 @@ import android.widget.TextView;
 import android.widget.VideoView;
 
 import com.adanac.fakeweixin.R;
+import com.adanac.fakeweixin.util.DownFileUtil;
 import com.adanac.view.indicator.FragmentListPageAdapter;
 import com.adanac.view.indicator.IndicatorViewPager;
 import com.adanac.view.indicator.IndicatorViewPager.IndicatorFragmentPagerAdapter;
@@ -112,7 +115,7 @@ public class MoreTabFHNHActivity extends FragmentActivity implements
 		// 文件路径
 
 		mUri = Uri.parse(Environment.getExternalStorageDirectory()
-				+ "/eduapp/符号的内涵.flv");
+				+ "/appvideo/符号的内涵.wmv");
 
 		// Create media controller
 		mMediaController = new MediaController(this);
@@ -185,6 +188,23 @@ public class MoreTabFHNHActivity extends FragmentActivity implements
 
 	// 开始
 	public void onStart() {
+		int index = mUri.getPath().lastIndexOf("/");
+		String savePath = mUri.getPath().substring(0, index);
+		Log.e("savePath:", savePath);
+		String filename = mUri.getLastPathSegment();
+		Log.e("filename:", filename);
+		File file = new File(savePath + "/" + filename);
+		if (!file.exists()) {
+			// Down Video
+			String downPath = "http://adanac.qiniudn.com/app%E7%AC%A6%E5%8F%B7%E7%9A%84%E5%86%85%E6%B6%B5.wmv";
+			DownFileUtil.downMedia(savePath, filename, downPath);
+			DownFileUtil.toastDisplay(MoreTabFHNHActivity.this, "缓冲中...", 5000);
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 		// Play Video
 		mVideoView.setVideoURI(mUri);
 		mVideoView.start();
