@@ -21,10 +21,10 @@
             />
         
 	    <TextView
-	        android:id="@+id/moretab_emsml_top"
+	        android:id="@+id/moretab_emsy_top"
 	        android:layout_width="wrap_content"
 	        android:layout_height="25dp"
-	        android:text="@string/moretab_emsml_top_title"
+	        android:text="@string/moretab_emsy_top_title"
 	        android:textSize="20sp" 
 	        android:textColor="#ffffff"
 	        android:layout_gravity="center_vertical"

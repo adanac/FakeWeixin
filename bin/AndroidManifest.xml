@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.adanac.fakeweixin"
     android:versionCode="3"
-    android:versionName="3.0" >
+    android:versionName="3.1" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -78,16 +78,42 @@
         <activity android:name="com.adanac.fakeweixin.view.sub.ThreeMjMoreTabActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.view.sub.ThreeXzMoreTabActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.slideview.ThreeXzMainActivity"></activity>
+        	<!-- 研究学者  -->
+        	<activity android:name="com.adanac.fakeweixin.slideview.xz.Xz01Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.xz.Xz02Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.xz.Xz03Activity"></activity>
+        	<!-- 理论文章  -->
+        	<activity android:name="com.adanac.fakeweixin.slideview.wz.Wz01Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.wz.Wz02Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.wz.Wz03Activity"></activity>
+        	<!-- 好书分享 -->
+        	<activity android:name="com.adanac.fakeweixin.slideview.fx.Fx01Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.fx.Fx02Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.fx.Fx03Activity"></activity>
         <activity android:name="com.adanac.fakeweixin.slideview.ThreeWzMainActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.slideview.ThreeFxMainActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.view.sub.ThreeWzMoreTabActivity"></activity>
         <activity android:name="com.adanac.fakeweixin.view.sub.ThreeFxMoreTabActivity"></activity>
+        	
         
         <!-- 走进媒介 -->
         <activity android:name="com.adanac.fakeweixin.slideview.FourQTMainActivity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.hh.HH01Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.hh.HH02Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.hh.HH03Activity"></activity>
+        	<!-- 书法 -->
         <activity android:name="com.adanac.fakeweixin.slideview.FourSFMainActivity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.sf.Sf01Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.sf.Sf02Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.sf.Sf03Activity"></activity>
         <activity android:name="com.adanac.fakeweixin.slideview.FourSYMainActivity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.sy.Sy01Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.sy.Sy02Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.sy.Sy03Activity"></activity>
         <activity android:name="com.adanac.fakeweixin.slideview.FourYSMainActivity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.ys.YS01Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.ys.YS02Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.ys.YS03Activity"></activity>
         
     </application>
 

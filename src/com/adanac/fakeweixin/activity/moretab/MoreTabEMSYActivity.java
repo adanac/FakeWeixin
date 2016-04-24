@@ -50,7 +50,7 @@ public class MoreTabEMSYActivity extends FragmentActivity implements
 	// 底部菜单没有显示出来是因为代码中没有写出来
 
 	// 顶部标题
-	private TextView moretab_emxdsj_top;
+	private TextView moretab_emsy_top;
 
 	// 底部菜单4个Linearlayout
 	private LinearLayout ll_home;
@@ -81,10 +81,10 @@ public class MoreTabEMSYActivity extends FragmentActivity implements
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.moretab_emxdsj);
+		setContentView(R.layout.moretab_emsy);
 
-		ViewPager viewPager = (ViewPager) findViewById(R.id.moretab_viewPager);
-		indicator = (ScrollIndicatorView) findViewById(R.id.moretab_indicator);
+		ViewPager viewPager = (ViewPager) findViewById(R.id.moretab_viewPager_emsy);
+		indicator = (ScrollIndicatorView) findViewById(R.id.moretab_indicator_emsy);
 		indicator.setScrollBar(new ColorBar(this, Color.RED, 5));
 
 		// 画出底部菜单
@@ -108,7 +108,7 @@ public class MoreTabEMSYActivity extends FragmentActivity implements
 		// 关于视频播放
 		this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-		mVideoView = (VideoView) findViewById(R.id.videoview);
+		mVideoView = (VideoView) findViewById(R.id.videoview_emsy);
 
 		// 文件路径
 
@@ -150,7 +150,7 @@ public class MoreTabEMSYActivity extends FragmentActivity implements
 		this.iv_setting = (ImageView) findViewById(R.id.iv_setting);
 
 		// 顶部标题
-		this.moretab_emxdsj_top = (TextView) findViewById(R.id.moretab_emxdsj_top);
+		this.moretab_emsy_top = (TextView) findViewById(R.id.moretab_emsy_top);
 
 		// 底部菜单4个菜单标题
 		this.tv_home = (TextView) findViewById(R.id.tv_home);

@@ -208,20 +208,25 @@ public class MoreTabEMSMLActivity extends FragmentActivity implements
 		}
 		// Play Video
 		mVideoView.setVideoURI(mUri);
-		mVideoView.start();
-
-		super.onStart();
+		// mVideoView.start();
+		//
+		// super.onStart();
+		mVideoView.stopPlayback();
+		super.onPause();
 	}
 
 	// ÔÝÍ£
 	public void onPause() {
 		// Stop video when the activity is pause.
 		mPositionWhenPaused = mVideoView.getCurrentPosition();
-		mVideoView.stopPlayback();
+		// mVideoView.stopPlayback();
 		Log.d(TAG, "OnStop: mPositionWhenPaused = " + mPositionWhenPaused);
 		Log.d(TAG, "OnStop: getDuration  = " + mVideoView.getDuration());
 
-		super.onPause();
+		// super.onPause();
+		mVideoView.start();
+
+		super.onStart();
 	}
 
 	public void onResume() {

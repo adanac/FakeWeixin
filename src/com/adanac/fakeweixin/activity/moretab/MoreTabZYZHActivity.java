@@ -205,20 +205,22 @@ public class MoreTabZYZHActivity extends FragmentActivity implements
 		}
 		// Play Video
 		mVideoView.setVideoURI(mUri);
-		mVideoView.start();
+		mVideoView.stopPlayback();
+		Log.d(TAG, "OnStop: mPositionWhenPaused = " + mPositionWhenPaused);
+		Log.d(TAG, "OnStop: getDuration  = " + mVideoView.getDuration());
 
-		super.onStart();
+		super.onPause();
+
 	}
 
 	// ÔÝÍ£
 	public void onPause() {
 		// Stop video when the activity is pause.
 		mPositionWhenPaused = mVideoView.getCurrentPosition();
-		mVideoView.stopPlayback();
-		Log.d(TAG, "OnStop: mPositionWhenPaused = " + mPositionWhenPaused);
-		Log.d(TAG, "OnStop: getDuration  = " + mVideoView.getDuration());
 
-		super.onPause();
+		mVideoView.start();
+
+		super.onStart();
 	}
 
 	public void onResume() {

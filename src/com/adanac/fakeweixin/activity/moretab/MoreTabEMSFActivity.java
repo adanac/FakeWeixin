@@ -50,7 +50,7 @@ public class MoreTabEMSFActivity extends FragmentActivity implements
 	// 底部菜单没有显示出来是因为代码中没有写出来
 
 	// 顶部标题
-	private TextView moretab_emxdsj_top;
+	private TextView moretab_emsf_top;
 
 	// 底部菜单4个Linearlayout
 	private LinearLayout ll_home;
@@ -81,10 +81,10 @@ public class MoreTabEMSFActivity extends FragmentActivity implements
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.moretab_emxdsj);
+		setContentView(R.layout.moretab_emsf);
 
-		ViewPager viewPager = (ViewPager) findViewById(R.id.moretab_viewPager);
-		indicator = (ScrollIndicatorView) findViewById(R.id.moretab_indicator);
+		ViewPager viewPager = (ViewPager) findViewById(R.id.moretab_viewPager_emsf);
+		indicator = (ScrollIndicatorView) findViewById(R.id.moretab_indicator_emsf);
 		indicator.setScrollBar(new ColorBar(this, Color.RED, 5));
 
 		// 画出底部菜单
@@ -108,12 +108,12 @@ public class MoreTabEMSFActivity extends FragmentActivity implements
 		// 关于视频播放
 		this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-		mVideoView = (VideoView) findViewById(R.id.videoview);
+		mVideoView = (VideoView) findViewById(R.id.videoview_emsf);
 
 		// 文件路径
 
 		mUri = Uri.parse(Environment.getExternalStorageDirectory()
-				+ "/appvideo/现代设计.wmv");
+				+ "/appvideo/书法.wmv");
 
 		// Create media controller
 		mMediaController = new MediaController(this);
@@ -150,7 +150,7 @@ public class MoreTabEMSFActivity extends FragmentActivity implements
 		this.iv_setting = (ImageView) findViewById(R.id.iv_setting);
 
 		// 顶部标题
-		this.moretab_emxdsj_top = (TextView) findViewById(R.id.moretab_emxdsj_top);
+		this.moretab_emsf_top = (TextView) findViewById(R.id.moretab_emsf_top);
 
 		// 底部菜单4个菜单标题
 		this.tv_home = (TextView) findViewById(R.id.tv_home);
@@ -194,7 +194,7 @@ public class MoreTabEMSFActivity extends FragmentActivity implements
 		File file = new File(savePath + "/" + filename);
 		if (!file.exists()) {
 			// Down Video
-			String downPath = "http://adanac.qiniudn.com/app%E7%8E%B0%E4%BB%A3%E8%AE%BE%E8%AE%A1.wmv";
+			String downPath = "http://adanac.qiniudn.com/app%E4%B9%A6%E6%B3%951.wmv";
 			DownFileUtil.downMedia(savePath, filename, downPath);
 			DownFileUtil.toastDisplay(MoreTabEMSFActivity.this, "缓冲中...", 5000);
 			try {
@@ -205,20 +205,25 @@ public class MoreTabEMSFActivity extends FragmentActivity implements
 		}
 		// Play Video
 		mVideoView.setVideoURI(mUri);
-		mVideoView.start();
-
-		super.onStart();
+		// mVideoView.start();
+		//
+		// super.onStart();
+		mVideoView.stopPlayback();
+		super.onPause();
 	}
 
 	// 暂停
 	public void onPause() {
 		// Stop video when the activity is pause.
 		mPositionWhenPaused = mVideoView.getCurrentPosition();
-		mVideoView.stopPlayback();
+		// mVideoView.stopPlayback();
 		Log.d(TAG, "OnStop: mPositionWhenPaused = " + mPositionWhenPaused);
 		Log.d(TAG, "OnStop: getDuration  = " + mVideoView.getDuration());
 
-		super.onPause();
+		// super.onPause();
+		mVideoView.start();
+
+		super.onStart();
 	}
 
 	public void onResume() {

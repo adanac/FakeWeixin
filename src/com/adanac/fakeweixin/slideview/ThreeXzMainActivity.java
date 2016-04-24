@@ -6,6 +6,7 @@ import java.util.List;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,6 +22,9 @@ import android.widget.Toast;
 
 import com.adanac.fakeweixin.R;
 import com.adanac.fakeweixin.slideview.SlideViewXz.OnSlideListener;
+import com.adanac.fakeweixin.slideview.xz.Xz01Activity;
+import com.adanac.fakeweixin.slideview.xz.Xz02Activity;
+import com.adanac.fakeweixin.slideview.xz.Xz03Activity;
 
 public class ThreeXzMainActivity extends Activity implements
 		OnItemClickListener, OnClickListener, OnSlideListener {
@@ -187,6 +191,20 @@ public class ThreeXzMainActivity extends Activity implements
 
 				Toast.makeText(this, "onItemClick position=" + position, 0)
 						.show();
+				switch (position) {
+				case 0:
+					startActivity(new Intent(getApplicationContext(),
+							Xz01Activity.class));
+					break;
+				case 1:
+					startActivity(new Intent(getApplicationContext(),
+							Xz02Activity.class));
+					break;
+				default:
+					startActivity(new Intent(getApplicationContext(),
+							Xz03Activity.class));
+					break;
+				}
 			}
 		}
 	}

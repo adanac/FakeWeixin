@@ -28,7 +28,7 @@ public class MoreFragmentEMSF extends LazyFragment {
 	@Override
 	protected void onCreateViewLazy(Bundle savedInstanceState) {
 		super.onCreateViewLazy(savedInstanceState);
-		setContentView(R.layout.fragment_tabmain_emxdsj);
+		setContentView(R.layout.fragment_tabmain_emsf);
 		tabIndex = getArguments().getInt(INTENT_INT_INDEX);
 		progressBar = (ProgressBar) findViewById(R.id.fragment_mainTab_emxdsj_progressBar);
 		textView = (TextView) findViewById(R.id.fragment_mainTab_emxdsj_textView);
