@@ -12,9 +12,11 @@ import android.os.Message;
 import android.text.Html;
 import android.text.Html.ImageGetter;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.adanac.fakeweixin.R;
+import com.adanac.fakeweixin.util.ProcBoundUtil;
 
 public class Sf02Activity extends Activity {
 	private Handler handler;
@@ -83,9 +85,12 @@ public class Sf02Activity extends Activity {
 							url = new URL(source);
 							drawable = Drawable.createFromStream(
 									url.openStream(), null);
-							drawable.setBounds(0, 0,
+							Log.e("width:", drawable.getIntrinsicWidth() + "");
+							Log.e("height:", drawable.getIntrinsicHeight() + "");
+							int[] res = ProcBoundUtil.procBound(
 									drawable.getIntrinsicWidth(),
 									drawable.getIntrinsicHeight());
+							drawable.setBounds(0, 0, res[0], res[1]);
 						} catch (MalformedURLException e) {
 							e.printStackTrace();
 						} catch (IOException e) {
