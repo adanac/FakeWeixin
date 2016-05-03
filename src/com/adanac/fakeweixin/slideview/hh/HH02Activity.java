@@ -35,14 +35,13 @@ public class HH02Activity extends Activity {
 		textView = (TextView) findViewById(R.id.txtqt01);
 		html = "<html><head><title></title></head>"
 				+ "<body>"
-				+ "<h1>黄公望的《富春山居图》</h1>"
-				+ "<p align='center'><font color='#00bbaa'>来源：中国书法家园                    时间：2015.10.10</p>"
-				+ "《富春山居图》是黄公望晚年的杰作，也是中国古代山水画的巅峰。让我们一起来欣赏这副杰作，试想是何原因使得这副画在电影中引得那么多人去争夺。<br/>"
-				+ "<img src='http://adanac.qiniudn.com/imghh02.png' /><br/>"
-
-				+ "黄公望的《富春山居图》<br/>"
-				+ "画中描绘坡岸水色，远山隐约，接着是连绵起伏，群峰争奇的山峦，再下是茫茫江水，天水一色，最后则高峰突起，远岫渺茫。山间丛林茂密，点缀村舍、茅亭，水中则有渔舟垂钓。即使没有去过富春山，我们在画中仍然可以感受到画家希望通过《富春山居图》来展现的“象”，即山浩渺连绵的富春山水。"
-				+ "画家运用线的虚实强弱和浓淡干湿的合理安排能体现物象空间的存在，能够感受到不能远近的山川；高古游丝描与铁线描分别代表着不同的质感，线条勾勒的运动与不同的结构方式能表现不同张力，给人不同的感受；线的穿梭、重叠、藏露能表现画面的层次，线的轻重缓急、抑扬顿挫能表现物象的节奏和韵律等等，在《富春山居图》中的能够感受到山峦的跌宕起伏的美感。"
+				+ "<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;黄公望的《富春山居图》</h2>"
+				+ "<small><font color='#00bbaa'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来源：中国书法家园                    时间：2015.10.10</font></small><br/><br/>"
+				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;《富春山居图》是黄公望晚年的杰作，也是中国古代山水画的巅峰。让我们一起来欣赏这副杰作，试想是何原因使得这副画在电影中引得那么多人去争夺。<br/>"
+				+ "<img src='http://adanac.qiniudn.com/imghh02.png' />"
+				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>黄公望的《富春山居图》</small><br/>"
+				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;画中描绘坡岸水色，远山隐约，接着是连绵起伏，群峰争奇的山峦，再下是茫茫江水，天水一色，最后则高峰突起，远岫渺茫。山间丛林茂密，点缀村舍、茅亭，水中则有渔舟垂钓。即使没有去过富春山，我们在画中仍然可以感受到画家希望通过《富春山居图》来展现的“象”，即山浩渺连绵的富春山水。"
+				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;画家运用线的虚实强弱和浓淡干湿的合理安排能体现物象空间的存在，能够感受到不能远近的山川；高古游丝描与铁线描分别代表着不同的质感，线条勾勒的运动与不同的结构方式能表现不同张力，给人不同的感受；线的穿梭、重叠、藏露能表现画面的层次，线的轻重缓急、抑扬顿挫能表现物象的节奏和韵律等等，在《富春山居图》中的能够感受到山峦的跌宕起伏的美感。"
 				+ "</body>" + "</html>";
 
 		textView.setMovementMethod(ScrollingMovementMethod.getInstance());// 滚动

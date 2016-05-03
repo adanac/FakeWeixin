@@ -35,11 +35,12 @@ public class HH03Activity extends Activity {
 		textView = (TextView) findViewById(R.id.txtqt01);
 		html = "<html><head><title></title></head>"
 				+ "<body>"
-				+ "<h1>徐悲鸿的《奔马图》</h1>"
-				+ "<p align='center'><font color='#00bbaa'>来源：徐悲鸿国画作品欣赏                   时间：2015.12.18</p>"
-				+ " 徐悲鸿，尤以画马出名，就如大家知道的，马也是徐悲鸿先生一生中最爱描绘的题材。徐悲鸿的画能融古今中外技法于一炉而又有其独特风格。他在绘画创作上，提倡“尽精微，致广大”；他对中国画，主张“古法之佳者守之，垂绝者继之，不佳者改之，未足者增之，西方绘画之可采者融之”。徐悲鸿先生关于马的绘画包括各种姿态的马如图所示，他画的奔马，笔墨淋漓潇洒，带着时代的风雷驰骋在画坛上，可以说是给当时的中国画坛带来了清新、有力、刚劲的气息。那么在徐悲鸿先生的绘画作品中所传达的“象”是什么呢？徐悲鸿先生用不同的笔触、不同的着色表现出给人不同感受的骏马，无论奔马、立马、走马或是饮马、群马，这些不同姿态的神骏气昂的骏马，都应该是作品中展现的象。那么，徐悲鸿先生又是如何呈现“有生命力的象”呢？通过这样的“象”又要表达什么呢？让我们带着这样的思考，来欣赏一下的绘画作品与内容。<br/>"
-				+ "<img src='http://adanac.qiniudn.com/imghh03.png' /><br/>"
-				+ "徐悲鸿的《奔马图》<br/>" + "</body>" + "</html>";
+				+ "<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;徐悲鸿的《奔马图》</h2>"
+				+ "<small><font color='#00bbaa'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来源：徐悲鸿国画作品欣赏                   时间：2015.12.18</font></small><br/><br/>"
+				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;徐悲鸿，尤以画马出名，就如大家知道的，马也是徐悲鸿先生一生中最爱描绘的题材。徐悲鸿的画能融古今中外技法于一炉而又有其独特风格。他在绘画创作上，提倡“尽精微，致广大”；他对中国画，主张“古法之佳者守之，垂绝者继之，不佳者改之，未足者增之，西方绘画之可采者融之”。徐悲鸿先生关于马的绘画包括各种姿态的马如图所示，他画的奔马，笔墨淋漓潇洒，带着时代的风雷驰骋在画坛上，可以说是给当时的中国画坛带来了清新、有力、刚劲的气息。那么在徐悲鸿先生的绘画作品中所传达的“象”是什么呢？徐悲鸿先生用不同的笔触、不同的着色表现出给人不同感受的骏马，无论奔马、立马、走马或是饮马、群马，这些不同姿态的神骏气昂的骏马，都应该是作品中展现的象。那么，徐悲鸿先生又是如何呈现“有生命力的象”呢？通过这样的“象”又要表达什么呢？让我们带着这样的思考，来欣赏一下的绘画作品与内容。<br/>"
+				+ "<img src='http://adanac.qiniudn.com/imghh03.png' />"
+				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>徐悲鸿的《奔马图》</small><br/>"
+				+ "</body>" + "</html>";
 
 		textView.setMovementMethod(ScrollingMovementMethod.getInstance());// 滚动
 

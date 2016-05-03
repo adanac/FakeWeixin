@@ -35,12 +35,12 @@ public class Sy01Activity extends Activity {
 		textView = (TextView) findViewById(R.id.txtsy01);
 		html = "<html><head><title></title></head>"
 				+ "<body>"
-				+ "<h2>阿尔弗雷德．艾森斯塔特之《时代广场的胜利日》</h2>"
-				+ "<p align='center'><font color='#00bbaa'>来源：现代摄影网                    时间：2015.12.10</p>"
-				+ "阿尔弗雷德．艾森斯塔特（Alfred Eisenstaedt）世界著名的纪实摄影家，被誉为“新闻摄影之父”(1898—1995)阿尔弗雷德?艾森斯塔特1898年生于西普鲁士。（今天的波兰境内）14岁时他拥有了自己的第一部达折叠胶片机，并开始拍摄，他最为著名的作品就是下面这幅《时代广场的胜利日》。<br/>"
-				+ "<img src=\"http://adanac.qiniudn.com/imgsy01.png\"/><br/>"
-				+ "《时代广场的胜利日》<br/>"
-				+ "当二战结束的消息传到纽约的时代广场，一位狂喜的海军士兵搂过正在身旁的陌生护士热烈地亲吻着她。照片出现于《Times》杂志，是反映战争结束后人们轻松欢乐心情的优秀作品。这幅作品的主体是海军与护士，背景是纽约时代广场，将主体置于画面中心的位置，利用主体优美的身体线条和热烈的亲吻和川流的人群这一陪体对比。作品采用平拍的拍摄角度，采用顺光，更完美的表现了主体，反映战争结束后人们轻松欢乐的心情。"
+				+ "<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阿尔弗雷德．艾森斯塔特之《时代广场的胜利日》</h2>"
+				+ "<small><font color='#00bbaa'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来源：现代摄影网                    时间：2015.12.10</font></small><br/><br/>"
+				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阿尔弗雷德．艾森斯塔特（Alfred Eisenstaedt）世界著名的纪实摄影家，被誉为“新闻摄影之父”(1898—1995)阿尔弗雷德?艾森斯塔特1898年生于西普鲁士。（今天的波兰境内）14岁时他拥有了自己的第一部达折叠胶片机，并开始拍摄，他最为著名的作品就是下面这幅《时代广场的胜利日》。<br/>"
+				+ "<img src=\"http://adanac.qiniudn.com/imgsy01.png\"/>"
+				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>《时代广场的胜利日》</small><br/>"
+				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当二战结束的消息传到纽约的时代广场，一位狂喜的海军士兵搂过正在身旁的陌生护士热烈地亲吻着她。照片出现于《Times》杂志，是反映战争结束后人们轻松欢乐心情的优秀作品。这幅作品的主体是海军与护士，背景是纽约时代广场，将主体置于画面中心的位置，利用主体优美的身体线条和热烈的亲吻和川流的人群这一陪体对比。作品采用平拍的拍摄角度，采用顺光，更完美的表现了主体，反映战争结束后人们轻松欢乐的心情。"
 				+ "</body>" + "</html>";
 
 		textView.setMovementMethod(ScrollingMovementMethod.getInstance());// 滚动
