@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.adanac.fakeweixin"
     android:versionCode="3"
-    android:versionName="3.1" >
+    android:versionName="3.2" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -114,6 +114,18 @@
         	<activity android:name="com.adanac.fakeweixin.slideview.ys.YS01Activity"></activity>
         	<activity android:name="com.adanac.fakeweixin.slideview.ys.YS02Activity"></activity>
         	<activity android:name="com.adanac.fakeweixin.slideview.ys.YS03Activity"></activity>
+        
+        <!-- 使用媒介 -->
+        <!-- 音频 -->
+        <activity android:name="com.adanac.fakeweixin.slideview.TwoYPMainActivity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.yp.YP01Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.yp.YP02Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.yp.YP03Activity"></activity>
+        <!-- 视频 -->
+        <activity android:name="com.adanac.fakeweixin.slideview.TwoSPMainActivity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.sp.SP01Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.sp.SP02Activity"></activity>
+        	<activity android:name="com.adanac.fakeweixin.slideview.sp.SP03Activity"></activity>
         
     </application>
 

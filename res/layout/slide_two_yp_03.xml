@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <include layout="@layout/moretab_two_yp_top" />
+    
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/slide_three" >
+	    <TextView
+            android:id="@+id/txtyp03"
+            android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			
+			android:background="#f5f5f5" 
+			android:textSize="18dip"
+			android:textColor="#000000"/>
+	    
+	
+	</LinearLayout>
+</LinearLayout>

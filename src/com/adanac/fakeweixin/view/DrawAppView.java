@@ -19,11 +19,11 @@ import com.adanac.fakeweixin.slideview.FourYSMainActivity;
 import com.adanac.fakeweixin.slideview.ThreeFxMainActivity;
 import com.adanac.fakeweixin.slideview.ThreeWzMainActivity;
 import com.adanac.fakeweixin.slideview.ThreeXzMainActivity;
+import com.adanac.fakeweixin.slideview.TwoSPMainActivity;
+import com.adanac.fakeweixin.slideview.TwoYPMainActivity;
 import com.adanac.fakeweixin.util.DrawUtil;
 import com.adanac.fakeweixin.util.ScreenUtil;
-import com.adanac.fakeweixin.view.sub.TwoSp01MoreTabActivity;
 import com.adanac.fakeweixin.view.sub.TwoTw01MoreTabActivity;
-import com.adanac.fakeweixin.view.sub.TwoYp01MoreTabActivity;
 
 /**
  * 首页View
@@ -166,10 +166,10 @@ public class DrawAppView extends View {
 				730 + 60 / 2, TwoTw01MoreTabActivity.class);
 		// 点击使用媒介 - 音频（530, 730, 90, 60）
 		clickYP(event, x, y, 530 - 90 / 2, 530 + 90 / 2, 730 - 60 / 2,
-				730 + 60 / 2, TwoYp01MoreTabActivity.class);
+				730 + 60 / 2, TwoYPMainActivity.class);
 		// 点击使用媒介 - 视频（630, 730, 90, 60）
 		clickSP(event, x, y, 630 - 90 / 2, 630 + 90 / 2, 730 - 60 / 2,
-				730 + 60 / 2, TwoSp01MoreTabActivity.class);
+				730 + 60 / 2, TwoSPMainActivity.class);// TwoSp01MoreTabActivity(ago)
 
 		// 点击研究媒介 - 研究学者（100, 730, 90, 60）
 		clickXZ(event, x, y, 100 - 90 / 2, 100 + 90 / 2, 730 - 60 / 2,
@@ -238,13 +238,13 @@ public class DrawAppView extends View {
 	}
 
 	private void clickSP(MotionEvent event, float x, float y, int i, int j,
-			int k, int l, Class<TwoSp01MoreTabActivity> clazz) {
+			int k, int l, Class<TwoSPMainActivity> clazz) {
 		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了视频");
 
 	}
 
 	private void clickYP(MotionEvent event, float x, float y, int i, int j,
-			int k, int l, Class<TwoYp01MoreTabActivity> clazz) {
+			int k, int l, Class<TwoYPMainActivity> clazz) {
 		clickSubMethod(event, x, y, i, j, k, l, clazz, "点击了音频");
 
 	}
