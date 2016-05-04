@@ -1,25 +1,17 @@
 package com.adanac.fakeweixin.slideview.ys;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.text.Html;
 import android.text.Html.ImageGetter;
 import android.text.method.ScrollingMovementMethod;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.adanac.fakeweixin.R;
-import com.adanac.fakeweixin.util.ProcBoundUtil;
 
 public class YS02Activity extends Activity {
-	private Handler handler;
+	// private Handler handler;
 	private TextView textView;
 	private String html;
 
@@ -38,7 +30,9 @@ public class YS02Activity extends Activity {
 				+ "<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;《辛德勒的名单》影评</h2>"
 				+ "<small><font color='#00bbaa'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来源：奥尔华艺                    时间：2015.12.18</font></small><br/><br/>"
 				+ "&nbsp;&nbsp;&nbsp;&nbsp;《辛德勒的名单》作为第66届奥斯卡最佳影片，是由澳大利亚小说家托马斯•科内雅雷斯所著的《辛德勒名单》改编而成。影片真实的再现了德国企业家奥斯卡•辛德勒在第二次世界大战期间，通过各种方式，用尽财产保护1100余名犹太人免遭法西斯杀害的真实故事。故事情节真实感人，让观众深受触动。<br/>"
-				+ "<img src='http://adanac.qiniudn.com/imgys02.png' />"
+				+ "&nbsp;&nbsp;<img src='"
+				+ R.drawable.imgys02
+				+ "' /><br/>"
 				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>《辛德勒的名单》电影剧照</small><br/>"
 				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人物形象分析:"
 				+ "辛德勒的行为在历史长河中留下的是英雄形象，但他也并非最初的动机就是拯救犹太人，也是十分巿侩与唯利是图，他的性格中除了商人的现实，也带有一点恻隐的侠意色彩，他的小聪明和狡黠让他发了一笔谈不上是光彩的战争财，却也让他完成了一件伟大的事迹，只是这一路上，固然有人性道德的觉醒，却也有些骑虎难下，无心插柳的无奈，这也是辛德勒这个角色引人玩味之处，他的救人有“为人”也有“为己”的动机，而在整个过程中两者的比例一直在省思调整着，辛德勒并非一开始就一个英雄，斯皮尔伯格没有将他神话，反而表现他更多的是如何去由“为己”真正的做到“为人”，由此引申开去的是战争给我们带来的是什么，而我们又是否从已经生过的战争体会到了和平的重要性。"
@@ -51,61 +45,74 @@ public class YS02Activity extends Activity {
 				+ "</body>" + "</html>";
 
 		textView.setMovementMethod(ScrollingMovementMethod.getInstance());// 滚动
-
-		handler = new Handler() {
+		ImageGetter imageGetter = new ImageGetter() {
 			@Override
-			public void handleMessage(Message msg) {
-				if (msg.what == 0x101) {
-					textView.setText((CharSequence) msg.obj);
-				}
-				super.handleMessage(msg);
+			public Drawable getDrawable(String source) {
+				int id = Integer.parseInt(source);
+
+				// 根据id从资源文件中获取图片对象
+				Drawable d = getResources().getDrawable(id);
+				d.setBounds(0, 0, d.getIntrinsicWidth(), d.getIntrinsicHeight());
+				return d;
 			}
 		};
 
-		// 因为从网上下载图片是耗时操作 所以要开启新线程
-		Thread t = new Thread(new Runnable() {
-			Message msg = Message.obtain();
+		textView.append(Html.fromHtml(html, imageGetter, null));
 
-			@Override
-			public void run() {
-				/**
-				 * 要实现图片的显示需要使用Html.fromHtml的一个重构方法：public static Spanned
-				 * fromHtml (String source, Html.ImageGetterimageGetter,
-				 * Html.TagHandler
-				 * tagHandler)其中Html.ImageGetter是一个接口，我们要实现此接口，在它的getDrawable
-				 * (String source)方法中返回图片的Drawable对象才可以。
-				 */
-				ImageGetter imageGetter = new ImageGetter() {
-
-					@Override
-					public Drawable getDrawable(String source) {
-						URL url;
-						Drawable drawable = null;
-						try {
-							url = new URL(source);
-							drawable = Drawable.createFromStream(
-									url.openStream(), null);
-							Log.e("width:", drawable.getIntrinsicWidth() + "");
-							Log.e("height:", drawable.getIntrinsicHeight() + "");
-							int[] res = ProcBoundUtil.procBound(
-									drawable.getIntrinsicWidth(),
-									drawable.getIntrinsicHeight());
-							drawable.setBounds(0, 0, res[0], res[1]);
-						} catch (MalformedURLException e) {
-							e.printStackTrace();
-						} catch (IOException e) {
-							e.printStackTrace();
-						}
-						return drawable;
-					}
-				};
-				CharSequence test = Html.fromHtml(html, imageGetter, null);
-				msg.what = 0x101;
-				msg.obj = test;
-				handler.sendMessage(msg);
-			}
-		});
-		t.start();
+		// handler = new Handler() {
+		// @Override
+		// public void handleMessage(Message msg) {
+		// if (msg.what == 0x101) {
+		// textView.setText((CharSequence) msg.obj);
+		// }
+		// super.handleMessage(msg);
+		// }
+		// };
+		//
+		// // 因为从网上下载图片是耗时操作 所以要开启新线程
+		// Thread t = new Thread(new Runnable() {
+		// Message msg = Message.obtain();
+		//
+		// @Override
+		// public void run() {
+		// /**
+		// * 要实现图片的显示需要使用Html.fromHtml的一个重构方法：public static Spanned
+		// * fromHtml (String source, Html.ImageGetterimageGetter,
+		// * Html.TagHandler
+		// * tagHandler)其中Html.ImageGetter是一个接口，我们要实现此接口，在它的getDrawable
+		// * (String source)方法中返回图片的Drawable对象才可以。
+		// */
+		// ImageGetter imageGetter = new ImageGetter() {
+		//
+		// @Override
+		// public Drawable getDrawable(String source) {
+		// URL url;
+		// Drawable drawable = null;
+		// try {
+		// url = new URL(source);
+		// drawable = Drawable.createFromStream(
+		// url.openStream(), null);
+		// Log.e("width:", drawable.getIntrinsicWidth() + "");
+		// Log.e("height:", drawable.getIntrinsicHeight() + "");
+		// int[] res = ProcBoundUtil.procBound(
+		// drawable.getIntrinsicWidth(),
+		// drawable.getIntrinsicHeight());
+		// drawable.setBounds(0, 0, res[0], res[1]);
+		// } catch (MalformedURLException e) {
+		// e.printStackTrace();
+		// } catch (IOException e) {
+		// e.printStackTrace();
+		// }
+		// return drawable;
+		// }
+		// };
+		// CharSequence test = Html.fromHtml(html, imageGetter, null);
+		// msg.what = 0x101;
+		// msg.obj = test;
+		// handler.sendMessage(msg);
+		// }
+		// });
+		// t.start();
 
 	}
 }

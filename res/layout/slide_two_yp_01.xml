@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     
-    <include layout="@layout/moretab_four_sf_top" />
+    <include layout="@layout/moretab_two_yp_top" />
     
 	<LinearLayout
 	    android:layout_width="match_parent"

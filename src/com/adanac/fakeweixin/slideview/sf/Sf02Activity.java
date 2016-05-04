@@ -1,25 +1,17 @@
 package com.adanac.fakeweixin.slideview.sf;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.text.Html;
 import android.text.Html.ImageGetter;
 import android.text.method.ScrollingMovementMethod;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.adanac.fakeweixin.R;
-import com.adanac.fakeweixin.util.ProcBoundUtil;
 
 public class Sf02Activity extends Activity {
-	private Handler handler;
+	// private Handler handler;
 	private TextView textView;
 	private String html;
 
@@ -40,8 +32,10 @@ public class Sf02Activity extends Activity {
 				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;《黄州寒食诗帖》，纸本，25 行，共129字，是苏轼行书的代表作。这是一首遣兴的诗作，是苏轼被贬黄州第三年的寒食节所发的 人生之叹。诗写得苍凉多情，"
 				+ "表达了苏轼此时惆怅孤独的心情。此诗的书法也正是在这种心情和境况下，有感 而出的。通篇书法起伏跌宕，光彩照人，气势奔放，而无荒率之笔。《黄州寒食诗帖》在书法史上影响很大，"
 				+ " 被称为“天下第三行书”，也是苏轼书法作品中的上乘。正如黄庭坚在此诗后所跋：“此书兼颜鲁公，杨少师， 李西台笔意，试使东坡复为之，未必及此。<br/>"
-				+ "<img src='http://adanac.qiniudn.com/imgsf02.png' />"
-				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>苏轼《黄州寒食诗帖》</small><br/>"
+				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='"
+				+ R.drawable.imgsf02
+				+ "' />"
+				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>苏轼《黄州寒食诗帖》</small><br/>"
 				+ "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【释文】："
 				+ "自我来黄州，已过三寒食。年年欲惜春，春去不容惜。 今年又苦雨，两月秋萧瑟。卧闻海棠花，泥污燕支雪。暗中偷负去，夜半真有力，何殊病少年，病起头已白。"
 				+ "春江欲入户，雨势来不已。小屋如渔舟，蒙蒙水云里。空庖煮寒菜，破灶烧湿苇。那知是寒食，但见乌衔纸。君门深九重，坟墓在万里。也拟哭涂穷，死灰吹不起。"
@@ -50,61 +44,74 @@ public class Sf02Activity extends Activity {
 				+ "</body>" + "</html>";
 
 		textView.setMovementMethod(ScrollingMovementMethod.getInstance());// 滚动
-
-		handler = new Handler() {
+		ImageGetter imageGetter = new ImageGetter() {
 			@Override
-			public void handleMessage(Message msg) {
-				if (msg.what == 0x101) {
-					textView.setText((CharSequence) msg.obj);
-				}
-				super.handleMessage(msg);
+			public Drawable getDrawable(String source) {
+				int id = Integer.parseInt(source);
+
+				// 根据id从资源文件中获取图片对象
+				Drawable d = getResources().getDrawable(id);
+				d.setBounds(0, 0, d.getIntrinsicWidth(), d.getIntrinsicHeight());
+				return d;
 			}
 		};
 
-		// 因为从网上下载图片是耗时操作 所以要开启新线程
-		Thread t = new Thread(new Runnable() {
-			Message msg = Message.obtain();
+		textView.append(Html.fromHtml(html, imageGetter, null));
 
-			@Override
-			public void run() {
-				/**
-				 * 要实现图片的显示需要使用Html.fromHtml的一个重构方法：public static Spanned
-				 * fromHtml (String source, Html.ImageGetterimageGetter,
-				 * Html.TagHandler
-				 * tagHandler)其中Html.ImageGetter是一个接口，我们要实现此接口，在它的getDrawable
-				 * (String source)方法中返回图片的Drawable对象才可以。
-				 */
-				ImageGetter imageGetter = new ImageGetter() {
-
-					@Override
-					public Drawable getDrawable(String source) {
-						URL url;
-						Drawable drawable = null;
-						try {
-							url = new URL(source);
-							drawable = Drawable.createFromStream(
-									url.openStream(), null);
-							Log.e("width:", drawable.getIntrinsicWidth() + "");
-							Log.e("height:", drawable.getIntrinsicHeight() + "");
-							int[] res = ProcBoundUtil.procBound(
-									drawable.getIntrinsicWidth(),
-									drawable.getIntrinsicHeight());
-							drawable.setBounds(0, 0, res[0], res[1]);
-						} catch (MalformedURLException e) {
-							e.printStackTrace();
-						} catch (IOException e) {
-							e.printStackTrace();
-						}
-						return drawable;
-					}
-				};
-				CharSequence test = Html.fromHtml(html, imageGetter, null);
-				msg.what = 0x101;
-				msg.obj = test;
-				handler.sendMessage(msg);
-			}
-		});
-		t.start();
+		// handler = new Handler() {
+		// @Override
+		// public void handleMessage(Message msg) {
+		// if (msg.what == 0x101) {
+		// textView.setText((CharSequence) msg.obj);
+		// }
+		// super.handleMessage(msg);
+		// }
+		// };
+		//
+		// // 因为从网上下载图片是耗时操作 所以要开启新线程
+		// Thread t = new Thread(new Runnable() {
+		// Message msg = Message.obtain();
+		//
+		// @Override
+		// public void run() {
+		// /**
+		// * 要实现图片的显示需要使用Html.fromHtml的一个重构方法：public static Spanned
+		// * fromHtml (String source, Html.ImageGetterimageGetter,
+		// * Html.TagHandler
+		// * tagHandler)其中Html.ImageGetter是一个接口，我们要实现此接口，在它的getDrawable
+		// * (String source)方法中返回图片的Drawable对象才可以。
+		// */
+		// ImageGetter imageGetter = new ImageGetter() {
+		//
+		// @Override
+		// public Drawable getDrawable(String source) {
+		// URL url;
+		// Drawable drawable = null;
+		// try {
+		// url = new URL(source);
+		// drawable = Drawable.createFromStream(
+		// url.openStream(), null);
+		// Log.e("width:", drawable.getIntrinsicWidth() + "");
+		// Log.e("height:", drawable.getIntrinsicHeight() + "");
+		// int[] res = ProcBoundUtil.procBound(
+		// drawable.getIntrinsicWidth(),
+		// drawable.getIntrinsicHeight());
+		// drawable.setBounds(0, 0, res[0], res[1]);
+		// } catch (MalformedURLException e) {
+		// e.printStackTrace();
+		// } catch (IOException e) {
+		// e.printStackTrace();
+		// }
+		// return drawable;
+		// }
+		// };
+		// CharSequence test = Html.fromHtml(html, imageGetter, null);
+		// msg.what = 0x101;
+		// msg.obj = test;
+		// handler.sendMessage(msg);
+		// }
+		// });
+		// t.start();
 
 	}
 }
